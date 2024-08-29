@@ -1,0 +1,370 @@
+.LandingPage{
+    width: 100%;
+    height: max-content;
+    background-color: antiquewhite;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+
+}
+
+.welcomeHead{
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+    font-size: 15px;
+    /* font-family: sans-serif; */
+}
+
+.head{
+    /* width: 40%;
+    height: 100%;
+    background-color: #fff; */
+    
+
+    & span{
+        color: rgb(180, 125, 54);
+
+    }
+}
+
+.eco{
+    text-transform: uppercase;
+}
+
+header{
+    width: 95%;
+    height: 80px;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.icon{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    background-color: red;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+
+nav{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & li{
+        list-style: none;
+        text-transform: uppercase;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 900;
+
+    }
+}
+
+.burger{
+    font-size: 40px;
+    display: none;
+}
+
+.account{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    gap: 10px;
+    
+}
+
+
+
+.Hero{
+    width: 95%;
+    height: 80vh;
+    margin-top: 50px; 
+    animation: change;
+    background-size: cover;
+    background-repeat: no-repeat ;
+    background-position: center;
+    animation: change 20s infinite;
+    
+}
+
+@keyframes change{
+    0%{
+        background: linear-gradient(rgba(0, 0, 0, 0.288),rgba(0, 0, 0, 0.466)), url(../assets/Images/download.jpeg);
+    }
+    25%{
+        background: linear-gradient(rgba(0, 0, 0, 0.288),rgba(0, 0, 0, 0.466)), url(../assets/Images/freepik.avif);
+    }
+
+    50%{
+        background: linear-gradient(rgba(0, 0, 0, 0.288),rgba(0, 0, 0, 0.466)), url(../assets/Images/vero.jpg);
+    }
+    75%{
+        background: linear-gradient(rgba(0, 0, 0, 0.288),rgba(0, 0, 0, 0.466)), url(../assets/Images/download.jpeg);
+    }
+    100%{
+        background: linear-gradient(rgba(0, 0, 0, 0.288),rgba(0, 0, 0, 0.466)), url(../assets/Images/freepik.avif);
+    }
+
+    
+}
+
+
+.mid{
+    width: 95%;
+    height: 90px;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product{
+    width: 95%;
+    height: 70vh;
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+
+}
+
+.vegetables{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.first{
+    width: 100%;
+    height: 40%;
+    border-radius: 30px;
+    border: 2px solid green;
+}
+
+.second{
+    width: 100%;
+    height: 350px;
+    border-radius: 30px;
+    border: 2px solid green;
+}
+
+.text{
+    width: 100%;
+    height: 20%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    p{
+        color: grey;
+        font-family: sans-serif;
+    }
+}
+
+.Fruit{
+    width: 95%;
+    height: 80vh;
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 70px;
+    /* gap: 100px; */
+}
+
+.one{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    gap: 30px;
+
+    & .Text{
+        width: 100%;
+        height: 20%;
+        /* background-color: rebeccapurple; */
+        color: black;
+        margin-bottom: 30px;
+
+        & p {
+            font-family: sans-serif;
+        }
+        
+    }
+
+    & .Buttons{
+        width: 90%;
+        height: 20%;
+        align-self: flex-end;
+        /* background-color: rebeccapurple; */
+        color: black;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        /* grid-template-columns: repeat(3, 1fr); */
+        
+
+        & button{
+            width: 155px;
+            height: 50%;
+            align-self: center;
+            justify-self: center;
+            cursor: pointer;
+            transition: all 320ms ease-in-out;
+            font-weight: 700;
+            border: 1px solid green;
+            background-color: #fff;
+        }
+    }
+}
+
+button:hover{
+    transform: scale(1.02);
+    transition: all 320ms ease-in-out;
+}
+
+.fruits{
+    width: 90%;
+    height: 450px;
+    border-radius: 30px;
+    align-self: flex-end;
+    border: 1px solid green;
+}
+
+
+
+.textBox{
+    width: 90%;
+    height: 80%;
+    border-radius: 30px;
+    background-color: green;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    border: 2px solid green;
+
+    & h2{
+        font-size: 30px;
+    }
+
+ 
+}
+.list{
+    align-self: flex-start;
+    font-family: sans-serif;
+    /* margin-bottom: 90px; */
+     & li{
+        list-style: none;
+     }
+}
+.space{
+    width: 100%;
+    height: 20vh;
+}
+
+
+@media (max-width:768px) {
+
+    nav{
+       
+        display: none;
+    }
+
+    .account{
+        display: none;
+    }
+    .burger{
+        display: flex;
+    }
+    .text{
+        margin-bottom: 50px;
+    }
+
+    /* .vegetables{
+        margin-bottom: 500px;
+    } */
+
+   .one{
+    .Buttons {
+        & button{
+            width: 100px;
+            /* background-color: red; */
+        }
+    }
+
+    
+   }
+
+   .Text{
+    margin-bottom: 50px;
+   }
+
+   /* .Fruit{
+    margin-bottom: 30px;
+} */
+
+ 
+}
+
+
+@media (max-width: 425px) {
+    .welcomeHead{
+        display: none;
+    }
+    .product{
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 900px;
+    }
+
+    .first{
+        height: 60%;
+    }
+   
+
+    .Fruit{
+        grid-template-columns: repeat(1,1fr);
+        margin-bottom: 600px;
+    }
+
+    .fruits{
+        margin-top: 50px;
+        align-self: center;
+    }
+
+   
+}
