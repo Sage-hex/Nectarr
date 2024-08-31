@@ -1,0 +1,180 @@
+/* General Reset */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+} */
+
+/* Main Container */
+.login-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* min-height: 100vh; */
+  /* background: url("https://i.imgur.com/B8jPB6S.jpg") center/cover no-repeat; */
+  /* padding: 20px; */
+  border: 2px solid magenta;
+}
+
+.login-wrapper {
+  width: 90%;
+  height: 100%;
+  border: 2px solid blue;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3.5rem;
+  /* position: relative; */
+}
+/* Welcome Section */
+.welcome-section {
+  width: 46%;
+  height: 88%;
+  max-width: 650px;
+  /* flex: 2; */
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+  background: rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 20px;
+  margin: 0;
+}
+
+.welcome-message {
+  color: #fff;
+  text-align: center;
+  max-width: 300px;
+}
+
+.welcome-message h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.welcome-message p {
+  font-size: 16px;
+}
+
+/* Form Section */
+.form-section {
+  /* flex: 1; */
+  width: 47%;
+  height: 80%;
+  border: 2px solid yellow;
+  background: rgba(255, 255, 255, 0.8);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  /* width: 100%; */
+  position: relative;
+}
+
+.form-header {
+  margin-bottom: 20px;
+}
+.user-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: absolute;
+  border: 2px solid black;
+  /* top: 5%;
+  left: 67.5%; */
+  top: 5%;
+  left: 47%;
+  transform: translate(-50%, -85%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+}
+.user-icon img {
+  width: 100%;
+  height: 100%;
+  /* border-radius: 50%; */
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.login-form input {
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.form-actions button {
+  padding: 10px 20px;
+  background: #f4a261;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.form-actions button:hover {
+  background: #e76f51;
+}
+
+.forgot-password-link {
+  color: #e76f51;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.signup-prompt {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.signup-prompt a {
+  color: #2a9d8f;
+  text-decoration: none;
+}
+
+.signup-prompt a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+/* @media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+  .welcome-section,
+  .form-section {
+    border-radius: 0;
+    max-width: 100%;
+  }
+  .welcome-message h2 {
+    font-size: 20px;
+  }
+} */
