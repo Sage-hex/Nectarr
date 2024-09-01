@@ -54,7 +54,7 @@ const LoginForm = () => {
           </form>
           <footer className="signup-prompt">
             <p>
-              Don't have an account? <a href="/signup">SignUp</a>
+              Already have an account? <a href="/signup">Login</a>
             </p>
           </footer>
         </section>
