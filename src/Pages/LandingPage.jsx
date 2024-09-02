@@ -1,127 +1,126 @@
-import {useState} from 'react'
-import './LandingPage.css'
+import React from 'react'
+import Header from '../Components/Header'
+import remove from '../assets/Images/remove.png'
 import { FaCircleUser } from "react-icons/fa6";
-import freepik from '../assets/Images/freepik.avif'
-import { GrCart } from "react-icons/gr";
-import { TbCarSuv, TbMedal } from "react-icons/tb";
-import { TfiMedall } from "react-icons/tfi";
-import { RxDropdownMenu } from 'react-icons/rx'
-import Drop from '../Components/Drop';
 
 const LandingPage = () => {
-  const [show, setShow]= useState(false)
   return (
     <div className='LandingPage'>
-        <div className="welcomeHead">
-            <div className='head'>
-                <span>sell On <span className='eco'>ecoharvest</span></span>
-            </div>
-            <p>Welcome to ECOHARVEST<span className='eco'></span></p>
-            <p>Refer a Friend and get #1K off</p>
+      <div className="Hero">
+      <Header/>
+      </div>
+      <div className="featuresBox">
+        <div className="features">
+          <img src={remove} alt="" className='remove'/>
+          <div className="text">
+            <h2>features 01</h2>
+            <p>Earn as you shop</p>
+          </div>
         </div>
-
-        <header>
-          <div className="logo">Logo</div>
-          <nav>
-            <li>Home</li>
-            <li>About</li>
-            <li>Rewards</li>
-          </nav>
-          <div className="account">
-            <FaCircleUser  className='icon'  onMouseEnter={()=> setShow(true)} />
-            <span>Account</span>
+        <div className="features two" >
+          <img src={remove} alt="" className='remove'/>
+          <div className="text">
+            <h2>features 02</h2>
+            <p>Organic Honey</p>
           </div>
-          < RxDropdownMenu className='burger'/>
-        </header>
+        </div>
+        <div className="features">
+          <img src={remove} alt="" className='remove two'/>
+          <div className="text">
+            <h2>features 03</h2>
+            <p>Discount on Delivery</p>
+          </div>
+        </div>
+      </div>
 
-        {show && <Drop setShow={setShow}/>}
-
-        <section className='Hero'>
-            <h1>Every Details Is Organic </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore neque consectetur veniam expedita ipsam suscipit? Quaerat ipsa accusamus dolor beatae</p>
-        </section>
-        <section className='mid'>
-           <h1>ALLOW FARMERS CATER TO YOUR NEEDS</h1>
-        </section>
-        <section className='product'>
-          <div className="vegetables">
-            <img src={freepik} alt="" className='first'/>
-            <div className="text">
-              <p>free Delivery </p>
-              <TbCarSuv color='grey' fontSize={'30px'} />
-            </div>
+      <div className="space"></div>
+  
+      <div className="collections">
+         <div className="text">
+           <h1>Our Collections</h1>
+           <p>We sell Organic Honey and 5 Kinds Of Honey</p>
           </div>
 
-          <div className="vegetables">
-            <img src={freepik} alt="" className='second'/>
-            <div className="text">
-              <p>Easy to buy</p>
-            <GrCart color='grey' fontSize={'30px'}/>
-            </div>
-          </div>
-          <div className="vegetables">
-            <img src={freepik} alt="" className='second'/>
-            <div className="text">
-              <p>Best Quality</p>
-              < TfiMedall fontSize={'30px'} color='grey'/>
-            </div>
-          </div>
-        </section>
+          <section className='items'>
+            <div className="box"></div>
+            <div className="box"></div>
+            <div className="box"></div>
+            <div className="box"></div>
+            <div className="box"></div>
+          </section>
+      </div>
 
-        <section className='Fruit'>
-          <div className="one">
-            <div className="textBox">
-               <h2>Commited To Giving <br /> You Top Quality <br /> Produce</h2>
-             </div>
-             <div className="Text">
-              <h3>Explore Organic Produce</h3>
-              <br />
-              <p>Explore our world of quality, fresh, organic <br />and chemical free and safe Food foods and earn.</p>
-             </div>
+      <section className='nature'>
+        <div className="circle"></div>
+        <div className="info">
+          <h2>Boost Your Immunity <br /> From Nature</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis facere excepturi possimus aut. Corrupti molestiae asperiores, alias enim deleniti beatae non accusamus quasi quibusdam odit tempore </p>
+          <h1>100% Organic</h1>
+        </div>
+      </section>
+
+      <section className='nature'>
+       <div className="info extra">
+          <h1>Benefit of Pure Honey</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis facere excepturi possimus aut.  Corrupti molestiae asperiores, alias enim deleniti beatae non accusamus quasi quibusdam odit tempore ullam,</p>
+          <ul>
+            <div className='list'><FaCircleUser  className='icon'  /> <span>Promote respectful sleep</span></div>
+            <div className='list'><FaCircleUser  className='icon'  /> <span>Promote respectful sleep</span></div>
+            <div className='list'><FaCircleUser  className='icon'  /> <span>Promote respectful sleep</span></div>
+            <div className='list'><FaCircleUser  className='icon'  /> <span>Promote respectful sleep</span></div>
+          </ul>
+        </div>
+        <div className="circle"></div>
+      </section>
+
+      <section className='origin'>
+        <div className="theOrigin">
+          <h3>The Origin</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis animi voluptates fuga et provident minima magni ducimus accusantium porro laborum voluptate, beatae aliquam ipsam repellendus nostrum velit? Incidunt, atque laborum?</p>
+        </div>
+        <div className="theOrigin">
+        <h3>Offers On The Buzz</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis animi voluptates fuga et provident minima magni ducimus accusantium porro laborum voluptate, beatae aliquam ipsam repellendus nostrum velit? Incidunt, atque laborum?</p>
+        </div>
+      </section>
+      <section className='subscribe'>
+        <div className="wrap">
+          <p>Subscribe And Win Honey Hampers</p>
+          <input type="text" placeholder='Enter Your Email'  className='input'/>
+          <button className='button'>Enter</button>
+        </div>
+      </section>
+      <footer>
+        <div className="wrapper">
+        <p>Hive <span className='hub'>Hub</span></p>
+        <h4>A drop of Nature's sweetness</h4>
+        <div className="description">
+          <div className="location">
+           <h3>Location:</h3><span> Plot 2055 Green Estate. Amuwo Odofin Lagos</span>
           </div>
-          <div className="one">
-             <img src={freepik} alt="" className='fruits' />
-             <div className="Buttons">
-               <button>VEGETABLES</button>
-               <button>FRUITS</button>
-               <button>SEA FOODS</button>
-               <button>TUBERS</button>
-             </div>
+          <div className="location">
+           <h3>Phone:</h3><span> 07062810942</span>
           </div>
-        </section>
+          <div className="location">
+           <h3>Chat:</h3><span> 07062050928</span>
+          </div>
+          <div className="location">
+           <h3>Email:</h3><span>ChatHive@gmail.com</span>
+          </div>
+        </div>
+         <hr />
 
-
-        <section className='product'>
-           <div className="vegetables">
-           <img src={freepik} alt="" className='second'/>
-           <div className="list">
-              <li>CrayFish</li>
-             <li>Freshly Smoked and Seived</li>
-              <li>5gram</li>
-             <li>#2500</li>
-           </div>
-           </div>
-           <div className="vegetables">
-             <img src={freepik} alt="" className='second'/>
-             <div className="list">
-               <li>Banana</li>
-               <li>Fresh and Ripe</li>
-               <li>7gram</li>
-               <li>#1500</li>
-             </div>
-           </div>
-           <div className="vegetables">
-             <img src={freepik} alt="" className='second'/> 
-             <div className="list">
-               <li>Fruit Combo</li>
-               <li>Berries, Pineaple, pears</li>
-               <li>12gram</li>
-               <li>#3000</li>
-             </div>
-           </div>
-        </section>
-        <div className="space"></div>
-
+        <div className="copyright">
+          <div className="colabo">
+           <FaCircleUser  className='icon'  />
+           <FaCircleUser  className='icon'  />
+           <FaCircleUser  className='icon'  />
+           <FaCircleUser  className='icon'  />
+          </div>
+          <span>copyright @ 2024 HiveHub. All rights reserved </span>
+        </div>
+        </div>
+      </footer>
     </div>
   )
 }

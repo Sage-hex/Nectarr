@@ -20,8 +20,8 @@ const Drop = ({setShow}) => {
         justifyContent:'center'
         }} onMouseLeave={()=>setShow(false)}>
            
-           <p><Link to={'/login'}>LOGIN</Link></p>
-           <p><Link to={'/signup'}>SIGN UP</Link></p>
+           <p style={{color:'black', textShadow:'2px 2px 3px grey'}}><Link to={'/login'} >LOGIN</Link></p>
+           <p style={{color:'black', textShadow:'2px 2px 3px grey'}}><Link to={'/signup'} >SIGN UP</Link></p>
         </div>
   )
 }
