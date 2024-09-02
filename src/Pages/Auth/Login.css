@@ -11,7 +11,7 @@
 .login-wrapper {
   width: 90%;
   height: 100%;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   background-image: url("../../assets/Images/login-bg.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,11 +23,11 @@
 }
 
 /* Welcome Section */
-.welcome-section {
+.login-welcome-section {
   width: 46%;
   height: 88%;
   max-width: 500px;
-  border: 2px solid red;
+  /* border: 2px solid black; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,7 +39,7 @@
   padding: 20px;
   margin: 0;
 }
-.welcome-message-wrapper {
+.login-welcome-message-wrapper {
   width: 65%;
   height: 70%;
   min-height: 30%;
@@ -56,26 +56,26 @@
   ); */
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
 }
-.welcome-message {
+.login-welcome-message {
   color: #fff;
   text-align: center;
   max-width: 300px;
 }
 
-.welcome-message h2 {
+.login-welcome-message h2 {
   font-size: 24px;
   margin-bottom: 10px;
 }
 
-.welcome-message p {
+.login-welcome-message p {
   font-size: 16px;
 }
 
 /* Form Section */
-.form-section {
+.login-form-section {
   width: 47%;
   height: 80%;
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
   background: rgba(0, 0, 0, 0.55);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -88,7 +88,7 @@
   position: relative;
 }
 
-.form-section .form-header {
+.login-form-section .form-header {
   width: 100%;
   background-color: red;
 }
@@ -98,7 +98,7 @@
   height: 70px;
   border-radius: 50%;
   position: absolute;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   top: 5%;
   left: 47%;
   transform: translate(-50%, -85%);
@@ -120,13 +120,13 @@
 }
 
 /* Container for each input and label */
-.form-group {
+.login-form-group {
   position: relative;
   margin: 25px 0;
   width: 100%;
 }
 
-.form-group input {
+.login-form-group input {
   width: 100%;
   padding: 12px 0 6px 0;
   font-size: 16px;
@@ -137,11 +137,11 @@
   transition: border-color 0.3s ease;
 }
 
-.form-group input:focus {
+.login-form-group input:focus {
   border-bottom-color: #9e892c;
 }
 
-.form-group label {
+.login-form-group label {
   position: absolute;
   top: 0;
   left: 0;
@@ -159,14 +159,14 @@ input:not(:placeholder-shown) + label {
   color: #000;
 }
 
-.form-actions {
+.login-form-actions {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-.form-actions button:hover {
+.login-form-actions button:hover {
   background: #e76f51;
 }
 
@@ -205,13 +205,16 @@ input:not(:placeholder-shown) + label {
     justify-content: center;
     gap: 1rem;
     height: max-content;
+    padding:20px;
   }
 
-  .welcome-section {
+  .login-welcome-section {
     height: 40%;
+    display:none;
+
   }
-  .welcome-section,
-  .form-section {
+  .login-welcome-section,
+  .login-form-section {
     width: 100%;
     max-width: 100%;
     border-radius: 10px;
@@ -230,7 +233,7 @@ input:not(:placeholder-shown) + label {
     font-size: 14px;
   }
 
-  .form-section {
+  .login-form-section {
     margin-top: 20px;
   }
 
@@ -256,15 +259,16 @@ input:not(:placeholder-shown) + label {
     font-size: 14px;
   }
 
-  .form-group {
+  .login-form-group {
     margin: 15px 0;
   }
 
-  .form-section {
+  .login-form-section {
     padding: 20px;
   }
 
-  .form-actions {
+  .login-form-actions {
     flex-direction: column;
+    margin-top:1rem;
   }
 }
