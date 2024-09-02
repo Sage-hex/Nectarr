@@ -3,7 +3,9 @@ import './Auth.css'
 
 const SignUp = () => {
   return (
-    <div className='SignUp'>signup</div>
+    <div className='SignUp'>
+       
+    </div>
   )
 }
 

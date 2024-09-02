@@ -1,112 +1,23 @@
-.LandingPage{
+.LandingPage{ 
     width: 100%;
+    background-color: white;
     height: max-content;
-    background-color: antiquewhite;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
-
+ 
 }
-
-.welcomeHead{
-    width: 100%;
-    height: 60px;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    color: white;
-    font-size: 15px;
-    /* font-family: sans-serif; */
-}
-
-.head{
-    /* width: 40%;
-    height: 100%;
-    background-color: #fff; */
-    
-
-    & span{
-        color: rgb(180, 125, 54);
-
-    }
-}
-
-.eco{
-    text-transform: uppercase;
-}
-
-header{
-    width: 95%;
-    height: 80px;
-    background-color: #fff;
-    box-shadow: 1px 1px 3px lightgray;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.icon{
-    font-size: 40px;
-    cursor: pointer;
-}
-
-.logo{
-    width: 70px;
-    height: 70px;
-    border-radius: 100px;
-    background-color: red;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-
-
-nav{
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    & li{
-        list-style: none;
-        text-transform: uppercase;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-weight: 900;
-
-    }
-}
-
-.burger{
-    font-size: 40px;
-    display: none;
-}
-
-.account{
-    width: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 15px;
-    gap: 10px;
-    
-}
-
-
 
 .Hero{
-    width: 95%;
-    height: 80vh;
-    margin-top: 50px; 
+    width: 100%;
+    height: 90vh;
     animation: change;
-    background-size: cover;
-    background-repeat: no-repeat ;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
     background-position: center;
     animation: change 20s infinite;
+    position: relative;
     
 }
 
@@ -131,240 +42,421 @@ nav{
     
 }
 
+.featuresBox{
+    position: absolute;
+    width: 90%;
+    height: max-content;
+    top: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    /* background-color: pink; */
+    align-items: center;
+    justify-content: center;
+    /* grid-template-columns: repeat(3, 1fr); */
+}
 
-.mid{
-    width: 95%;
-    height: 90px;
-    background-color: antiquewhite;
+.features{
+    width: 383px;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 5px;
+    background-color: rgb(165, 101, 42);
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.904);
+
+    & .remove{
+        width: 50%;
+        height: 100%;
+    }
+    & .two{
+       order: 2;
+    }
+    .text{
+        display: flex;
+        color: white;
+        flex-direction: column;
+        gap: 10px;
+
+        & p{
+            color: black;
+        }
+    }
+    
 }
 
-.product{
-    width: 95%;
-    height: 70vh;
-    background-color: antiquewhite;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-
+.two{
+    flex-direction: column;
+    & .remove{
+        order: 2;
+    }
 }
 
-.vegetables{
+.space{
     width: 100%;
-    height: 100%;
+    height: 500px;
+    background-color:white;
+}
+.collections{
+    width: 100%;
+    height: max-content;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-}
-
-.first{
-    width: 100%;
-    height: 40%;
-    border-radius: 30px;
-    border: 2px solid green;
-}
-
-.second{
-    width: 100%;
-    height: 350px;
-    border-radius: 30px;
-    border: 2px solid green;
 }
 
 .text{
-    width: 100%;
-    height: 20%;
-    /* background-color: red; */
+    text-align: center;
+    margin-bottom: 30px;
+    h1{
+        font-size: 40px;
+    }
+}
+
+.items{
+    width: 90%;
+    height: max-content;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 80px;
+
+}
+
+.box{
+    width: 383px;
+    height: 350px;
+    background: #000;
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.904);
+}
+
+
+
+.nature{
+    width: 90%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    
+
+    & h2{
+        color: gold;
+        font-size: 30px;  
+    }
+    h1{
+        font-size: 30px;
+    }
+    p{
+        font-size: 17px;
+        color: rgb(165, 56, 42);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    /* background-color: antiquewhite; */
+}
+
+.circle{
+    width: 470px;
+    height: 470px;
+    border-radius: 100%;
+    background-color: #3f2e24;
+    
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.904);
+}
+.info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & ul{
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.list{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30px;
+    gap: 20px;
+}
 
-    p{
-        color: grey;
+.origin{
+    width: 100%;
+    height: max-content;
+    padding: 30px;
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+}
+
+.theOrigin{
+    width: 560px;
+    height: 200px;
+    background-color:#3f2e24 ;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 20px;
+
+    & p{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+}
+
+.subscribe{
+    width: 100%;
+    height: 60vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+& .wrap{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+
+    & p{
+        font-size: 20px;
+        align-self: center;
+        margin-bottom: 90px;
+    }
+}
+}
+
+.input, .button{
+    width: 40%;
+    padding: 20px;
+    border: none;
+    outline: none;
+    background-color: gold;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.button{
+    width: 15%;
+    cursor: pointer;
+}
+
+
+footer{
+    width: 100%;
+    height: 60vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .wrapper{
+        width: 90%;
+        height: 100%;
+        background-color: gold;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+
+        & p{
+            color: yellow;
+            align-self: start;
+    
+            & span{
+                color: white;
+            }
+        }
+    }
+}
+
+.description{
+    width: 70%;
+    height: max-content;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 20px ;
+    font-size: 20px;
+
+    & span{
         font-family: sans-serif;
     }
 }
 
-.Fruit{
-    width: 95%;
-    height: 80vh;
-    background-color: antiquewhite;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 70px;
-    /* gap: 100px; */
+.location{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+
 }
 
-.one{
-    width: 100%;
-    height: 100%;
-    /* background-color: red; */
+hr{
+    height: 2px;
+    color: #000;
+}
+
+.copyright{
+    width: 70%;
+    height: max-content;
+    align-self: flex-end;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    
-    gap: 30px;
-
-    & .Text{
-        width: 100%;
-        height: 20%;
-        /* background-color: rebeccapurple; */
-        color: black;
-        margin-bottom: 30px;
-
-        & p {
-            font-family: sans-serif;
-        }
-        
-    }
-
-    & .Buttons{
-        width: 90%;
-        height: 20%;
-        align-self: flex-end;
-        /* background-color: rebeccapurple; */
-        color: black;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-        /* grid-template-columns: repeat(3, 1fr); */
-        
-
-        & button{
-            width: 155px;
-            height: 50%;
-            align-self: center;
-            justify-self: center;
-            cursor: pointer;
-            transition: all 320ms ease-in-out;
-            font-weight: 700;
-            border: 1px solid green;
-            background-color: #fff;
-        }
-    }
-}
-
-button:hover{
-    transform: scale(1.02);
-    transition: all 320ms ease-in-out;
-}
-
-.fruits{
-    width: 90%;
-    height: 450px;
-    border-radius: 30px;
-    align-self: flex-end;
-    border: 1px solid green;
-}
-
-
-
-.textBox{
-    width: 90%;
-    height: 80%;
-    border-radius: 30px;
-    background-color: green;
-    padding: 50px;
-    display: flex;
-    align-items: center;
+    gap: 20px ;
+    /* align-items: center; */
     justify-content: center;
-    align-self: flex-start;
-    border: 2px solid green;
+    font-size: 20px;
 
-    & h2{
-        font-size: 30px;
+    & span{
+        font-family: sans-serif;
     }
+}
 
- 
-}
-.list{
-    align-self: flex-start;
-    font-family: sans-serif;
-    /* margin-bottom: 90px; */
-     & li{
-        list-style: none;
-     }
-}
-.space{
-    width: 100%;
-    height: 20vh;
+.colabo{
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    margin-left: 60px;
+    gap: 20px;
+    color: white;
+
 }
 
 
-@media (max-width:768px) {
 
-    nav{
+ @media (max-width:768px) {
+  
+    .featuresBox{
        
-        display: none;
     }
-
-    .account{
-        display: none;
+    
+    .features{
+        width: 300px;
+        height: 300px;       
     }
-    .burger{
-        display: flex;
+    
+    
+    .space{
+        height: 700px; 
     }
+    
+    
     .text{
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+        h1{
+            font-size: 40px;
+        }
+    }
+    
+  
+    
+    .box{
+        width: 300px;
+        height: 300px;
+        
+    }
+    
+    
+    
+
+    
+    .circle{
+        width: 300px;
+        height: 300px;
+       
     }
 
-    /* .vegetables{
-        margin-bottom: 500px;
-    } */
 
-   .one{
-    .Buttons {
-        & button{
-            width: 100px;
-            /* background-color: red; */
+    
+    footer{
+        height: max-content; 
+        & .wrapper{
+            height: 65vh;
         }
+    }
+ 
+    
+ }
+
+
+ @media (max-width:425px) {
+ 
+    
+
+    
+
+    
+    .two{
+        flex-direction: column;
+        & .remove{
+            order: 2;
+        }
+    }
+    
+    .space{
+        width: 100%;
+        height: 1000px;
+       
+    }
+ 
+    
+    .text{
+        text-align: center;
+        margin-bottom: 30px;
+        h1{
+            font-size: 40px;
+        }
+    }
+    
+    
+
+  
+    .info{
+        width: 100%;
+    }
+
+    .input, .button{
+        width: 60%;
+    }
+    
+    .button{
+        width: 30%;
+    }
+    
+  
+    
+    .description{
+        align-self: flex-start;
+        font-size: 10px;
     }
 
     
-   }
-
-   .Text{
-    margin-bottom: 50px;
-   }
-
-   /* .Fruit{
-    margin-bottom: 30px;
-} */
-
- 
-}
-
-
-@media (max-width: 425px) {
-    .welcomeHead{
-        display: none;
-    }
-    .product{
-        grid-template-columns: repeat(1, 1fr);
-        margin-bottom: 900px;
+    .copyright{ 
+        align-self: flex-start;
+        font-size: 10px;
     }
 
-    .first{
-        height: 60%;
-    }
-   
-
-    .Fruit{
-        grid-template-columns: repeat(1,1fr);
-        margin-bottom: 600px;
-    }
-
-    .fruits{
-        margin-top: 50px;
-        align-self: center;
-    }
-
-   
-}
+ }
