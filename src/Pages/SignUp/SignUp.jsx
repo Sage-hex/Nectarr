@@ -1,5 +1,4 @@
 import React from "react";
-import "./Auth.css";
 import "./SignUp.css";
 import Button from "../../Components/Button/Button";
 
