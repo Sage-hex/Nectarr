@@ -1,4 +1,5 @@
 import React from "react";
+import "./Auth.css";
 import "./SignUp.css";
 import Button from "../../Components/Button/Button";
 
@@ -17,13 +18,13 @@ const SignUp = () => {
             </div>
           </div>
         </section>
-        <section className="form-section">
+        <section className="signup-form-section">
           <div className="signup-text">
             <h2>Create an account</h2>
             <p>Sign up now and unlock exclusive access!</p>
           </div>
           <form className="signup-form" action="#" method="GET">
-            <div className="form-group">
+            <div className="signup-form-group">
               <input
                 type="text"
                 id="firstname"
@@ -33,7 +34,7 @@ const SignUp = () => {
               />
               <label htmlFor="firstname">First Name</label>
             </div>
-            <div className="form-group">
+            <div className="signup-form-group">
               <input
                 type="text"
                 id="lastname"
@@ -43,7 +44,7 @@ const SignUp = () => {
               />
               <label htmlFor="lastname">Last Name</label>
             </div>
-            <div className="form-group">
+            <div className="signup-form-group">
               <select id="gender" name="gender" required>
                 <option value="" disabled selected hidden></option>
                 <option value="male">Male</option>
@@ -52,7 +53,7 @@ const SignUp = () => {
               </select>
               <label htmlFor="gender">Gender</label>
             </div>
-            <div className="form-group">
+            <div className="signup-form-group">
               <input
                 type="text"
                 id="location"
@@ -62,11 +63,11 @@ const SignUp = () => {
               />
               <label htmlFor="location">Location</label>
             </div>
-            <div className="form-group">
+            <div className="signup-form-group">
               <input type="tel" id="tel" name="tel" placeholder=" " required />
               <label htmlFor="tel">Telephone</label>
             </div>
-            <div className="form-group">
+            <div className="signup-form-group">
               <input
                 type="email"
                 id="email"
@@ -76,7 +77,7 @@ const SignUp = () => {
               />
               <label htmlFor="email">Email</label>
             </div>
-            <div className="form-group">
+            <div className="signup-form-group">
               <input
                 type="password"
                 id="password"
@@ -86,7 +87,7 @@ const SignUp = () => {
               />
               <label htmlFor="password">Password</label>
             </div>
-            <div className="form-group">
+            <div className="signup-form-group">
               <input
                 type="password"
                 id="confirm-password"
@@ -96,25 +97,25 @@ const SignUp = () => {
               />
               <label htmlFor="confirm-password">Confirm Password</label>
             </div>
-            <div className="form-actions">
+            <div className="signup-form-actions">
               <Button>Sign Up</Button>
             </div>
           </form>
-
-          <footer className="footer terms">
-            <div className="footer-text">
-              <p>By Clicking Sign In, you agree to our terms and conditions</p>
-            </div>
+          <article className="signup-footer-secion">
             <div className="login-prompt">
               <p>
                 Already have an account? <a href="/login">Login</a>
               </p>
             </div>
-          </footer>
+            <div className="terms">
+              <p>By Clicking Sign In, you agree to our terms and conditions</p>
+            </div>
+          </article>
         </section>
       </section>
     </main>
   );
 };
+
 
 export default SignUp;
