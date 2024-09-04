@@ -7,14 +7,6 @@ const LoginForm = () => {
   return (
     <main className="login-container">
       <section className="login-wrapper">
-        <section className="login-welcome-section">
-          <div className="login-welcome-message-wrapper">
-            <div className="login-welcome-message">
-              <h2>Glad to have you back.</h2>
-              <p>What would you like to do today?</p>
-            </div>
-          </div>
-        </section>
         <section className="login-form-section">
           {/* <header className="form-header"> */}
           <div className="user-icon">
