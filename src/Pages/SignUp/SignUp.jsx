@@ -11,9 +11,11 @@ const SignUp = () => {
           <div className="logo">
             <img src={signuplogo} alt="Logo" />
           </div>
-          <nav className="login-link">
-            Already have an account? <NavLink to="/login">Login</NavLink>
-          </nav>
+          <div className="login-link">
+            <p>
+              Already have an account? <NavLink to="/login">Login</NavLink>
+            </p>
+          </div>
         </article>
 
         <section className="form-section">
