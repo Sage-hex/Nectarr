@@ -2,25 +2,26 @@ import React from "react";
 import "./SignUp.css";
 import { NavLink } from "react-router-dom";
 import signuplogo from "../../assets/Images/signup-logo.png";
+import Button from "../../Components/Button/Button";
 
 const SignUp = () => {
   return (
     <section className="signup-wrapper">
       <div className="signup-container">
         <article className="signup-header">
-          <div className="logo">
+          <div className="signup-logo">
             <img src={signuplogo} alt="Logo" />
           </div>
-          <div className="login-link">
+          <div className="signup-login-link">
             <p>
               Already have an account? <NavLink to="/login">Login</NavLink>
             </p>
           </div>
         </article>
 
-        <section className="form-section">
+        <section className="signup-form-section">
           <h1>Create an account</h1>
-          <p className="subtext">Sign up now and unlock exclusive access!</p>
+          <p className="signup-subtext">Sign up now and unlock exclusive access!</p>
 
           <form className="signup-form">
             <div className="input-group">
@@ -89,14 +90,14 @@ const SignUp = () => {
                 required
               />
             </div>
-            <button type="submit" className="signup-btn">
-              Sign Up
-            </button>
+            <div className="signup-btn">
+              <Button type="submit">Sign Up</Button>
+            </div>
           </form>
 
-          <p className="terms-text">
+          <p className="signup-terms-text">
             By Clicking Sign Up, you agree to our{" "}
-            <a href="/terms">terms and conditions</a>
+            <NavLink to="/terms">terms and conditions</NavLink>
           </p>
         </section>
       </div>

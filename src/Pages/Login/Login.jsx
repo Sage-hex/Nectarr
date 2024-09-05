@@ -5,7 +5,7 @@ import Button from "../../Components/Button/Button";
 
 const LoginForm = () => {
   return (
-    <main className="login-container">
+    <section className="login-container">
       <section className="login-wrapper">
         <section className="login-form-section">
           {/* <header className="form-header"> */}
@@ -51,7 +51,7 @@ const LoginForm = () => {
           </section>
         </section>
       </section>
-    </main>
+    </section>
   );
 };
 

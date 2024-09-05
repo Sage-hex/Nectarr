@@ -1,189 +1,189 @@
 .signup-wrapper {
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blueviolet;
-  min-height: max-content;
+  background-image: url("../../assets/Images/login-bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .signup-container {
-  width: 40%; /* Fixed width for the container */
-  max-width: 500px; /* Maximum width */
-  height: 80%;
+  width: 45%;
+  height: 88%;
+  max-width: 550px;
+  min-height: 70%;
   padding: 20px;
-  border: 1px solid #fff;
-  border-radius: 10px;
+  border-radius: 5px;
   background: rgba(0, 0, 0, 0.55);
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
+  
 }
 
 .signup-header {
   width: 100%;
-  height: 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  background-color: red;
+
 }
 
-.signup-header > .logo {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #f1c40f;
+.signup-logo {
   width: 25%;
-  height: 70%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
 }
 
-.signup-header > .logo img {
+.signup-logo img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
-.signup-header > .login-link {
+.signup-login-link {
   width: 50%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: blue;
-  font-size: 0.9em;
+  color: #fff;
 }
 
-.signup-header > .login-link a {
-  color: #fff;
-  text-decoration: none;
+.signup-login-link a {
+  color:#e7c700;
   font-weight: 700;
+  text-decoration: none;
 }
 
-.form-section {
+.signup-form-section {
   width: 100%;
-  height: auto;
-  border: 2px solid green;
 }
 
-.form-section > h1 {
+.signup-form-section h1 {
   color: #fff;
-  font-size: 2em;
   margin-bottom: 10px;
+  font-size: 2rem;
 }
 
-.form-section > .subtext {
-  font-size: 1em;
+.signup-subtext {
   margin-bottom: 20px;
-  font-weight: 300;
   color: #fff;
 }
 
 .signup-form {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+
 }
 
 .input-group {
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
+  gap: 20px;
+  
+}
+.input-group input::placeholder{
+  color: white;
 }
 
 .input-group input,
 .input-group select {
-  width: 48%;
+  width: 100%;
+  /* max-width: 48%;  */
   padding: 10px;
   border: 1px solid #fff;
   border-radius: 5px;
   background-color: transparent;
   color: #fff;
-  font-size: 1em;
+  outline: none;
 }
 
-.input-group input::placeholder,
-.input-group select option {
-  color: #ccc;
+.signup-btn .Button-custom {
+  width: 70%;
+  font-weight: 700;
+  border-radius: 8px;
+
 }
 
-.signup-btn {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  background-color: #f1c40f;
-  color: #000;
-  font-size: 1em;
-  font-weight: bold;
-  cursor: pointer;
+.signup-terms-text {
   margin-top: 20px;
-}
-
-.signup-btn:hover {
-  background-color: #d4ac0d;
-}
-
-.terms-text {
-  margin-top: 20px;
-  font-size: 0.9em;
-  font-weight: 300;
-}
-
-.terms-text a {
   color: #fff;
-  text-decoration: underline;
+  font-size: 0.9em;
 }
 
-/* Mobile Responsiveness */
+.signup-terms-text a {
+  text-decoration: none;
+  color: #e7c700;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
   .signup-container {
-    width: 80%; /* Adjust width for medium screens */
+    width: 80%;
+    height: max-content;
     padding: 15px;
   }
 
   .signup-header {
-    height: 50px; /* Adjust height for header on medium screens */
+    height: auto;
+  }
+  .signup-header p{
+    font-size: 14px;
   }
 
-  .logo {
-    width: 25%; /* Adjust width for logo on medium screens */
-    height: 100%;
+  .signup-logo {
+    width: 25%;
   }
 
-  h1 {
+  .signup-form-section h1 {
     font-size: 1.5em;
   }
 
-  .subtext {
+  .signup-subtext {
     font-size: 0.9em;
   }
 }
 
 @media (max-width: 480px) {
+  .signup-wrapper{
+    height: max-content;
+  }
+  .signup-header {
+    flex-direction: column;
+    align-items: center;
+  }
   .signup-container {
-    width: 90%; /* Adjust width for small screens */
+    width: 100%;
     padding: 10px;
+    border-radius: 0;
   }
 
   .signup-header {
-    height: 40px; /* Adjust height for header on small screens */
+    height: auto;
+    gap: 10px;
   }
 
-  .logo {
-    width: 30%; /* Adjust width for logo on small screens */
-    height: 100%;
+  .signup-logo {
+    width: 30%;
   }
 
-  h1 {
+  .signup-form-section h1 {
     font-size: 1.2em;
   }
 
-  .subtext {
+  .signup-subtext {
     font-size: 0.8em;
   }
 
@@ -194,15 +194,6 @@
   .input-group input,
   .input-group select {
     width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .login-link {
-    text-align: right;
-    font-size: 0.8em;
-  }
-
-  .signup-btn {
-    padding: 10px;
+    border-radius: 0;
   }
 }
