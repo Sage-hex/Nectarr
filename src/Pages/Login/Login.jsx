@@ -3,16 +3,17 @@ import "./Login.css"; // Import the CSS file for styling
 import userIcon from "../../assets/Images/user-icon.png"; // Import the user icon image
 import Button from "../../Components/Button/Button";
 
+
 const LoginForm = () => {
   return (
     <section className="login-container">
       <section className="login-wrapper">
         <section className="login-form-section">
-          {/* <header className="form-header"> */}
+          <section className="form-header">
           <div className="user-icon">
             <img src={userIcon} alt="User Icon" />
           </div>
-          {/* </header> */}
+          </section>
           <form className="login-form" action="#" method="POST">
             <div class="login-form-group">
               <input
