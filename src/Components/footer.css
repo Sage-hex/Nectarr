@@ -1,0 +1,104 @@
+
+footer{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    background-color: #742712;
+    justify-content: center;
+    font-family: Lora;
+
+    & .wrapper{
+        width: 90%;
+        height: max-content;
+        color: rgba(255, 255, 255, 0.815);
+        padding-top: 10px;
+        gap: 10px;
+        padding-top: 50px;
+
+    }
+}
+
+.description{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    gap: 20px ;
+    /* background-color: #fff; */
+    /* font-size: 20px; */
+
+    
+}
+
+
+.instruction{
+    padding-top: 50px;
+    width: 80%;
+    height: max-content;
+    gap: 30px;
+    display: flex;
+    justify-self: flex-end;
+    flex-wrap: wrap;
+    align-self: flex-end;
+    font-size: 20px;
+
+    & p{
+        font-family: lora;
+    }
+}
+p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.Intouch{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    & h3{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    & span{
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+
+
+
+
+
+@media (max-width:1280px) {
+    footer{
+        height: max-content; 
+        & .wrapper{
+            height: 40vh;
+        }
+    }
+ 
+}
+
+@media (max-width:500px) {
+    .description{
+        align-self: flex-start;
+        font-size: 10px;
+    }
+
+    
+    .copyright{ 
+        align-self: flex-start;
+        font-size: 10px;
+    }
+
+    footer{
+        height: max-content; 
+        & .wrapper{
+            height: 45vh;
+        }
+    }
+}

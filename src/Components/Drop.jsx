@@ -1,16 +1,23 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 const Drop = ({setShow}) => {
+  const [showheader, setShowheader]=useState(false)
+  useEffect(()=>{
+    Aos.init()
+  },[])
   return (
-    <div style={{
+    <div data-aos="zoom-in" style={{
         width:'150px',
         height: '100px', 
         backgroundColor:'white', 
         boxShadow:'1px 2px 3px gray',
         position:'absolute',
         padding:'10px',
-        top:'20%',
+        top:'15%',
+        transition:'all 3000ms ease out',
         right:'8%',
         cursor:'pointer',
         display:"flex",
@@ -19,9 +26,14 @@ const Drop = ({setShow}) => {
         alignItems:'center',
         justifyContent:'center'
         }} onMouseLeave={()=>setShow(false)}>
-           
-           <p style={{color:'black', textShadow:'2px 2px 3px grey'}}><Link to={'/login'} >LOGIN</Link></p>
-           <p style={{color:'black', textShadow:'2px 2px 3px grey'}}><Link to={'/signup'} >SIGN UP</Link></p>
+            {
+              showheader ?     <button onClick={()=>nav('/logout')}  className='logout'>Logout</button> :
+            <>
+                <p style={{color:'black', textShadow:'2px 2px 3px grey'}}><Link to={'/login'} >LOGIN</Link></p>
+                <p style={{color:'black', textShadow:'2px 2px 3px grey'}}><Link to={'/signup'} >SIGN UP</Link></p>
+            </>
+}
+         
         </div>
   )
 }

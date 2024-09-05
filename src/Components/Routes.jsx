@@ -6,12 +6,17 @@ import SignUp from '../Pages/Auth/SignUp'
 import ForgetPassword from '../Pages/Auth/ForgetPassword'
 import RessetPasword from '../Pages/Auth/RessetPasword'
 import UserHome from '../Pages/UserDashBoard/UserHome'
+import About from '../Pages/About'
 
 
 const router = createHashRouter([
     {
         path: '/',
         element: <LandingPage/>
+    },
+    {
+        path: '/about',
+        element: <About/>
     },
     {
         path: '/signup',

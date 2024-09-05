@@ -1,46 +1,28 @@
 .LandingPage{ 
-    width: 100%;
+    width: 100vw;
     background-color: white;
     height: max-content;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Lora;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
  
 }
 
 .Hero{
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     animation: change;
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: center;
-    animation: change 20s infinite;
+    background: url(../assets/Images/Nectar-Buzz/hero-image.jpg);
     position: relative;
     
 }
 
-@keyframes change{
-    0%{
-        background: linear-gradient(rgba(0, 0, 0, 0.288),rgba(0, 0, 0, 0.466)), url(../assets/Images/download.jpeg);
-    }
-    25%{
-        background: linear-gradient(rgba(0, 0, 0, 0.288),rgba(0, 0, 0, 0.466)), url(../assets/Images/freepik.avif);
-    }
 
-    50%{
-        background: linear-gradient(rgba(0, 0, 0, 0.288),rgba(0, 0, 0, 0.466)), url(../assets/Images/vero.jpg);
-    }
-    75%{
-        background: linear-gradient(rgba(0, 0, 0, 0.288),rgba(0, 0, 0, 0.466)), url(../assets/Images/download.jpeg);
-    }
-    100%{
-        background: linear-gradient(rgba(0, 0, 0, 0.288),rgba(0, 0, 0, 0.466)), url(../assets/Images/freepik.avif);
-    }
-
-    
-}
 
 .featuresBox{
     position: absolute;
@@ -58,21 +40,26 @@
 
 .features{
     width: 383px;
-    height: 400px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 5px;
-    background-color: rgb(165, 101, 42);
+    background: #F3A089;
+
     border-radius: 10px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.904);
 
     & .remove{
         width: 50%;
-        height: 100%;
+        height: 90%;
     }
     & .two{
        order: 2;
+
+    }
+    .bee2{
+        height: 70%;
     }
     .text{
         display: flex;
@@ -96,13 +83,15 @@
 
 .space{
     width: 100%;
-    height: 500px;
+    height: 400px;
     background-color:white;
 }
 .collections{
     width: 100%;
     height: max-content;
-    background-color: white;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    /* background-color: red; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,12 +108,16 @@
 .items{
     width: 90%;
     height: max-content;
-    background-color: #fff;
+    /* background-color: #fff; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
     margin-bottom: 80px;
+    background: linear-gradient(rgba(255, 255, 255, 0.712),rgba(255, 255, 255, 0.767)), url(../assets/Images/Nectar-Buzz/beeHive.png);
+    background-size: contain;
+    background-position:  right;
+    background-repeat: no-repeat;
 
 }
 
@@ -137,7 +130,15 @@
 }
 
 
-
+.hold{
+    width: 100%;
+    height: max-content;
+    flex-direction: column;
+    background: linear-gradient(rgba(255, 255, 255, 0.712),rgba(255, 255, 255, 0.767)), url(../assets/Images/Nectar-Buzz/honeywell.png);
+    background-size: contain ;
+    background-position:  center;
+    background-repeat: no-repeat;
+}
 .nature{
     width: 90%;
     height: max-content;
@@ -145,7 +146,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
     text-align: center;
     margin-bottom: 50px;
     
@@ -158,23 +159,39 @@
         font-size: 30px;
     }
     p{
-        font-size: 17px;
-        color: rgb(165, 56, 42);
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-family: Lora;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 31.97px;
+        text-align: center;
+        
     }
     /* background-color: antiquewhite; */
 }
 
+
+
 .circle{
-    width: 470px;
-    height: 470px;
-    border-radius: 100%;
-    background-color: #3f2e24;
-    
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.904);
+    /* width: 450px; */
+    height: 400px;
+    align-self: center;
+   
+}
+.bee{
+    background-color: #fff;
+    box-shadow: none;
+   
+}
+
+.who{
+    /* order: 2; */
+    border-radius: 0px;
+    height: 500px;
 }
 .info{
     width: 50%;
+    /* width: 50%; */
+    text-align: center;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -187,9 +204,55 @@
     }
 }
 
+
+.Stories{
+    width: 95%;
+    height: max-content;
+    text-align: center;
+}
+
+.topStories{
+    width: 100%;
+    height: 400px;
+    /* background-color: red; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    /* margin-bottom: 20px; */
+
+   
+}
+.story{
+    width: 500px;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    & img{
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        box-shadow: 2px 1px 1px lightgray;
+        background: #000;
+        text-align: center;
+    }
+
+    & p{
+        font-size: 20px;
+        width: 90%;
+    }
+
+
+    
+}
 .list{
     display: flex;
     align-items: center;
+    font-size: 20px;
     justify-content: center;
     gap: 20px;
 }
@@ -198,29 +261,72 @@
     width: 100%;
     height: max-content;
     padding: 30px;
-    background-color: antiquewhite;
+    background: #E8BF7B66;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 30px;
     justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &{
+        .HoneyT{
+            height: 80px;
+            width: 150px;
+            left: 25px;
+            top: 0px;
+            position: absolute;
+        }
+    }
+
+    & .hive{
+        height: 150px;
+        width: 200px;
+        /* margin-left: 800px; */
+        justify-self: flex-end;
+        /* align-self: flex-end; */
+    }
+    
+    
 }
 
+
+
+
 .theOrigin{
-    width: 560px;
-    height: 200px;
-    background-color:#3f2e24 ;
+    width: 450px;
+    height: 250px;
+    background: #742712;
     border-radius: 10px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: rgba(255, 255, 255, 0.815);
     gap: 20px;
 
-    & p{
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+
+
+    .Top{
+        width: 100%;
+        height: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        
+
+        & .HoneyTop{
+            width: 50px;
+            height: 50px;
+            /* position: absolute; */
+            top: 50px;
+            left: 0px;
+            /* right: 0px; */
+        }
     }
     
 }
@@ -228,7 +334,10 @@
 .subscribe{
     width: 100%;
     height: 60vh;
-    background-color: #fff;
+    background: linear-gradient(rgba(255, 255, 255, 0.459),rgba(255, 255, 255, 0.37)), url(../assets/Images/Nectar-Buzz/bee3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -239,10 +348,11 @@
     display: flex;
     flex-direction: column;
 
-    & p{
+    & h2{
         font-size: 20px;
         align-self: center;
-        margin-bottom: 90px;
+        /* margin-bottom: 90px; */
+        font-weight: 900;
     }
 }
 }
@@ -252,7 +362,7 @@
     padding: 20px;
     border: none;
     outline: none;
-    background-color: gold;
+    background: #E8BF7B66;
     border-radius: 5px;
     margin-bottom: 15px;
 }
@@ -263,104 +373,49 @@
 }
 
 
-footer{
-    width: 100%;
-    height: 60vh;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    & .wrapper{
-        width: 90%;
-        height: 100%;
-        background-color: gold;
-        padding: 20px;
-        display: flex;
+
+
+
+ @media (max-width:1280px) {
+    .theOrigin{
+        width: 400px;
+    }
+  .info{
+    width: 90%;
+  }
+ 
+    .featuresBox{
+       top: 90%;
+       
+    }
+    .nature{
         flex-direction: column;
-        gap: 10px;
+       margin-top: 200px; 
 
-
-        & p{
-            color: yellow;
-            align-self: start;
-    
-            & span{
-                color: white;
-            }
+    }
+    .origin{
+        flex-direction: column;
+        margin-top: 0;
+        .HoneyT{
+            left: 0px;
+        }
+        .theOrigin{
+            height: 250px;
         }
     }
-}
-
-.description{
-    width: 70%;
-    height: max-content;
-    align-self: flex-end;
-    display: flex;
-    flex-direction: column;
-    gap: 20px ;
-    font-size: 20px;
-
-    & span{
-        font-family: sans-serif;
-    }
-}
-
-.location{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    
-
-}
-
-hr{
-    height: 2px;
-    color: #000;
-}
-
-.copyright{
-    width: 70%;
-    height: max-content;
-    align-self: flex-end;
-    display: flex;
-    flex-direction: column;
-    gap: 20px ;
-    /* align-items: center; */
-    justify-content: center;
-    font-size: 20px;
-
-    & span{
-        font-family: sans-serif;
-    }
-}
-
-.colabo{
-    display: flex;
-    /* align-items: center;
-    justify-content: center; */
-    margin-left: 60px;
-    gap: 20px;
-    color: white;
-
-}
-
-
-
- @media (max-width:768px) {
-  
-    .featuresBox{
+    .features{
+        width: 300px;
+        height: 300px; 
+        
        
     }
     
-    .features{
-        width: 300px;
-        height: 300px;       
+    .bee{
+        order: -1;
     }
-    
-    
     .space{
-        height: 700px; 
+        height: 500px; 
     }
     
     
@@ -370,55 +425,45 @@ hr{
             font-size: 40px;
         }
     }
-    
-  
-    
+
     .box{
         width: 300px;
         height: 300px;
         
     }
-    
-    
-    
 
-    
-    .circle{
+    /* .circle{
         width: 300px;
         height: 300px;
        
-    }
+    } */
 
-
-    
-    footer{
-        height: max-content; 
-        & .wrapper{
-            height: 65vh;
-        }
+    .Stories{
+        margin-bottom: 450px;
     }
  
     
  }
 
 
- @media (max-width:425px) {
- 
-    
-
-    
-
-    
+ @media (max-width:500px) {   
     .two{
         flex-direction: column;
         & .remove{
             order: 2;
         }
     }
+    .origin{
+        width: 100vw;
+    }
+
+    .theOrigin{
+        width: 300px;
+    }
     
     .space{
         width: 100%;
-        height: 1000px;
+        height: 1002px;
        
     }
  
@@ -430,7 +475,7 @@ hr{
             font-size: 40px;
         }
     }
-    
+                                                                
     
 
   
@@ -448,15 +493,6 @@ hr{
     
   
     
-    .description{
-        align-self: flex-start;
-        font-size: 10px;
-    }
 
-    
-    .copyright{ 
-        align-self: flex-start;
-        font-size: 10px;
-    }
 
  }
