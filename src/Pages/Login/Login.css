@@ -23,7 +23,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 500px;
+  max-width: 550px;
   /* gap: 5rem; */
   position: relative;
 }
@@ -121,27 +121,33 @@ input:not(:placeholder-shown) + label {
   align-items: center;
   width: 100%;
 }
-
-.login-form-actions button:hover {
-  background: #e76f51;
+.login-form-actions .Button-custom{
+  margin-top: 1rem;
+  width: 50%;
+  border-radius: 8px;
 }
 
 .forgot-password-link {
-  color: #e76f51;
+  color:#fff;
   text-decoration: none;
   font-size: 14px;
+  font-weight: 600;
   display: block;
   text-align: end;
 }
+
+
 
 .signup-prompt {
   align-self: flex-start;
   margin-top: 0px;
   text-align: right;
+  padding: 20px;
 }
 
 .signup-prompt a {
-  color: #2a9d8f;
+  color: #fff;
+  font-weight: 600;
   text-decoration: none;
 }
 

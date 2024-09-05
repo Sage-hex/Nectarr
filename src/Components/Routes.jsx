@@ -3,8 +3,8 @@ import { createHashRouter, RouterProvider } from "react-router-dom";
 import LandingPage from "../Pages/LandingPage";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
-import ForgetPassword from "../Pages/Auth/ForgetPassword";
-import RessetPasword from "../Pages/Auth/RessetPasword";
+import ForgotPassword from "../Pages/ForgotPassword/ForgotPassword";
+import ResetPassword from "../Pages/ResetPassword/ResetPassword";
 import UserHome from "../Pages/UserDashBoard/UserHome";
 
 const router = createHashRouter([
@@ -25,12 +25,12 @@ const router = createHashRouter([
   //     element: <BuyersLogin/>
   // },
   {
-    path: "forgetPassword",
-    element: <ForgetPassword />,
+    path: "/forgotPassword",
+    element: <ForgotPassword />,
   },
   {
-    path: "ressetPassword",
-    element: <RessetPasword />,
+    path: "/resetPassword",
+    element: <ResetPassword />,
   },
   {
     path: "user",
