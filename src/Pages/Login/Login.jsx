@@ -2,14 +2,17 @@ import React from "react";
 import "./Login.css"; // Import the CSS file for styling
 import userIcon from "../../assets/Images/user-icon.png"; // Import the user icon image
 import Button from "../../Components/Button/Button";
-
+import loginImg from "../../assets/Images/signup-logo.png";
 
 const LoginForm = () => {
   return (
-    <section className="login-container">
+    // <section className="login-container">
       <section className="login-wrapper">
         <section className="login-form-section">
           <section className="form-header">
+            <div className="login-logo">
+              <img src={loginImg} alt="logo" />
+            </div>
           <div className="user-icon">
             <img src={userIcon} alt="User Icon" />
           </div>
@@ -52,7 +55,7 @@ const LoginForm = () => {
           </section>
         </section>
       </section>
-    </section>
+    // </section>
   );
 };
 
