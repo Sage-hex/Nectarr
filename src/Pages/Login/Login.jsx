@@ -3,7 +3,7 @@ import "./Login.css"; // Import the CSS file for styling
 import userIcon from "../../assets/Images/user-icon.png"; // Import the user icon image
 import Button from "../../Components/Button/Button";
 import loginImg from "../../assets/Images/signup-logo.png";
-
+import { NavLink } from "react-router-dom";
 const LoginForm = () => {
   return (
     // <section className="login-container">
@@ -41,16 +41,15 @@ const LoginForm = () => {
             {/* <div className="forget-password">
 
             </div> */}
-            <a href="/forgot-password" className="forgot-password-link">
-              Forget password
-            </a>
+            <NavLink to="/forgotpassword" className="forgot-password-link">Forget password</NavLink>
+          
             <div className="login-form-actions">
               <Button>Login</Button>
             </div>
           </form>
           <section className="signup-prompt">
             <p>
-              Don't have an account? <a href="/signup">Signup</a>
+              Don't have an account? <NavLink to="/signup">Sign up</NavLink>
             </p>
           </section>
         </section>
