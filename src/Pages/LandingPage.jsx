@@ -3,9 +3,6 @@ import Header from '../Components/Header'
 import remove from '../assets/Images/remove.png'
 import bee1 from '../assets/Images/Nectar-Buzz/bee1.png'
 import honey from '../assets/Images/Nectar-Buzz/honey1.png'
-import honeyT from '../assets/Images/Nectar-Buzz/honeyText.png'
-import honeyTop from '../assets/Images/Nectar-Buzz/honeyTop.png'
-import hive from '../assets/Images/Nectar-Buzz/hive.png'
 import bee2 from '../assets/Images/Nectar-Buzz/bee2.png'
 import bee4 from '../assets/Images/Nectar-Buzz/bee4.png'
 import Honey5 from '../assets/Images/Nectar-Buzz/Honey5.jpg'
@@ -22,6 +19,7 @@ import { GiScarabBeetle } from "react-icons/gi";
 import Aos from 'aos';
 import "aos/dist/aos.css";
 import Footer from '../Components/Footer'
+import Origin from '../Components/Origin'
 
 const LandingPage = () => {
   
@@ -150,30 +148,9 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+     
+      <Origin/>
 
-      <section className='origin'>
-        <img src={honeyT} alt="" className='HoneyT'/>
-      
-        <div className="theOrigin">
-          <h3>The Origin</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis animi voluptates fuga et provident minima magni ducimus accusantium porro laborum voluptate, beatae aliquam ipsam repellendus nostrum velit? Incidunt, atque laborum?</p>
-        </div>
-        <div className="theOrigin">
-        <div className="Top">
-        <h3>Offers On The Buzz</h3>
-        <img src={honeyTop} alt="" className='HoneyTop' />
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis animi voluptates fuga et provident minima magni ducimus accusantium porro laborum voluptate, beatae aliquam ipsam repellendus nostrum velit? Incidunt, atque laborum?</p>
-        </div>
-        <img src={hive} alt="" className='hive'/>
-      </section>
-      <section className='subscribe'>
-        <div className="wrap">
-          <h2>Subscribe And Win Honey Hampers</h2>
-          <input type="text" placeholder='Enter Your Email'  className='input'/>
-          <button className='button'>Enter</button>
-        </div>
-      </section>
       <Footer/>
     </div>
   )
