@@ -1,13 +1,12 @@
-import React from 'react'
-import {createHashRouter, RouterProvider} from 'react-router-dom'
-import LandingPage from '../Pages/LandingPage'
-import Login from '../Pages/Auth/Login'
-import SignUp from '../Pages/Auth/SignUp'
-import ForgetPassword from '../Pages/Auth/ForgetPassword'
-import RessetPasword from '../Pages/Auth/RessetPasword'
-import UserHome from '../Pages/UserDashBoard/UserHome'
-import About from '../Pages/About'
-
+import React from "react";
+import { createHashRouter, RouterProvider } from "react-router-dom";
+import LandingPage from "../Pages/LandingPage";
+import Login from "../Pages/Login/Login";
+import SignUp from "../Pages/SignUp/SignUp";
+import ForgotPassword from "../Pages/ForgotPassword/ForgotPassword";
+import ResetPassword from "../Pages/ResetPassword/ResetPassword";
+import ResetPasswordAuth from "../Pages/ResetPasswordAuth/ResetPasswordAuth";
+import UserHome from "../Pages/UserDashBoard/UserHome";
 
 const router = createHashRouter([
     {
@@ -15,11 +14,7 @@ const router = createHashRouter([
         element: <LandingPage/>
     },
     {
-        path: '/about',
-        element: <About/>
-    },
-    {
-        path: '/',
+        path: '/signup',
         element: <SignUp/>
     },
     {
@@ -32,7 +27,7 @@ const router = createHashRouter([
     // },
     {
         path: 'forgetPassword',
-        element: <ForgetPassword/>
+        element: <ForgotPassword/>
     },
     {
         path: 'ressetPassword',
@@ -49,9 +44,9 @@ const router = createHashRouter([
 const Routes = () => {
   return (
     <div>
-        <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </div>
-  )
-}
+  );
+};
 
-export default Routes
+export default Routes;
