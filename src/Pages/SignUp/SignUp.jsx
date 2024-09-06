@@ -1,120 +1,108 @@
 import React from "react";
 import "./SignUp.css";
+import { NavLink } from "react-router-dom";
+import signuplogo from "../../assets/Images/signup-logo.png";
 import Button from "../../Components/Button/Button";
 
 const SignUp = () => {
   return (
-    <main className="signup-container">
-      <section className="signup-wrapper">
-        <section className="welcome-section">
-          <div className="welcome-message-wrapper">
-            <div className="welcome-message">
-              <h2>
-                Explore, discover, <br /> and enjoy. Let's <br /> make your day
-                a <br /> little brighter.
-              </h2>
-              <p>What would you like to do today?</p>
-            </div>
+    <section className="signup-wrapper">
+      <div className="signup-container">
+        <article className="signup-header">
+          <div className="signup-logo">
+            <img src={signuplogo} alt="Logo" />
           </div>
-        </section>
+          <div className="signup-login-link">
+            <p>
+              Already have an account? <NavLink to="/login">Login</NavLink>
+            </p>
+          </div>
+        </article>
+
         <section className="signup-form-section">
-          <div className="signup-text">
-            <h2>Create an account</h2>
-            <p>Sign up now and unlock exclusive access!</p>
-          </div>
-          <form className="signup-form" action="#" method="GET">
-            <div className="signup-form-group">
+          <h1>Create an account</h1>
+          <p className="signup-subtext">Sign up now and unlock exclusive access!</p>
+
+          <form className="signup-form">
+            <div className="input-group">
               <input
                 type="text"
-                id="firstname"
-                name="firstname"
-                placeholder=" "
+                name="firstName"
+                placeholder="First name"
+                aria-label="First name"
                 required
               />
-              <label htmlFor="firstname">First Name</label>
-            </div>
-            <div className="signup-form-group">
               <input
                 type="text"
-                id="lastname"
-                name="lastname"
-                placeholder=" "
+                name="lastName"
+                placeholder="Last name"
+                aria-label="Last name"
                 required
               />
-              <label htmlFor="lastname">Last Name</label>
             </div>
-            <div className="signup-form-group">
-              <select id="gender" name="gender" required>
-                <option value="" disabled selected hidden></option>
+            <div className="input-group">
+              <select name="gender" aria-label="Gender" required>
+                <option value="" disabled selected>
+                  Select Gender
+                </option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="other">Other</option>
+                <option value="prefer_not_to_say">Prefer not to say</option>
               </select>
-              <label htmlFor="gender">Gender</label>
+              <input
+                type="tel"
+                name="tel"
+                placeholder="Tel"
+                aria-label="Telephone"
+                required
+              />
             </div>
-            <div className="signup-form-group">
+            <div className="input-group">
               <input
                 type="text"
-                id="location"
                 name="location"
-                placeholder=" "
+                placeholder="Location"
+                aria-label="Location"
                 required
               />
-              <label htmlFor="location">Location</label>
-            </div>
-            <div className="signup-form-group">
-              <input type="tel" id="tel" name="tel" placeholder=" " required />
-              <label htmlFor="tel">Telephone</label>
-            </div>
-            <div className="signup-form-group">
               <input
                 type="email"
-                id="email"
                 name="email"
-                placeholder=" "
+                placeholder="Email"
+                aria-label="Email"
                 required
               />
-              <label htmlFor="email">Email</label>
             </div>
-            <div className="signup-form-group">
+            <div className="input-group">
               <input
                 type="password"
-                id="password"
                 name="password"
-                placeholder=" "
+                placeholder="Password"
+                aria-label="Password"
                 required
               />
-              <label htmlFor="password">Password</label>
-            </div>
-            <div className="signup-form-group">
               <input
                 type="password"
-                id="confirm-password"
-                name="confirm-password"
-                placeholder=" "
+                name="confirmPassword"
+                placeholder="Confirm password"
+                aria-label="Confirm password"
                 required
               />
-              <label htmlFor="confirm-password">Confirm Password</label>
             </div>
-            <div className="signup-form-actions">
-              <Button>Sign Up</Button>
+            <div className="signup-btn">
+              <Button type="submit">Sign Up</Button>
             </div>
           </form>
-          <article className="signup-footer-secion">
-            <div className="login-prompt">
-              <p>
-                Already have an account? <a href="/login">Login</a>
-              </p>
-            </div>
-            <div className="terms">
-              <p>By Clicking Sign In, you agree to our terms and conditions</p>
-            </div>
-          </article>
+
+          <p className="signup-terms-text">
+            By Clicking Sign Up, you agree to our{" "}
+            <NavLink to="/terms">terms and conditions</NavLink>
+          </p>
         </section>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 };
-
 
 export default SignUp;
