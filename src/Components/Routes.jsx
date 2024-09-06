@@ -5,6 +5,7 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import ForgotPassword from "../Pages/ForgotPassword/ForgotPassword";
 import ResetPassword from "../Pages/ResetPassword/ResetPassword";
+import ResetPasswordAuth from "../Pages/ResetPasswordAuth/ResetPasswordAuth";
 import UserHome from "../Pages/UserDashBoard/UserHome";
 
 const router = createHashRouter([
@@ -31,6 +32,11 @@ const router = createHashRouter([
   {
     path: "/resetPassword",
     element: <ResetPassword />,
+  },
+  ,
+  {
+    path: "/resetPasswordauth",
+    element: <ResetPasswordAuth />,
   },
   {
     path: "user",
