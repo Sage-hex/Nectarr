@@ -1,31 +1,53 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../Components/Header'
 import remove from '../assets/Images/remove.png'
-import { FaCircleUser } from "react-icons/fa6";
+import bee1 from '../assets/Images/Nectar-Buzz/bee1.png'
+import honey from '../assets/Images/Nectar-Buzz/honey1.png'
+import bee2 from '../assets/Images/Nectar-Buzz/bee2.png'
+import bee4 from '../assets/Images/Nectar-Buzz/bee4.png'
+import Honey5 from '../assets/Images/Nectar-Buzz/Honey5.jpg'
+import HoneyJar1 from '../assets/Images/Nectar-Buzz/HoneyJar1.jpg'
+import HoneyJar2 from '../assets/Images/Nectar-Buzz/HoneyJar2.jpg'
+import HoneyJar3 from '../assets/Images/Nectar-Buzz/HoneyJar3.jpg'
+import HoneyJar4 from '../assets/Images/Nectar-Buzz/HoneyJar4.jpg'
+import HoneyJar5 from '../assets/Images/Nectar-Buzz/HoneyJar5.jpg'
+import mamaruka from '../assets/Images/Nectar-Buzz/mamaruka.jpg'
+import mrstan from '../assets/Images/Nectar-Buzz/mr stanely.jpg'
+import gain from '../assets/Images/Nectar-Buzz/gain.png'
+import { GiScarabBeetle } from "react-icons/gi";
+
+import Aos from 'aos';
+import "aos/dist/aos.css";
+import Footer from '../Components/Footer'
+import Origin from '../Components/Origin'
 
 const LandingPage = () => {
+  
+  useEffect(()=>{
+    Aos.init()
+  },[])
   return (
     <div className='LandingPage'>
       <div className="Hero">
       <Header/>
       </div>
       <div className="featuresBox">
-        <div className="features">
-          <img src={remove} alt="" className='remove'/>
+        <div className="features" data-aos="fade-right">
+          <img src={bee1 } alt="" className='remove'/>
           <div className="text">
             <h2>features 01</h2>
             <p>Earn as you shop</p>
           </div>
         </div>
-        <div className="features two" >
-          <img src={remove} alt="" className='remove'/>
+        <div className="features two" data-aos="fade-down" >
+          <img src={honey} alt="" className='remove bee2'/>
           <div className="text">
             <h2>features 02</h2>
             <p>Organic Honey</p>
           </div>
         </div>
-        <div className="features">
-          <img src={remove} alt="" className='remove two'/>
+        <div className="features" data-aos="fade-left" >
+          <img src={bee2} alt="" className='remove two' />
           <div className="text">
             <h2>features 03</h2>
             <p>Discount on Delivery</p>
@@ -34,6 +56,28 @@ const LandingPage = () => {
       </div>
 
       <div className="space"></div>
+
+      <div className="hold">
+          
+      <section className='nature'>
+      <img src={Honey5} alt="" className='circle who'  />
+        <div className="info">
+          <h1> WHO WE ARE</h1>
+          <p>        Discover the pure sweetness of nature at Nectar Buzz,
+              Nigeria’s premier honey store. We offer a wide variety
+               of high-quality, locally sourced honey, perfect for your
+              daily needs or as a delightful gift for your health and 
+              health. Experience the taste of pure , unadulterated 
+              honey and enjoy its numerous health benefits. We are
+              dedicated to providing the purest and most delicious
+              honey. We are passionate about sourcing local and
+              high-quality honey from bee-keepers across the
+              country. Our commitment to sustainability and ethical
+              practice ensures that our honey is not only beneficial 
+              for your health but also your foods and bakes.  </p>
+          <h2 style={{color:'black'}}>100% Organic</h2>
+        </div>
+      </section>
   
       <div className="collections">
          <div className="text">
@@ -42,85 +86,72 @@ const LandingPage = () => {
           </div>
 
           <section className='items'>
-            <div className="box"></div>
-            <div className="box"></div>
-            <div className="box"></div>
-            <div className="box"></div>
-            <div className="box"></div>
+            <img src={HoneyJar1} alt="" className='box'/>
+            <img src={HoneyJar2} alt="" className='box'/>
+            <img src={HoneyJar3} alt="" className='box'/>
+            <img src={HoneyJar4} alt="" className='box'/>
+            <img src={HoneyJar5} alt="" className='box'/>
           </section>
       </div>
-
+      </div>
+      <h1 >SEE MORE...</h1>
       <section className='nature'>
-        <div className="circle"></div>
+      <img src={gain} alt="" className='circle' />
         <div className="info">
-          <h2>Boost Your Immunity <br /> From Nature</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis facere excepturi possimus aut. Corrupti molestiae asperiores, alias enim deleniti beatae non accusamus quasi quibusdam odit tempore </p>
+          <h2>Boost Your Immunity <br /> From Nature And EARN</h2>
+          <p>
+             
+            Continue shopping at your favorite stores,
+            both online and in-person. 
+             <br />
+            Earn rewards: Every purchase you make 
+            will earn you points or cashback.
+            <br />
+            Redeem rewards: Use your accumulated
+           points or cashback to get discounts on </p>
           <h1>100% Organic</h1>
         </div>
       </section>
 
-      <section className='nature'>
+      <section className='nature '>
        <div className="info extra">
           <h1>Benefit of Pure Honey</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis facere excepturi possimus aut.  Corrupti molestiae asperiores, alias enim deleniti beatae non accusamus quasi quibusdam odit tempore ullam,</p>
           <ul>
-            <div className='list'><FaCircleUser  className='icon'  /> <span>Promote respectful sleep</span></div>
-            <div className='list'><FaCircleUser  className='icon'  /> <span>Promote respectful sleep</span></div>
-            <div className='list'><FaCircleUser  className='icon'  /> <span>Promote respectful sleep</span></div>
-            <div className='list'><FaCircleUser  className='icon'  /> <span>Promote respectful sleep</span></div>
+            <div className='list'><GiScarabBeetle className='icon'/> <span>Promote respectful sleep</span></div>
+            <div className='list'><GiScarabBeetle className='icon'/> <span>Promote respectful sleep</span></div>
+            <div className='list'><GiScarabBeetle className='icon'/><span>Promote respectful sleep</span></div>
+            <div className='list'><GiScarabBeetle className='icon'/> <span>Promote respectful sleep</span></div>
           </ul>
         </div>
-        <div className="circle"></div>
+        <img src={bee4} alt="" className='circle bee'/>
       </section>
 
-      <section className='origin'>
-        <div className="theOrigin">
-          <h3>The Origin</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis animi voluptates fuga et provident minima magni ducimus accusantium porro laborum voluptate, beatae aliquam ipsam repellendus nostrum velit? Incidunt, atque laborum?</p>
-        </div>
-        <div className="theOrigin">
-        <h3>Offers On The Buzz</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis animi voluptates fuga et provident minima magni ducimus accusantium porro laborum voluptate, beatae aliquam ipsam repellendus nostrum velit? Incidunt, atque laborum?</p>
-        </div>
-      </section>
-      <section className='subscribe'>
-        <div className="wrap">
-          <p>Subscribe And Win Honey Hampers</p>
-          <input type="text" placeholder='Enter Your Email'  className='input'/>
-          <button className='button'>Enter</button>
-        </div>
-      </section>
-      <footer>
-        <div className="wrapper">
-        <p>Hive <span className='hub'>Hub</span></p>
-        <h4>A drop of Nature's sweetness</h4>
-        <div className="description">
-          <div className="location">
-           <h3>Location:</h3><span> Plot 2055 Green Estate. Amuwo Odofin Lagos</span>
+      <div className="Stories">
+        <h1>Top Stories From Consumers</h1>
+        <div className="topStories">
+          <div className="story">
+            <img src={mamaruka} alt="" className='person'/>
+            <p>Locally Sourced and Sustainable:
+               "I no dey use sugar, na honey i dey use pass but
+                 this one wey una gimme so, as i use am drink my akamu
+                 e just go well for my body." -Mummy Joy
+            </p>
           </div>
-          <div className="location">
-           <h3>Phone:</h3><span> 07062810942</span>
-          </div>
-          <div className="location">
-           <h3>Chat:</h3><span> 07062050928</span>
-          </div>
-          <div className="location">
-           <h3>Email:</h3><span>ChatHive@gmail.com</span>
-          </div>
-        </div>
-         <hr />
 
-        <div className="copyright">
-          <div className="colabo">
-           <FaCircleUser  className='icon'  />
-           <FaCircleUser  className='icon'  />
-           <FaCircleUser  className='icon'  />
-           <FaCircleUser  className='icon'  />
+          <div className="story">
+            <img src={mrstan} alt="" className='person'/>
+            <p> "I love the variety of flavors Nectar Buzz offers. From classic 
+                 honey to flavored options like manuka and raw honey, 
+                 there's something for everyone." - Pa Stanley
+            </p>
           </div>
-          <span>copyright @ 2024 HiveHub. All rights reserved </span>
         </div>
-        </div>
-      </footer>
+      </div>
+     
+      <Origin/>
+
+      <Footer/>
     </div>
   )
 }
