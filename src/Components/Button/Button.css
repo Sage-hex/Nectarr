@@ -5,9 +5,12 @@
     color: var(--white); */
   background: #9e892c;
   color: white;
-
   border-radius: var(--radius);
   font-weight: var(--font-weight);
   cursor: pointer;
   width: max-content;
+}
+
+.Button:hover {
+  background-color: #e7c700;
 }

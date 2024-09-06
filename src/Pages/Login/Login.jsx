@@ -1,26 +1,22 @@
- devimport React from "react";
+import React from "react";
 import "./Login.css"; // Import the CSS file for styling
 import userIcon from "../../assets/Images/user-icon.png"; // Import the user icon image
 import Button from "../../Components/Button/Button";
-
+import loginImg from "../../assets/Images/signup-logo.png";
+import { NavLink } from "react-router-dom";
 const LoginForm = () => {
   return (
-    <main className="login-container">
+    // <section className="login-container">
       <section className="login-wrapper">
-        <section className="login-welcome-section">
-          <div className="login-welcome-message-wrapper">
-            <div className="login-welcome-message">
-              <h2>Glad to have you back.</h2>
-              <p>What would you like to do today?</p>
-            </div>
-          </div>
-        </section>
         <section className="login-form-section">
-          {/* <header className="form-header"> */}
+          <section className="form-header">
+            <div className="login-logo">
+              <img src={loginImg} alt="logo" />
+            </div>
           <div className="user-icon">
             <img src={userIcon} alt="User Icon" />
           </div>
-          {/* </header> */}
+          </section>
           <form className="login-form" action="#" method="POST">
             <div class="login-form-group">
               <input
@@ -45,21 +41,20 @@ const LoginForm = () => {
             {/* <div className="forget-password">
 
             </div> */}
-            <a href="/forgot-password" className="forgot-password-link">
-              Forget password
-            </a>
+            <NavLink to="/forgotpassword" className="forgot-password-link">Forget password</NavLink>
+          
             <div className="login-form-actions">
               <Button>Login</Button>
             </div>
           </form>
           <section className="signup-prompt">
             <p>
-              Don't have an account? <a href="/signup">Signup</a>
+              Don't have an account? <NavLink to="/signup">Sign up</NavLink>
             </p>
           </section>
         </section>
       </section>
-    </main>
+    // </section>
   );
 };
 
