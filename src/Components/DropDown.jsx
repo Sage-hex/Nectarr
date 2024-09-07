@@ -1,27 +1,17 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import './Dropdown.css'
-// import './dropdown.css'
-const Dropdown = ({setNav}) => {
+import './dropdown.css'
+const Dropdown = () => {
     const nav = useNavigate()
-   
   return (
     <div className='Drop'>
-      <button className="del" onClick={()=>(setNav(false))}>X</button>
-        <div>
-           <li>Home</li>
-            <li>About</li>
-            <li>Product</li>
-            <li>shops</li>
+        <div >
+            <li onClick={()=>nav('/home')}>Home</li>
+            <li onClick={()=>nav('/categories')}> vendors</li>
             <li onClick={()=>nav('/cart')}>Cart</li>
-          
-      
-            <button onClick={()=>nav('/logout')}  className='logout'>Logoin</button>
+            <button onClick={()=>nav('/logout')}  className='logout'>Logout</button>
             <button onClick={()=>nav('/singup')} className='signup'> SignUp</button>
-         </div>
-            
-      
-        
+        </div>
     </div>
   )
 }

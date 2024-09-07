@@ -1,4 +1,3 @@
-
 import React from "react";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import LandingPage from "../Pages/LandingPage";
@@ -8,16 +7,12 @@ import ForgotPassword from "../Pages/ForgotPassword/ForgotPassword";
 import ResetPassword from "../Pages/ResetPassword/ResetPassword";
 import ResetPasswordAuth from "../Pages/ResetPasswordAuth/ResetPasswordAuth";
 import UserHome from "../Pages/UserDashBoard/UserHome";
-import Beekeeper from '../Pages/BeekeperSignUp/Beekeper';
+import WelcomePage from "../Pages/WelcomePage/WelcomePage";
 
 const router = createHashRouter([
   {
     path: "/",
     element: <LandingPage />,
-  },
-  {
-    path: "/beekeeperSignUp",
-    element: <Beekeeper />
   },
   {
     path: "/signup",
@@ -26,6 +21,11 @@ const router = createHashRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  ,
+  {
+    path: "/welcome",
+    element: <WelcomePage />,
   },
   // {
   //     path: 'buyersLogin',

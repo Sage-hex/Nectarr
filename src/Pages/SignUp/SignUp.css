@@ -9,9 +9,6 @@
   background-size: cover;
   background-position: center;
 }
-.BeeImg{
-  background: linear-gradient(rgba(0, 0, 0, 0.384), rgba(0, 0, 0, 0.26)), url();
-}
 
 .signup-container {
   width: 45%;
