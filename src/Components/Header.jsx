@@ -25,19 +25,20 @@ const Header = () => {
           <img src={Logo} alt="" className='logo'/>
           <nav>
           <NavLink
-           to="/"
-          style={{ textDecoration: 'none' }}
-          className={({ isActive }) => (isActive ? "active" : "notActive")}>
-          <li>Home</li>
-         </NavLink>
+        to="/"
+        style={{ textDecoration: 'none' }}
+        className={({ isActive }) => (isActive ? "active" : "notActive")}
+      >
+        <li>Home</li>
+      </NavLink>
       
-          <NavLink
-          to="/about"
-          style={{ textDecoration: 'none' }}
-          className={({ isActive }) => (isActive ? "active" : "notActive")}
-          >
-          <li>About</li>
-          </NavLink>
+      <NavLink
+        to="/about"
+        style={{ textDecoration: 'none' }}
+        className={({ isActive }) => (isActive ? "active" : "notActive")}
+      >
+        <li>About</li>
+      </NavLink>
             <li>Product</li>
             <li>shops</li>
           </nav>

@@ -40,6 +40,19 @@
     }
 }
 
+.img1{
+    top: 300px;
+    height: 250px;
+    width: 250px;
+    left: 500px;
+}
+
+.img2{
+    left: 680px;
+    top: 10%;
+    height: 250px;
+    width: 250px;
+}
 
 .honey1{
     width: 50%;
@@ -48,7 +61,7 @@
 }
 
 .heroMessage{
-    width: 500px;
+    width: 70%;
     height: max-content;
     font-size: 25px;
     /* background-color: #fff; */
@@ -88,7 +101,7 @@
 
 .about{
     width: 90%;
-    height: max-content;
+    height: 60vh;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -96,33 +109,17 @@
     gap: 150px;
 }
 
-
-.aboutImg{
-    width: 500px;
-    height: 500px;
-    /* background-color: red; */
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    /* gap: 10px; */
-}
-.round{
-    width: 180px;
-    height: 180px;
+.cacular{
+    width: 350px;
+    height: 350px;
+    background-color: lightgray;
     border-radius: 100%;
-    border: 2px dotted grey;
-    box-shadow: 2px 2px 5px lightgray;
-    
 }
 
 .aboutText{
-    width: 500px;
+    width: 600px;
     height: max-content;
-    text-align: left;
-    & p{
-        font-size: 25px;
-    }
+    text-align: center;
 }
 
     
@@ -189,7 +186,7 @@
 
 .OurBeeKeeper{
     width: 500px;
-    height: 600px;
+    height: 700px;
 }
 
 .beekeeper{
