@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0ccc61656ccff267c024a42e973d295648f2bbe2
 import React from "react";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import LandingPage from "../Pages/LandingPage";
@@ -8,6 +11,7 @@ import ForgotPassword from "../Pages/ForgotPassword/ForgotPassword";
 import ResetPassword from "../Pages/ResetPassword/ResetPassword";
 import ResetPasswordAuth from "../Pages/ResetPasswordAuth/ResetPasswordAuth";
 import UserHome from "../Pages/UserDashBoard/UserHome";
+<<<<<<< HEAD
 import Profile from "../Pages/Profile";
 import About from "../Pages/About"
 
@@ -52,6 +56,54 @@ const router = createHashRouter([
 
 
 ])
+=======
+import WelcomePage from "../Pages/WelcomePage/WelcomePage";
+import BeekeperSignUp from '../Pages/BeekeperSignUp/Beekeper'
+const router = createHashRouter([
+  {
+    path: "/",
+    element: <LandingPage />,
+  },
+  {
+    path: "/signup",
+    element: <SignUp />,
+  },
+  {
+    path: "/beekeper",
+    element: <BeekeperSignUp/>,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  ,
+  {
+    path: "/welcome",
+    element: <WelcomePage />,
+  },
+  // {
+  //     path: 'buyersLogin',
+  //     element: <BuyersLogin/>
+  // },
+  {
+    path: "/forgotPassword",
+    element: <ForgotPassword />,
+  },
+  {
+    path: "/resetPassword",
+    element: <ResetPassword />,
+  },
+  ,
+  {
+    path: "/resetPasswordauth",
+    element: <ResetPasswordAuth />,
+  },
+  {
+    path: "user",
+    element: <UserHome />,
+  },
+]);
+>>>>>>> 0ccc61656ccff267c024a42e973d295648f2bbe2
 
 const Routes = () => {
   return (
