@@ -51,4 +51,18 @@
 }
 
 
+.DropDown{
+    width: 120px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+ 
+}
+
+
 

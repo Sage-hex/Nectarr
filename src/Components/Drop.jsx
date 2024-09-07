@@ -10,15 +10,15 @@ const Drop = ({setShow}) => {
   },[])
   return (
     <div data-aos="zoom-in" style={{
-        width:'150px',
+        width:'130px',
         height: '100px', 
         backgroundColor:'white', 
         boxShadow:'1px 2px 3px gray',
         position:'absolute',
         padding:'10px',
-        top:'15%',
+        top:'17%',
         transition:'all 3000ms ease out',
-        right:'8%',
+        right:'1%',
         cursor:'pointer',
         display:"flex",
         flexDirection:'column',
@@ -29,8 +29,8 @@ const Drop = ({setShow}) => {
             {
               showheader ?     <button onClick={()=>nav('/logout')}  className='logout'>Logout</button> :
             <>
-                <p style={{color:'black', textShadow:'2px 2px 3px grey'}}><Link to={'/login'} >LOGIN</Link></p>
-                <p style={{color:'black', textShadow:'2px 2px 3px grey'}}><Link to={'/signup'} >SIGN UP</Link></p>
+                <p style={{color:'black', textShadow:'2px 2px 3px grey', fontSize:'15px'}}><Link color='black' to={'/login'} >LOGIN</Link></p>
+                <p style={{color:'black', textShadow:'2px 2px 3px grey',  fontSize:'15px'}}><Link color='black' to={'/signup'} >SIGN UP</Link></p>
             </>
 }
          

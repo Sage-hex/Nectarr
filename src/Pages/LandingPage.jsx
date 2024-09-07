@@ -59,8 +59,9 @@ const LandingPage = () => {
 
       <div className="hold">
           
-      <section className='nature'>
-      <img src={Honey5} alt="" className='circle who'  />
+      <section className='Nature'>
+         <div className="nature">
+         <img src={Honey5} alt="" className='circle who'  />
         <div className="info">
           <h1> WHO WE ARE</h1>
           <p>        Discover the pure sweetness of nature at Nectar Buzz,
@@ -77,6 +78,7 @@ const LandingPage = () => {
               for your health but also your foods and bakes.  </p>
           <h2 style={{color:'black'}}>100% Organic</h2>
         </div>
+         </div>
       </section>
   
       <div className="collections">

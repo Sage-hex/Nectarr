@@ -7,7 +7,8 @@ import { FaPhoneVolume } from "react-icons/fa6";
 import { BsCart3 } from "react-icons/bs";
 import './Header.css'
 import Dropdown from './DropDown';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import Logo from '../assets/Images/signup-logo.png'
 
 const Header = () => {
   const [show, setShow]= useState(false)
@@ -15,15 +16,29 @@ const Header = () => {
 
 
   return (
-    <div className='header'>    
+    <div className='header' >    
        <section className='section'>
         <p >Get 10% on your first Purchase. Sign Up to Mailing List</p>
        </section>
         <header>
           < RxDropdownMenu className='burger' onClick={()=>setNav(prenav => !prenav)}/>
+          <img src={Logo} alt="" className='logo'/>
           <nav>
-            <li><Link to={'/'}>Home</Link></li>
-            <li><Link to={'/about'}>About</Link></li>
+          <NavLink
+        to="/"
+        style={{ textDecoration: 'none' }}
+        className={({ isActive }) => (isActive ? "active" : "notActive")}
+      >
+        <li>Home</li>
+      </NavLink>
+      
+      <NavLink
+        to="/about"
+        style={{ textDecoration: 'none' }}
+        className={({ isActive }) => (isActive ? "active" : "notActive")}
+      >
+        <li>About</li>
+      </NavLink>
             <li>Product</li>
             <li>shops</li>
           </nav>

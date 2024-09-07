@@ -1,9 +1,10 @@
 .LandingPage{ 
-    width: 100vw;
+    width: 100%;
     background-color: white;
     height: max-content;
     font-family: Lora;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     
@@ -98,7 +99,7 @@
 }
 
 .text{
-    text-align: center;
+    text-align: left;
     margin-bottom: 30px;
     h1{
         font-size: 40px;
@@ -139,15 +140,22 @@
     background-position:  center;
     background-repeat: no-repeat;
 }
+
+.Nature{
+    width: 100%;
+    height: max-content;
+    align-self: center;
+    justify-content: center;
+}
 .nature{
     width: 90%;
     height: max-content;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-between;
     text-align: center;
+    gap: 100px;
     margin-bottom: 50px;
     
 
@@ -172,7 +180,7 @@
 
 
 .circle{
-    /* width: 450px; */
+    width: 450px;
     height: 400px;
     align-self: center;
    
@@ -184,17 +192,22 @@
 }
 
 .who{
-    /* order: 2; */
+    justify-self: center;
+    align-self: center;
     border-radius: 0px;
     height: 500px;
 }
 .info{
-    width: 50%;
-    /* width: 50%; */
+    width: 40%;
+    
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    & p{
+        text-align: left;
+    }
 
     & ul{
         align-self: flex-start;
@@ -206,7 +219,7 @@
 
 
 .Stories{
-    width: 95%;
+    width: 90%;
     height: max-content;
     text-align: center;
 }
@@ -214,9 +227,10 @@
 .topStories{
     width: 100%;
     height: 400px;
-    /* background-color: red; */
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     gap: 30px;
     /* margin-bottom: 20px; */
 

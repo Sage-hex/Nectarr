@@ -6,6 +6,7 @@ import honey1 from '../assets/Images/Nectar-Buzz/honey1.png'
 import mamaruka from '../assets/Images/Nectar-Buzz/mamaruka.jpg'
 import Origin from '../Components/Origin'
 import Footer from '../Components/Footer'
+import Helen from '../assets/Images/remove.png'
 
 
 const About = () => {
@@ -14,9 +15,8 @@ const About = () => {
         <div className="About">
           <Header/>
            <div className="hero">
+                <img src={honey1} alt="" className='honey1'/>
              <div className="heroLeft">
-                  <img src={bee3} alt="" className='img1' />
-                  <img src={bee3} alt="" className='img2'/>
                    <div className="heroMessage">
                       <h1>Nature's <span>Golden</span><span>Buzz</span></h1>
                       <h1>100% Organic</h1>
@@ -24,7 +24,7 @@ const About = () => {
                    </div>
               </div>
               <div className="heroLeft">
-                  <img src={honey1} alt="" className='honey1'/>
+                  x
               </div>
            </div>
         </div>
@@ -33,7 +33,6 @@ const About = () => {
         <div className="AboutUs">
             <h1>About Us</h1>
             <div className="about">
-                <img src="" alt="" className='cacular'/>
                 <div className="aboutText">
                     <p>
                        Discover the Sweetness of Nature
@@ -45,6 +44,14 @@ const About = () => {
                        Our mission is to  promote the benefits of honey while supporting
                        sustainable beekeeping practices.
                     </p>
+                </div>
+
+                <div className="aboutImg">
+                    <img src={Helen} alt="" className='round'/>
+                    <img src={Helen} alt="" className='round'/>
+                    <img src={Helen} alt="" className='round'/>
+                    <img src={Helen} alt="" className='round'/>
+                    <img src={Helen} alt="" className='round'/>
                 </div>
             </div>
         </div>
