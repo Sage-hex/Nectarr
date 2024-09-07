@@ -98,7 +98,7 @@
 
 
 .aboutImg{
-    width: 600px;
+    width: 500px;
     height: 500px;
     /* background-color: red; */
     display: flex;
@@ -117,9 +117,12 @@
 }
 
 .aboutText{
-    width: 400px;
+    width: 500px;
     height: max-content;
     text-align: left;
+    & p{
+        font-size: 25px;
+    }
 }
 
     

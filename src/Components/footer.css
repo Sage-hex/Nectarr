@@ -1,10 +1,11 @@
 
-footer{
+.footer{
     width: 100%;
-    height: max-content;
+    height: auto;
     display: flex;
     align-items: center;
-    background-color: #742712;
+    /* background-color: #742712; */
+    background: #742712;
     justify-content: center;
     font-family: Lora;
 
@@ -15,16 +16,22 @@ footer{
         padding-top: 10px;
         gap: 10px;
         padding-top: 50px;
+        background-color: #742712;
 
     }
 }
 
+.logo{
+    width: 20px;
+}
+
 .description{
     width: 100%;
-    height: max-content;
+    height: auto;
     display: flex;
+    /* flex-direction: column; */
     gap: 20px ;
-    /* background-color: #fff; */
+    background-color: #742712;
     /* font-size: 20px; */
 
     
@@ -33,28 +40,26 @@ footer{
 
 .instruction{
     padding-top: 50px;
-    width: 80%;
     height: max-content;
     gap: 30px;
-    display: flex;
-    justify-self: flex-end;
-    flex-wrap: wrap;
-    align-self: flex-end;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* background-color: pink; */
     font-size: 20px;
 
     & p{
         font-family: lora;
     }
 }
-p{
-    font-size: 20px;
-    font-weight: 500;
-}
+
 
 .Intouch{
-    width: 300px;
+    width: 180px;
+    height: max-content;
     display: flex;
     flex-direction: column;
+    /* background-color: pink; */
+    /* color: black; */
     gap: 20px;
     & h3{
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -76,14 +81,17 @@ p{
 @media (max-width:1280px) {
     footer{
         height: max-content; 
-        & .wrapper{
+        /* & .wrapper{
             height: 40vh;
-        }
+        } */
     }
  
 }
 
 @media (max-width:500px) {
+    .who{
+        display: none;
+    }
     .description{
         align-self: flex-start;
         font-size: 10px;
@@ -100,5 +108,19 @@ p{
         & .wrapper{
             height: 45vh;
         }
+    }
+    .description{
+        flex-direction: column;
+    }
+
+    .instruction{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .Intouch{
+        /* width: 300px; */
     }
 }

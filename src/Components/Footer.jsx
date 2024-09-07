@@ -4,6 +4,7 @@ import './footer.css'
 import { FaCameraRetro } from "react-icons/fa";
 import { AiOutlineX } from "react-icons/ai";
 import { FaWhatsapp } from "react-icons/fa";
+import Logo from '../assets/Images/signup-logo.png'
 import Aos from 'aos';
 import "aos/dist/aos.css";
 
@@ -12,12 +13,11 @@ const Footer = () => {
         Aos.init()
       },[])
   return (
-    <footer data-aos="fade-down" >
+    <footer data-aos="fade-down" className='footer'>
       <div className="wrapper">
         <div className="description">
           <div>
-             <p>Hive <span className='hub'>Hub</span></p>
-             <h4>A drop of Nature's sweetness</h4>
+            <img src={Logo} alt="" className='logo'/>
           </div>
 
           <section className='instruction'>
