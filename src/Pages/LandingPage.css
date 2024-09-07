@@ -37,6 +37,7 @@
     align-items: center;
     justify-content: center;
     /* grid-template-columns: repeat(3, 1fr); */
+
 }
 
 .features{
@@ -79,6 +80,7 @@
     flex-direction: column;
     & .remove{
         order: 2;
+        
     }
 }
 
@@ -122,12 +124,67 @@
 
 }
 
+.absolute{
+    width: 383px;
+    height: 30%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 30px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.Clover{
+    width: 180px;
+    height: 50px;
+    background-color: #ffffff7a;
+    font-weight: 900;
+    font-size: 20px;
+    border: 1px solid white;
+    font-family: Lora;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.viewMore{
+    width: 110px;
+    height: 50px;
+    justify-self: flex-end;
+    align-self: flex-end;
+    background-color: #ffffff6b;
+    color: white;
+    font-weight: 900;
+    font-family: Lora;
+    font-size: 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Boxhold{
+    width: 383px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    & .boxText{
+        width: 100%;
+        /* width: 380px; */
+    }
+}
+
 .box{
     width: 383px;
     height: 350px;
-    background: #000;
     border-radius: 20px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.904);
+    position: relative;
+    cursor: pointer;
 }
 
 
@@ -147,16 +204,17 @@
     align-self: center;
     justify-content: center;
 }
-.nature{
+.Benefit{
+    
     width: 90%;
     height: max-content;
+    /* background: #000; */
+    gap: 50px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    text-align: center;
-    gap: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     
 
     & h2{
@@ -178,9 +236,16 @@
 }
 
 
-
-.circle{
-    width: 450px;
+.Who{
+    width: 100%;
+    height: max-content;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Circle{
+    width: 350px;
     height: 400px;
     align-self: center;
    
@@ -197,9 +262,11 @@
     border-radius: 0px;
     height: 500px;
 }
-.info{
-    width: 40%;
-    
+.information{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -222,6 +289,7 @@
     width: 90%;
     height: max-content;
     text-align: center;
+    background-color: grey;
 }
 
 .topStories{
@@ -230,16 +298,16 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 30px;
-    /* margin-bottom: 20px; */
+    background-color: red;
 
    
 }
 .story{
     width: 500px;
     height: 100%;
-    background-color: #fff;
+    background-color: pink;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -309,7 +377,7 @@
 
 
 .theOrigin{
-    width: 450px;
+    width: 600px;
     height: 250px;
     background: #742712;
     border-radius: 10px;
@@ -392,35 +460,41 @@
 
 
  @media (max-width:1280px) {
+
+    .Benefit{
+        justify-content: center;
+    }
     .theOrigin{
         width: 400px;
     }
-  .info{
-    width: 90%;
+  .information{
+    width: 100%;
+  }
+
+  .text, .boxText{
+    text-align: center;
   }
  
     .featuresBox{
        top: 90%;
+              
        
     }
-    .nature{
-        flex-direction: column;
-       margin-top: 200px; 
-
-    }
+    
     .origin{
-        flex-direction: column;
+        /* flex-direction: column; */
         margin-top: 0;
         .HoneyT{
             left: 0px;
         }
         .theOrigin{
             height: 250px;
+            width: 320px;
         }
     }
     .features{
         width: 300px;
-        height: 300px; 
+        height: 350px; 
         
        
     }
@@ -440,20 +514,27 @@
         }
     }
 
+    .Boxhold{
+        width: 300px;
+    }
+
     .box{
         width: 300px;
         height: 300px;
         
     }
+    
 
-    /* .circle{
-        width: 300px;
-        height: 300px;
-       
-    } */
+    .absolute{
+        width: 303px;
+        margin-top: 100px;
+        
+    }
+
+   
 
     .Stories{
-        margin-bottom: 450px;
+        margin-bottom: 100px;
     }
  
     
@@ -461,6 +542,12 @@
 
 
  @media (max-width:500px) {   
+    .collections{
+        margin-top: 200px;
+    }
+    .featuresBox{
+        margin-bottom: 1100px;
+    }
     .two{
         flex-direction: column;
         & .remove{
@@ -476,7 +563,7 @@
     }
     
     .space{
-        width: 100%;
+        /* width:100px; */
         height: 1002px;
        
     }
@@ -493,7 +580,7 @@
     
 
   
-    .info{
+    .information{
         width: 100%;
     }
 
@@ -504,6 +591,8 @@
     .button{
         width: 30%;
     }
+
+   
     
   
     

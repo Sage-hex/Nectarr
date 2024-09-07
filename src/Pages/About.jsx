@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../Components/Header'
 import './About.css'
-import bee3 from '../assets/Images/Nectar-Buzz/bee3.png'
+// import bee3 from '../assets/Images/Nectar-Buzz/bee3.png'
 import honey1 from '../assets/Images/Nectar-Buzz/honey1.png'
 import mamaruka from '../assets/Images/Nectar-Buzz/mamaruka.jpg'
 import Origin from '../Components/Origin'
@@ -61,7 +61,7 @@ const About = () => {
             <h1>Why Choose Us</h1>
             <div className="bestOfAll">
                 <div className="bestText">
-                    <p>we give You the Best</p>
+                    <h2>we give You the Best</h2>
                     <li>
                         Pure and Natural Honey: Our honey is free from artificial additives 
                         and preservatives, ensuring a taste that's as pure as nature intended.

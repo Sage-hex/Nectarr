@@ -11,7 +11,7 @@ const LoginForm = () => {
         <section className="login-form-section">
           <section className="form-header">
             <div className="login-logo">
-              <img src={loginImg} alt="logo" />
+              <img src={"loginImg"} alt="logo" />
             </div>
           <div className="user-icon">
             <img src={userIcon} alt="User Icon" />
