@@ -7,9 +7,9 @@ const WelcomePage = ({ user }) => {
   return (
     <div className="welcome-wrapper">
       <div className="welcome-box">
-      {/* <div className="welcome-logo">
-              <img src={loginImg} alt="logo" />
-            </div> */}
+      <div className="welcome-logo">
+              <img src={loginImg} className='logo' alt="logo" />
+            </div>
         <img
           src="https://via.placeholder.com/150" // Replace with actual user image URL
           alt="Profile"
@@ -19,7 +19,7 @@ const WelcomePage = ({ user }) => {
 
         <div className="welcome-icon-container">
           <div className="welcome-icon">
-             <FaCheckCircle />
+             <FaCheckCircle className='welcome-icon-img'/>
           </div>
          
         </div>
