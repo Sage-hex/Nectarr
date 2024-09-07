@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../Components/Header'
 import './About.css'
-import bee3 from '../assets/Images/Nectar-Buzz/bee3.png'
+// import bee3 from '../assets/Images/Nectar-Buzz/bee3.png'
 import honey1 from '../assets/Images/Nectar-Buzz/honey1.png'
 import mamaruka from '../assets/Images/Nectar-Buzz/mamaruka.jpg'
 import Origin from '../Components/Origin'
