@@ -8,7 +8,7 @@ import ResetPassword from "../Pages/ResetPassword/ResetPassword";
 import ResetPasswordAuth from "../Pages/ResetPasswordAuth/ResetPasswordAuth";
 import UserHome from "../Pages/UserDashBoard/UserHome";
 import WelcomePage from "../Pages/WelcomePage/WelcomePage";
-
+import BeekeperSignUp from '../Pages/BeekeperSignUp/Beekeper'
 const router = createHashRouter([
   {
     path: "/",
@@ -17,6 +17,10 @@ const router = createHashRouter([
   {
     path: "/signup",
     element: <SignUp />,
+  },
+  {
+    path: "/beekeper",
+    element: <BeekeperSignUp/>,
   },
   {
     path: "/login",
