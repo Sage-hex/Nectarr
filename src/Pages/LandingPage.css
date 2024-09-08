@@ -7,7 +7,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    
+   overflow: hidden;    
  
 }
 
@@ -25,178 +25,16 @@
 
 
 
-.featuresBox{
-    position: absolute;
-    width: 90%;
-    height: max-content;
-    top: 85%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    /* background-color: pink; */
-    align-items: center;
-    justify-content: center;
-    /* grid-template-columns: repeat(3, 1fr); */
-
-}
-
-.features{
-    width: 383px;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    background: #F3A089;
-
-    border-radius: 10px;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.904);
-
-    & .remove{
-        width: 50%;
-        height: 90%;
-    }
-    & .two{
-       order: 2;
-
-    }
-    .bee2{
-        height: 70%;
-    }
-    .text{
-        display: flex;
-        color: white;
-        flex-direction: column;
-        gap: 10px;
-
-        & p{
-            color: black;
-        }
-    }
-    
-}
-
-.two{
-    flex-direction: column;
-    & .remove{
-        order: 2;
-        
-    }
-}
 
 .space{
     width: 100%;
     height: 400px;
     background-color:white;
 }
-.collections{
-    width: 100%;
-    height: max-content;
-    background-color: #fff;
-    background-repeat: no-repeat;
-    /* background-color: red; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.text{
-    text-align: left;
-    margin-bottom: 30px;
-    h1{
-        font-size: 40px;
-    }
-}
-
-.items{
-    width: 90%;
-    height: max-content;
-    /* background-color: #fff; */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 80px;
-    background: linear-gradient(rgba(255, 255, 255, 0.712),rgba(255, 255, 255, 0.767)), url(../assets/Images/Nectar-Buzz/beeHive.png);
-    background-size: contain;
-    background-position:  right;
-    background-repeat: no-repeat;
-
-}
-
-.absolute{
-    width: 383px;
-    height: 30%;
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    gap: 30px;
-    position: absolute;
-    cursor: pointer;
-}
-
-.Clover{
-    width: 180px;
-    height: 50px;
-    background-color: #ffffff7a;
-    font-weight: 900;
-    font-size: 20px;
-    border: 1px solid white;
-    font-family: Lora;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.viewMore{
-    width: 110px;
-    height: 50px;
-    justify-self: flex-end;
-    align-self: flex-end;
-    background-color: #ffffff6b;
-    color: white;
-    font-weight: 900;
-    font-family: Lora;
-    font-size: 15px;
-    border: 1px solid white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.Boxhold{
-    width: 383px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-
-    & .boxText{
-        width: 100%;
-        /* width: 380px; */
-    }
-}
-
-.box{
-    width: 383px;
-    height: 350px;
-    border-radius: 20px;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.904);
-    position: relative;
-    cursor: pointer;
-}
 
 
-.hold{
-    width: 100%;
-    height: max-content;
-    flex-direction: column;
-    background: linear-gradient(rgba(255, 255, 255, 0.712),rgba(255, 255, 255, 0.767)), url(../assets/Images/Nectar-Buzz/honeywell.png);
-    background-size: contain ;
-    background-position:  center;
-    background-repeat: no-repeat;
-}
+
+
 
 .Nature{
     width: 100%;
@@ -204,36 +42,7 @@
     align-self: center;
     justify-content: center;
 }
-.Benefit{
-    
-    width: 90%;
-    height: max-content;
-    /* background: #000; */
-    gap: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 100px;
-    
 
-    & h2{
-        color: gold;
-        font-size: 30px;  
-    }
-    h1{
-        font-size: 30px;
-    }
-    p{
-        font-family: Lora;
-        font-size: 25px;
-        font-weight: 400;
-        line-height: 31.97px;
-        text-align: center;
-        
-    }
-    /* background-color: antiquewhite; */
-}
 
 
 .Who{
@@ -244,12 +53,7 @@
     align-items: center;
     justify-content: center;
 }
-.Circle{
-    width: 350px;
-    height: 400px;
-    align-self: center;
-   
-}
+
 .bee{
     background-color: #fff;
     box-shadow: none;
@@ -262,34 +66,14 @@
     border-radius: 0px;
     height: 500px;
 }
-.information{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 
-    & p{
-        text-align: left;
-    }
-
-    & ul{
-        align-self: flex-start;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-}
 
 
 .Stories{
     width: 90%;
     height: max-content;
     text-align: center;
-    background-color: grey;
+    background-color: #fff;
 }
 
 .topStories{
@@ -300,14 +84,13 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
-    background-color: red;
+    background-color: white;
 
    
 }
 .story{
     width: 500px;
     height: 100%;
-    background-color: pink;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -469,17 +252,13 @@
     }
   .information{
     width: 100%;
-  }
-
-  .text, .boxText{
     text-align: center;
   }
- 
-    .featuresBox{
-       top: 90%;
-              
-       
-    }
+
+  .text{
+    text-align: center;
+  }
+
     
     .origin{
         /* flex-direction: column; */
@@ -514,25 +293,6 @@
         }
     }
 
-    .Boxhold{
-        width: 300px;
-    }
-
-    .box{
-        width: 300px;
-        height: 300px;
-        
-    }
-    
-
-    .absolute{
-        width: 303px;
-        margin-top: 100px;
-        
-    }
-
-   
-
     .Stories{
         margin-bottom: 100px;
     }
@@ -542,9 +302,7 @@
 
 
  @media (max-width:500px) {   
-    .collections{
-        margin-top: 200px;
-    }
+   
     .featuresBox{
         margin-bottom: 1100px;
     }
@@ -564,7 +322,7 @@
     
     .space{
         /* width:100px; */
-        height: 1002px;
+        height: 1099px;
        
     }
  

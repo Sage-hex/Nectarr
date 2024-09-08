@@ -1,0 +1,9 @@
+.hold{
+    width: 100%;
+    height: max-content;
+    flex-direction: column;
+    background: linear-gradient(rgba(255, 255, 255, 0.712),rgba(255, 255, 255, 0.767)), url(../assets/Images/Nectar-Buzz/honeywell.png);
+    background-size: contain ;
+    background-position:  center;
+    background-repeat: no-repeat;
+}

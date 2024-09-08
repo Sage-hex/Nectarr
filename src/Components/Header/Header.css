@@ -55,9 +55,14 @@ header{
     gap: 10px;
 }
 
+.LOGO{
+    width: 100px;
+    height: 60px;
+}
+
 
 nav{
-    width: 40%;
+    width: 30%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -103,10 +108,11 @@ nav{
 
 @media (max-width:768px) {
 
-    nav, .phone{
+    nav, .phone, .cart, .icon{
        
         display: none;
     }
+   
     .burger{
         display: block;
     }

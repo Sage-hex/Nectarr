@@ -4,7 +4,7 @@ import './footer.css'
 import { FaCameraRetro } from "react-icons/fa";
 import { AiOutlineX } from "react-icons/ai";
 import { FaWhatsapp } from "react-icons/fa";
-import Logo from '../assets/Images/signup-logo.png'
+import Logo from '../../assets/Images/signup-logo.png'
 import Aos from 'aos';
 import "aos/dist/aos.css";
 

@@ -1,7 +1,9 @@
 import React from 'react'
-import honeyT from '../assets/Images/Nectar-Buzz/honeyText.png'
-import honeyTop from '../assets/Images/Nectar-Buzz/honeyTop.png'
-import hive from '../assets/Images/Nectar-Buzz/hive.png'
+import honeyTop from '../../assets/Images/Nectar-Buzz/honeyTop.png'
+import honeyT from '../../assets/Images/Nectar-Buzz/honeyText.png'
+
+// import honeyTop from '../../assets/Images/Nectar-Buzz/honeyTop.png'
+import hive from '../../assets/Images/Nectar-Buzz/hive.png'
 
 const Origin = () => {
   return (
