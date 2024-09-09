@@ -8,8 +8,9 @@ import ForgotPassword from "../Pages/ForgotPassword/ForgotPassword";
 import ResetPassword from "../Pages/ResetPassword/ResetPassword";
 import ResetPasswordAuth from "../Pages/ResetPasswordAuth/ResetPasswordAuth";
 import UserHome from "../Pages/UserDashBoard/UserHome";
-import Profile from "../Pages/Profile";
+import Profile from "../Pages/Profile/Profile";
 import About from "../Pages/About"
+import Shop from "../Pages/Shop/Shop";
 
 const router = createHashRouter([
     {
@@ -21,6 +22,11 @@ const router = createHashRouter([
         path: '/about',
         element: <About/>
     },
+
+    {
+      path: '/shop',
+      element: <Shop/>
+  },
     {
         path: '/Profile',
         element: <Profile/>

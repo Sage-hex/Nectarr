@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './profile.css'
-import Logo from '../assets/Images/signup-logo.png'
-import Button from '../Components/Button/Button'
+import Logo from '../../assets/Images/signup-logo.png'
+import Button from '../../Components/Button/Button'
 import { IoCameraOutline } from "react-icons/io5"
 import toast from 'react-hot-toast/headless'
 

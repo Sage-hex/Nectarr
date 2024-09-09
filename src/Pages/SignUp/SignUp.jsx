@@ -3,8 +3,11 @@ import "./SignUp.css";
 import { NavLink } from "react-router-dom";
 import signuplogo from "../../assets/Images/signup-logo.png";
 import Button from "../../Components/Button/Button";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+  const nav = useNavigate()
+
   return (
     <section className="signup-wrapper">
       <div className="signup-container">
@@ -91,7 +94,7 @@ const SignUp = () => {
               />
             </div>
             <div className="signup-btn">
-              <Button type="submit">Sign Up</Button>
+              <Button type="submit"  onClick={()=>nav('./profile')}>Sign Up</Button>
             </div>
           </form>
 

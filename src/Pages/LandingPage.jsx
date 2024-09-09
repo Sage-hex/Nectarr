@@ -7,7 +7,7 @@ import bee2 from '../assets/Images/Nectar-Buzz/bee2.png';
 
 import mamaruka from '../assets/Images/Nectar-Buzz/mamaruka.jpg';
 import mrstan from '../assets/Images/Nectar-Buzz/mr stanely.jpg';
-import './LandingPage.css'
+import "./LandingPage.css"
 import Aos from 'aos';
 import "aos/dist/aos.css";
 import Footer from '../Components/Footer/Footer';
@@ -16,14 +16,31 @@ import FeaturesBox from '../Components/Features/FeaturesBox';
 import SeeMore from '../Components/SeeMore/SeeMore';
 import Benefit from '../Components/Benefit/Benefit';
 import WhoWeAre from '../Components/WhoWeAre/WhoWeAre';
+// import LandingHero from '../Components/LandingHero/LandingHero';
 
 const LandingPage = () => {
-  
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     Aos.init();
   }, []);
+  
+  const phrases = [
+    "E SHOCK YOU!",
+    "CAN'T BELIEVE THESE DEALS!",
+    "AMAZING OFFERS JUST FOR YOU!",
+    "EXCLUSIVE DISCOUNTS TODAY!",
+    "SHOP NOW AND SAVE BIG!"
+  ];
 
+  useEffect(() => {
+    
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % phrases.length);
+    }, 3000);
+
+    return () => clearInterval(interval); 
+  }, [phrases.length]);
   
 
 
@@ -31,6 +48,15 @@ const LandingPage = () => {
     <div className='LandingPage'>
       <div className="Hero">
         <Header />
+      
+       <div className="HeroTextHold">
+       <div className="Landing-text-overlay">
+        <h1>{phrases[currentIndex]}</h1>
+        <div className="btnHold">
+          <button>shopnow</button>
+        </div>
+      </div>
+       </div>
       </div>
       
 

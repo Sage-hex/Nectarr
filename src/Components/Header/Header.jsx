@@ -36,7 +36,13 @@ const Header = () => {
           >
           <li>About</li>
           </NavLink>
-            <li>shops</li>
+          <NavLink
+          to="/shop"
+          style={{ textDecoration: 'none' }}
+          className={({ isActive }) => (isActive ? "active" : "notActive")}
+          >
+          <li>Shop</li>
+          </NavLink>
           </nav>
           <div className="account">
             <div className='phone'><FaPhoneVolume /> <span>07062810941</span></div>

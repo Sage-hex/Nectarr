@@ -1,5 +1,6 @@
 
 .featuresBox{
+    overflow: hidden;
     position: absolute;
     width: 90%;
     height: max-content;
