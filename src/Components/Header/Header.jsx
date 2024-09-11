@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import { RxDropdownMenu } from 'react-icons/rx'
 import Drop from '../DropDown/Drop';
 import { FaCircleUser } from "react-icons/fa6";
@@ -10,12 +10,12 @@ import { Link, NavLink } from 'react-router-dom';
 import Logo from '../../assets/Images/signup-logo.png'
 
 const Header = () => {
-  const [show, setShow]= useState(false)
-  const [nav, setNav]= useState(false)
+    const [show, setShow] = useState(false)
+    const [nav, setNav] = useState(false)
 
 
-  return (
-    <div className='header' >    
+    return (
+        <div className='header' >    
        <section className='section'>
         <p >Get 10% on your first Purchase. Sign Up to Mailing List</p>
        </section>
@@ -43,6 +43,13 @@ const Header = () => {
           >
           <li>Shop</li>
           </NavLink>
+          <NavLink
+          to="/hampper"
+          style={{ textDecoration: 'none' }}
+          className={({ isActive }) => (isActive ? "active" : "notActive")}
+          >
+          <li>Hampper</li>
+          </NavLink>
           </nav>
           <div className="account">
             <div className='phone'><FaPhoneVolume /> <span>07062810941</span></div>
@@ -57,7 +64,7 @@ const Header = () => {
 
         {show && <Drop setShow={setShow}/>}
     </div>
-  )
+    )
 }
 
 export default Header

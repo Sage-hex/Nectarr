@@ -10,28 +10,29 @@ import Shop from "../Pages/Shop/Shop";
 import UserHome from "../Pages/UserDashBoard/UserHome";
 import Profile from "../Pages/Profile/Profile";
 import About from "../Pages/AboutPage/About";
-import WelcomePage from '../Pages/WelcomePage/WelcomePage'
+import WelcomePage from '../Pages/WelcomePage/WelcomePage';
+import Hampper from '../Pages/Hampper/Hampper';
 
-const router = createHashRouter([
-  {
-    path: '/',
-    element: <Layout />, 
-    children: [
-      { path: '/', element: <LandingPage /> },
-      { path: 'about', element: <About /> },
-      { path: 'shop', element: <Shop /> },
-      { path: 'user', element: <UserHome /> },
-    ],
-  },
-  
- { path: 'profile', element: <Profile /> },
- { path: 'welcomePage', element: <WelcomePage /> },
- { path: 'signup', element: <SignUp /> },
- { path: 'login', element: <Login /> },
- { path: 'forgotPassword', element: <ForgotPassword /> },
- { path: 'resetPassword', element: <ResetPassword /> },
- { path: 'resetPasswordAuth', element: <ResetPasswordAuth/> },
-  
+const router = createHashRouter([{
+        path: '/',
+        element: <Layout />,
+        children: [
+            { path: '/', element: <LandingPage /> },
+            { path: 'about', element: <About /> },
+            { path: 'shop', element: <Shop /> },
+            { path: 'hampper', element: <Hampper /> },
+            { path: 'user', element: <UserHome /> },
+        ],
+    },
+
+    { path: 'profile', element: <Profile /> },
+    { path: 'welcomePage', element: <WelcomePage /> },
+    { path: 'signup', element: <SignUp /> },
+    { path: 'login', element: <Login /> },
+    { path: 'forgotPassword', element: <ForgotPassword /> },
+    { path: 'resetPassword', element: <ResetPassword /> },
+    { path: 'resetPasswordAuth', element: <ResetPasswordAuth/> },
+
 ]);
 
 export default router;
