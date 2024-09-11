@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import './dropdown.css'
+import './Dropdown.css'
 const Dropdown = ({setNav}) => {
     const nav = useNavigate()
     const route=()=>{
