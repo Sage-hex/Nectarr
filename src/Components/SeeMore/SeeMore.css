@@ -74,8 +74,19 @@
 
 @media (max-width:1280px) {
     .information{
-        width: 100%;
-        text-align: center;
+        width: 90%;
+        font-size: 20px;
+
+        & p{
+            font-size: 10px;
+            text-align: center;
+            line-height: 20.97px;
+
+        }
+        /* background: #000; */
+    }
+    .p{
+
     }
 
     .Benefit{
