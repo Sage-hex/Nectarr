@@ -62,8 +62,9 @@
         color: gold;
     }
 
-    & button{
-        width: 100px;
+    & .shopnow{
+        width: 150px;
+        color: gold;
         padding: 8px;
         border: none;
         background-color: #ffffff5d;

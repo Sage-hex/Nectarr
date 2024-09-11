@@ -1,6 +1,6 @@
 import React from 'react'
 import './ChooseUs.css'
-import mamaruka from '../../assets/Images/Nectar-Buzz/mamaruka.jpg'
+import beekeeper from '../../assets/Images/Nectar-Buzz/beefarmer.png'
 
 const ChooseUs = () => {
   return (
@@ -35,7 +35,7 @@ const ChooseUs = () => {
                         discover the pure joy of our honey.
                     </p>
                 </div>
-                <img src={mamaruka} alt="" className='bestimg'/>
+                <img src={beekeeper} alt="" className='bestimg'/>
             </div>
         </div>
   )

@@ -1,7 +1,7 @@
 import React from 'react'
 import honeyTop from '../../assets/Images/Nectar-Buzz/honeyTop.png'
 import honeyT from '../../assets/Images/Nectar-Buzz/honeyText.png'
-
+import './Origin.css'
 // import honeyTop from '../../assets/Images/Nectar-Buzz/honeyTop.png'
 import hive from '../../assets/Images/Nectar-Buzz/hive.png'
 

@@ -1,15 +1,19 @@
 import React, { useState } from 'react'
 import './profile.css'
 import Logo from '../../assets/Images/signup-logo.png'
+import { useNavigate } from 'react-router-dom'
 import Button from '../../Components/Button/Button'
-import { IoCameraOutline } from "react-icons/io5"
-import toast from 'react-hot-toast/headless'
+// import { IoCameraOutline } from "react-icons/io5"
+// import toast from 'react-hot-toast/headless'
+
 
 
 const Profile = ({}) => {
+  const nav = useNavigate()
     const [Images, setImages] = useState()
-    function submit() {
-      toast.success('image have been uploaded successfully🤗')
+    const submit=()=> {
+      alert('image have been uploaded successfully🤗')
+      nav('/login')
     }
 
    
@@ -33,6 +37,7 @@ const Profile = ({}) => {
              </div>
           </label>
             <Button onClick={submit}>UPLOAD</Button>
+            {/* <button className='Button-custom' onClick={submit}>Upload</button> */}
         </div>
     </div>
   )

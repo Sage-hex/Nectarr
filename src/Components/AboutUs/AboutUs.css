@@ -55,21 +55,41 @@
     .aboutText{
         width: 100%;
     }
+    .aboutImg{
+        width: 100%;
+        .round{
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    .AboutUs{
+        gap: 10px;
+    }
 }
 
 @media (max-width:500px) {
     .AboutUs{
-        margin-bottom: 400px;
+        margin-bottom: 200px;
     }
     .aboutImg{
         width: 100%;
         height: max-content;
+
+        &  .round{
+            width: 130px;
+            height: 130px;
+            border: 1px dashed grey;
+            background-color: pink;
+        }
     }
 
-    .round{
-        width: 200px;
-        height: 200px;
-        border: 1px dashed grey;
-        background-color: pink;
+    .aboutText{
+        text-align: center;
+        & p{
+            font-size: 15px;
+        }
     }
+
+   
 }

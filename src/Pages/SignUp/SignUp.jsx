@@ -1,12 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SignUp.css";
 import { NavLink } from "react-router-dom";
 import signuplogo from "../../assets/Images/signup-logo.png";
 import Button from "../../Components/Button/Button";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+import axios from "axios";
 
 const SignUp = () => {
-  const nav = useNavigate()
+  const nav = useNavigate();
+  const [username, setUserName] = useState('');
+  const [email, setEmail] = useState('');
+  const [passWord, setPassWord] = useState('');
+  const [phoneNo, setPhoneNo] = useState('');
+  const [location, setLocation] = useState('');
+  const [address, setAddress] = useState('');
+  const [gender, setGender] = useState('');
+  console.log(username);
+  console.log(email);
+  console.log(passWord);
+  console.log(phoneNo);
+  console.log(location);
+  console.log(address);
+  console.log(gender);
+  
+
+  const signUp = async (e) => {
+    e.preventDefault();
+
+    if (!username || !email || !passWord || !phoneNo || !location || !address || !gender) {
+      alert('All fields are required');
+      return;
+    }
+
+    const signUpData = {
+      username,
+      email,
+      passWord,
+      phoneNo,
+      location,
+      address,
+      gender
+    };
+    
+
+    try {
+      const url = "https://nectarbuzz.onrender.com/api/v1/user-signup";
+      const res = await axios.post(url, signUpData);
+      alert('Sign up successful 🎉🎉');
+      console.log(res.data);
+
+
+      // nav("/login"); /
+    } catch (err) {
+      toast.error('Sign up failed');
+      console.error(err);
+    }
+  };
+
+ 
+  
 
   return (
     <section className="signup-wrapper">
@@ -26,7 +79,7 @@ const SignUp = () => {
           <h1>Create an account</h1>
           <p className="signup-subtext">Sign up now and unlock exclusive access!</p>
 
-          <form className="signup-form">
+          <form className="signup-form" onSubmit={signUp}>
             <div className="input-group">
               <input
                 type="text"
@@ -34,6 +87,7 @@ const SignUp = () => {
                 placeholder="First name"
                 aria-label="First name"
                 required
+                onChange={(e)=>setUserName(e.target.value)}
               />
               <input
                 type="text"
@@ -41,10 +95,11 @@ const SignUp = () => {
                 placeholder="Last name"
                 aria-label="Last name"
                 required
+                onChange={(e)=>setUserName(e.target.value)}
               />
             </div>
             <div className="input-group">
-              <select name="gender" aria-label="Gender" required>
+              <select name="gender" aria-label="Gender" required onChange={(e)=>setGender(e.target.value)}>
                 <option value="" disabled selected>
                   Select Gender
                 </option>
@@ -59,6 +114,7 @@ const SignUp = () => {
                 placeholder="Tel"
                 aria-label="Telephone"
                 required
+                onChange={(e)=>setPhoneNo(e.target.value)}
               />
             </div>
             <div className="input-group">
@@ -68,6 +124,7 @@ const SignUp = () => {
                 placeholder="Location"
                 aria-label="Location"
                 required
+                onChange={(e)=>setLocation(e.target.value)}
               />
               <input
                 type="email"
@@ -75,6 +132,7 @@ const SignUp = () => {
                 placeholder="Email"
                 aria-label="Email"
                 required
+                onChange={(e)=>setEmail(e.target.value)}
               />
             </div>
             <div className="input-group">
@@ -84,6 +142,7 @@ const SignUp = () => {
                 placeholder="Password"
                 aria-label="Password"
                 required
+                onChange={(e)=>setPassWord(e.target.value)}
               />
               <input
                 type="password"
@@ -91,16 +150,17 @@ const SignUp = () => {
                 placeholder="Confirm password"
                 aria-label="Confirm password"
                 required
+                onChange={(e)=>setUserName(e.target.value)}
               />
             </div>
             <div className="signup-btn">
-              <Button type="submit"  onClick={()=>nav('./profile')}>Sign Up</Button>
+              <Button type="submit"  >Sign Up</Button>
             </div>
           </form>
 
           <p className="signup-terms-text">
             By Clicking Sign Up, you agree to our{" "}
-            <NavLink to="/terms">terms and conditions</NavLink>
+            <NavLink to="/about">terms and conditions</NavLink>
           </p>
         </section>
       </div>

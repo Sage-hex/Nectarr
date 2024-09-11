@@ -1,7 +1,7 @@
 .Profile{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(66.31deg, #a5793369 2.57%, rgba(63, 46, 19, 0.219) 98.46%), url(../assets/Images/login-left-image.jpeg);
+    background: linear-gradient(66.31deg, #a5793369 2.57%, rgba(63, 46, 19, 0.219) 98.46%), url(../../assets/Images/login-left-image.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -38,8 +38,14 @@
     & .Button-custom{
         width: 150px;
         color: black;
+        background: #9e892c;
+        border: none;
         font-weight: 900;
         border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        transition: 320ms ease-in-out;
+        
     }
 }
 
@@ -49,6 +55,10 @@
     border-radius: 100%;
     border: 2px dotted white;
     display: flex;
+    background: url(../../assets/Images/Nectar-Buzz/camerabg2-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px;
     align-items: center;
     justify-content: center;
     cursor: pointer;

@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom'
 import Aos from 'aos';
 import "aos/dist/aos.css";
 
+
 const Drop = ({setShow}) => {
   const [showheader, setShowheader]=useState(false)
+ 
+  
   useEffect(()=>{
     Aos.init()
   },[])
@@ -12,6 +15,7 @@ const Drop = ({setShow}) => {
     <div data-aos="zoom-in" style={{
         width:'130px',
         height: '100px', 
+        zIndex: 1000,
         backgroundColor:'white', 
         boxShadow:'1px 2px 3px gray',
         position:'absolute',
@@ -30,7 +34,7 @@ const Drop = ({setShow}) => {
               showheader ?     <button onClick={()=>nav('/logout')}  className='logout'>Logout</button> :
             <>
                 <p style={{color:'black', textShadow:'2px 2px 3px grey', fontSize:'15px'}}><Link color='black' to={'/login'} >LOGIN</Link></p>
-                <p style={{color:'black', textShadow:'2px 2px 3px grey',  fontSize:'15px'}}><Link color='black' to={'/signup'} >SIGN UP</Link></p>
+                <p style={{color:'black', textShadow:'2px 2px 3px grey',  fontSize:'15px'}}><Link color='black'to={'signup'} >SIGN UP</Link></p>
             </>
 }
          

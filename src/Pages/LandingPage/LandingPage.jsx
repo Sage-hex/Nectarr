@@ -1,25 +1,29 @@
 import React, { useEffect, useState } from 'react';
-import Header from '../Components/Header/Header';
-import remove from '../assets/Images/remove.png';
-import bee1 from '../assets/Images/Nectar-Buzz/bee1.png';
-import honey from '../assets/Images/Nectar-Buzz/honey1.png';
-import bee2 from '../assets/Images/Nectar-Buzz/bee2.png';
 
-import mamaruka from '../assets/Images/Nectar-Buzz/mamaruka.jpg';
-import mrstan from '../assets/Images/Nectar-Buzz/mr stanely.jpg';
+
+import mamaruka from '../../assets/Images/Nectar-Buzz/mamaruka.jpg';
+import mrstan from '../../assets/Images/Nectar-Buzz/mr stanely.jpg';
 import "./LandingPage.css"
 import Aos from 'aos';
 import "aos/dist/aos.css";
-import Footer from '../Components/Footer/Footer';
-import Origin from '../Components/Origin/Origin';
-import FeaturesBox from '../Components/Features/FeaturesBox';
-import SeeMore from '../Components/SeeMore/SeeMore';
-import Benefit from '../Components/Benefit/Benefit';
-import WhoWeAre from '../Components/WhoWeAre/WhoWeAre';
+import Footer from '../../Components/Footer/Footer';
+import Origin from '../../Components/Origin/Origin';
+import FeaturesBox from '../../Components/Features/FeaturesBox';
+import SeeMore from '../../Components/SeeMore/SeeMore';
+import Benefit from '../../Components/Benefit/Benefit';
+import WhoWeAre from '../../Components/WhoWeAre/WhoWeAre';
+import Ourservice from '../../Components/OurService/Ourservice';
+import GetStarted from '../GetStarted/GetStarted';
+// import { useOutletContext } from 'react-router-dom';
 // import LandingHero from '../Components/LandingHero/LandingHero';
 
 const LandingPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  // const context = useOutletContext();
+  // console.log(context); // Check if this logs { showModal, setShowModal }
+  // const { showModal, setShowModal } = context ;
+  // console.log(showModal)
+  
 
   useEffect(() => {
     Aos.init();
@@ -47,7 +51,6 @@ const LandingPage = () => {
   return (
     <div className='LandingPage'>
       <div className="Hero">
-        <Header />
       
        <div className="HeroTextHold">
        <div className="Landing-text-overlay">
@@ -64,13 +67,15 @@ const LandingPage = () => {
 
       <div className="space"></div>
 
+      <Ourservice/>
+
 
       <WhoWeAre/>
       
 
       <SeeMore/>
 
-      <Benefit/>
+      {/* <Benefit/> */}
 
       <div className="Stories">
         <h1>Top Stories From Consumers</h1>
@@ -95,8 +100,10 @@ const LandingPage = () => {
       </div>
      
       <Origin/>
-
-      <Footer/>
+      {/* {
+        {showModal} == true ? <GetStarted/> : null
+      } */}
+      
     </div>
   )
 }

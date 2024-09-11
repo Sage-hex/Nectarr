@@ -6,12 +6,16 @@ import { FaPhoneVolume } from "react-icons/fa6";
 import { BsCart3 } from "react-icons/bs";
 import './Header.css'
 import Dropdown from '../DropDown/DropDown';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import Logo from '../../assets/Images/signup-logo.png'
+// import { useOutletContext } from 'react-router-dom';
 
 const Header = () => {
-  const [show, setShow]= useState(false)
-  const [nav, setNav]= useState(false)
+  const Nav = useNavigate()
+  const [nav, setNav]= useState(false) 
+  // const context = useOutletContext();
+  // console.log(context);
+  // const { showModal, setShowModal } = context ;
 
 
   return (
@@ -47,7 +51,7 @@ const Header = () => {
           <div className="account">
             <div className='phone'><FaPhoneVolume /> <span>07062810941</span></div>
             <BsCart3 fontSize={'20px'} className='cart' />  
-            <FaCircleUser  className='icon'  onMouseEnter={()=> setShow(true)} />
+            <FaCircleUser  className='icon'  onClick={()=>Nav('/getStarted')} />
 
           </div>
           < RxDropdownMenu className='burger' onClick={()=>setNav(prenav => !prenav)}/>
@@ -55,7 +59,7 @@ const Header = () => {
         </header>
         {nav && <Dropdown setNav={setNav}/> }
 
-        {show && <Drop setShow={setShow}/>}
+        
     </div>
   )
 }

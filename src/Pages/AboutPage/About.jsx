@@ -1,18 +1,15 @@
 import {useEffect} from 'react'
-import Header from '../Components/Header/Header'
 import './About.css'
-// import bee3 from '../assets/Images/Nectar-Buzz/bee3.png'
-import honey1 from '../assets/Images/Nectar-Buzz/honey1.png'
+import honey1 from '../../assets/Images/Nectar-Buzz/honey1.png'
 
-import Origin from '../Components/Origin/Origin'
-import Footer from '../Components/Footer/Footer'
+import Origin from '../../Components/Origin/Origin'
 
 import Aos from 'aos';
 import "aos/dist/aos.css";
-import AboutUs from '../Components/AboutUs/AboutUs'
-import ChooseUs from '../Components/ChooseUs/ChooseUs'
-import OurBeekeepers from '../Components/OurBeeKeepers/OurBeekeepers'
-import DoYouKnow from '../Components/DoYouKnow/DoYouKnow'
+import AboutUs from '../../Components/AboutUs/AboutUs'
+import ChooseUs from '../../Components/ChooseUs/ChooseUs'
+import OurBeekeepers from '../../Components/OurBeeKeepers/OurBeekeepers'
+import DoYouKnow from '../../Components/DoYouKnow/DoYouKnow'
 
 
 const About = () => {
@@ -22,14 +19,13 @@ const About = () => {
   return (
     <div className='AboutPage'>
         <div className="About">
-          <Header/>
            <div className="hero">
                 <img src={honey1} alt="" className='honey1'/>
              <div className="heroLeft">
                    <div className="heroMessage">
                       <h1>Nature's <span>Golden</span><span>Buzz</span></h1>
                       <h1>100% Organic</h1>
-                      <button>shop Now</button>
+                      <button className='shopnow'>shop Now</button>
                    </div>
               </div>
               <div className="heroLeft">
@@ -47,7 +43,6 @@ const About = () => {
         <DoYouKnow/>
 
         <Origin/>
-        <Footer/>
          
 
     </div>

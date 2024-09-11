@@ -1,0 +1,164 @@
+
+.origin{
+    width: 100%;
+    height: max-content;
+    padding: 30px;
+    background: #E8BF7B66;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &{
+        .HoneyT{
+            height: 80px;
+            width: 150px;
+            left: 25px;
+            top: 0px;
+            position: absolute;
+        }
+    }
+
+    & .hive{
+        height: 150px;
+        width: 200px;
+        justify-self: flex-end;
+    }
+    
+    
+}
+
+
+.theOrigin{
+    width: 600px;
+    height: 250px;
+    background: #742712;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.815);
+    gap: 20px;
+
+   
+
+
+    .Top{
+        width: 100%;
+        height: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        
+
+        & .HoneyTop{
+            width: 50px;
+            height: 50px;
+            /* position: absolute; */
+            top: 50px;
+            left: 0px;
+            /* right: 0px; */
+        }
+    }
+    
+}
+
+.subscribe{
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.459),rgba(255, 255, 255, 0.37)), url(../../assets/Images/Nectar-Buzz/bee3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+& .wrap{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & h2{
+        font-size: 20px;
+        align-self: center;
+        /* margin-bottom: 90px; */
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+}
+}
+
+.wrap .input, .wrap .button{
+    width: 40%;
+    padding: 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: transparent;
+    margin-bottom: 15px;
+    border: 2px solid #742712
+}
+
+.wrap .button{
+    width: 15%;
+    height: 20%;
+    cursor: pointer;
+   
+    color: black;
+    font-weight: 800;
+}
+
+
+@media (max-width:1280px){
+       
+    .theOrigin{
+        width: 400px;
+    }
+  
+
+  .text{
+    text-align: center;
+  }
+
+    
+    .origin{
+        /* flex-direction: column; */
+        margin-top: 0;
+        .HoneyT{
+            left: 0px;
+        }
+        .theOrigin{
+            height: 250px;
+            width: 320px;
+        }
+    }
+}
+
+@media (max-width:500px){
+    .origin{
+        width: 100vw;
+    }
+
+    .theOrigin{
+        width: 300px;
+    }
+
+
+    .input, .button{
+        width: 60%;
+    }
+    
+    .button{
+        width: 30%;
+    }
+}

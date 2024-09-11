@@ -1,8 +1,20 @@
+.COlABO{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.438),rgba(255, 255, 255, 0.514)),url(../../assets/Images/Nectar-Buzz/bee.png);
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .Benefit{
     
     width: 90%;
     height: max-content;
-    /* background: #000; */
     gap: 50px;
     display: flex;
     flex-wrap: wrap;
@@ -68,6 +80,10 @@
 
     .Benefit{
         justify-content: center;
+    }
+    .Circle{
+        width: 300px;
+        height: 300px;
     }
 
 

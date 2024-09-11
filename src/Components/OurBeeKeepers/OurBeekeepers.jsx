@@ -1,6 +1,9 @@
 import React from 'react'
 import './OurBeekeepers.css'
-import mamaruka from '../../assets/Images/Nectar-Buzz/mamaruka.jpg'
+import farmer1 from '../../assets/Images/Nectar-Buzz/Frame 1901.png'
+import farmer2 from '../../assets/Images/Nectar-Buzz/Frame 1882.png'
+import farmer3 from '../../assets/Images/Nectar-Buzz/Frame 1880.png'
+import farmer4 from '../../assets/Images/Nectar-Buzz/Frame 1879.png'
 
 const OurBeekeepers = () => {
   return (
@@ -8,7 +11,7 @@ const OurBeekeepers = () => {
             <h1>MEET OUR BEEKEEPERS</h1>
             <div className="BeeKeepers">
                 <div className="OurBeeKeeper">
-                    <img src={mamaruka} alt="" className='beekeeper'/>
+                    <img src={farmer1} alt="" className='beekeeper'/>
                     <div className="beeText">
                         <h3>Doris Ifeola</h3>
                         <p>
@@ -24,7 +27,7 @@ const OurBeekeepers = () => {
                 </div>
 
                 <div className="OurBeeKeeper">
-                    <img src={mamaruka} alt="" className='beekeeper'/>
+                    <img src={farmer2} alt="" className='beekeeper'/>
                     <div className="beeText">
                     <h3>Joseph Adahka</h3>
                         <p>
@@ -43,7 +46,7 @@ const OurBeekeepers = () => {
 
             <div className="BeeKeepers">
                 <div className="OurBeeKeeper">
-                    <img src={mamaruka} alt="" className='beekeeper'/>
+                    <img src={farmer4} alt="" className='beekeeper'/>
                     <div className="beeText">
                         <h3>Chindeu Igwe</h3>
                         <p>
@@ -60,7 +63,7 @@ const OurBeekeepers = () => {
                 </div>
 
                 <div className="OurBeeKeeper">
-                    <img src={mamaruka} alt="" className='beekeeper'/>
+                    <img src={farmer3} alt="" className='beekeeper'/>
                     <div className="beeText">
                         <h3>Cassandra Taiwo</h3>
                         <p>

@@ -16,7 +16,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 150px;
+    gap: 160px;
 }
 
 .OurBeeKeeper{
@@ -35,5 +35,28 @@
     & p{
         font-size: 15px;
         font-weight: 500;
+    }
+}
+
+@media (max-width:500px) {
+    .MeetBeeKeepers{
+        & h1{
+            font-size: 20px;
+        }
+    }
+
+    .OurBeeKeeper{
+        background-color: #fff;
+        height: max-content;
+    }
+
+    .BeeKeepers{
+        height: max-content;
+        /* background-color: red; */
+        gap: 50px;
+    }
+
+    .beekeeper{
+        height: 300px;
     }
 }

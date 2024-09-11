@@ -25,13 +25,12 @@ li, p{
 
 
 .HoneyCon{
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: red; */
     
 }
 
@@ -48,31 +47,42 @@ li, p{
    margin-bottom: 50px;
    display: flex;
    flex-wrap: wrap;
-   gap: 364px;
+  
+   gap: 350px !important;
 }
 
 .beeYourSelf{
+    
     width: 400px;
     height: 400px;
-    background: url(../../assets/Images/Nectar-Buzz/hero-image.jpg);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+    
+   
 }
 
-input{
-    width: 80%;
-    height: 50px;
-    background-color: #ffffff00;
-    border: 1px dotted white;
-    font-size: 20px;
-    color: white;
-    padding: 10px;
-}
 
-@media (max-width:1280px){
+
+
+@media (max-width:1220px){
     .HFT{
-        gap: 0px;
+        width: 90%;
+        height: max-content;
+        margin-bottom: 50px;
+        display: flex;
+        flex-wrap: wrap;
+       
+        gap: 85px !important;
+     }
+
+     .beeYourSelf{
+        width: 200px;
+     }
+
+    
+}
+
+@media (max-width:500px) {
+    .beeYourSelf{
+        width: 400px;
     }
+    
 }

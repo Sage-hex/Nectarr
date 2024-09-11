@@ -72,6 +72,7 @@
    padding: 30px 20px;
   /* height: 40%; */
   margin-top: 5rem;
+
 }
 
 /* Container for each input and label */
@@ -86,8 +87,10 @@
   width: 100%;
   padding: 12px 0 6px 0;
   font-size: 16px;
-  border: none;
-  border-bottom: 2px solid #ccc;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
   background: transparent;
   outline: none;
   transition: border-color 0.3s ease;
@@ -99,8 +102,9 @@
 
 .login-form-group label {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: 20px;
+  
   font-size: 16px;
   color: #aaa;
   transition: all 0.2s ease;
@@ -110,7 +114,7 @@
 input:focus + label,
 input:not(:placeholder-shown) + label {
   top: -20px;
-  left: 0;
+  left: 10px;
   font-size: 10px;
   color: #fff;
 }
@@ -124,6 +128,7 @@ input:not(:placeholder-shown) + label {
 .login-form-actions .Button-custom{
   margin-top: 1rem;
   width: 50%;
+  color: white;
   border-radius: 8px;
 }
 

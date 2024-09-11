@@ -1,7 +1,7 @@
 import React from 'react'
 import '../SeeMore/SeeMore.css'
 import Collection from '../../Components/Collections/Collection';
-import Honey5 from '../../assets/Images/Nectar-Buzz/Honey5.jpg';
+import HoneyDrop from '../../assets/Images/Nectar-Buzz/HoneyDrop.png';
 
 
 import './WhoWeAre.css'
@@ -11,7 +11,7 @@ const WhoWeAre = () => {
     <div className="hold">
         <section className='Who'>
           <div className="Benefit">
-            <img src={Honey5} alt="" className='Circle' />
+            <img src={HoneyDrop} alt="" className='Circle' />
             <div className="information">
               <h1> WHO WE ARE</h1>
               <p>Discover the pure sweetness of nature at Nectar Buzz,

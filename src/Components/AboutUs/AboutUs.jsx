@@ -1,14 +1,21 @@
 import React from 'react'
 import './AboutUs.css'
-import Helen from '../../assets/Images/remove.png'
+import Helen1 from '../../assets/Images/Nectar-Buzz/Ellipse 10.png'
+import Helen2 from '../../assets/Images/Nectar-Buzz/Ellipse 11.png'
+import Helen3 from '../../assets/Images/Nectar-Buzz/Ellipse 12.png'
+import Helen4 from '../../assets/Images/Nectar-Buzz/Ellipse 13.png'
+import Helen5 from '../../assets/Images/Nectar-Buzz/Ellipse 14.png'
 
 
 const AboutUs = () => {
   return (
     <div className="AboutUs">
-            <h1>About Us</h1>
+            
             <div className="about">
                 <div className="aboutText">
+                    <h1>About Us</h1>
+                    <br />
+                    <br />
                     <p>
                        Discover the Sweetness of Nature
                        Nestles in the heart of Lagos, Nectar Buzz is your go-to
@@ -22,11 +29,11 @@ const AboutUs = () => {
                 </div>
 
                 <div className="aboutImg" data-aos="zoom-in">
-                    <img src={Helen} alt="" className='round' data-aos="fade-left"/>
-                    <img src={Helen} alt="" className='round'/>
-                    <img src={Helen} alt="" className='round'/>
-                    <img src={Helen} alt="" className='round'/>
-                    <img src={Helen} alt="" className='round'/>
+                    <img src={Helen1} alt="" className='round' />
+                    <img src={Helen2} alt="" className='round'/>
+                    <img src={Helen3} alt="" className='round'/>
+                    <img src={Helen4} alt="" className='round'/>
+                    <img src={Helen5} alt="" className='round'/>
                 </div>
             </div>
         </div>
