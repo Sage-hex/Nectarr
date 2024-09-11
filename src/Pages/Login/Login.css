@@ -72,6 +72,7 @@
    padding: 30px 20px;
   /* height: 40%; */
   margin-top: 5rem;
+
 }
 
 /* Container for each input and label */
@@ -88,6 +89,7 @@
   font-size: 16px;
   border: none;
   border-bottom: 2px solid #ccc;
+  color: white;
   background: transparent;
   outline: none;
   transition: border-color 0.3s ease;
@@ -124,6 +126,7 @@ input:not(:placeholder-shown) + label {
 .login-form-actions .Button-custom{
   margin-top: 1rem;
   width: 50%;
+  color: white;
   border-radius: 8px;
 }
 

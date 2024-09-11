@@ -4,7 +4,13 @@ import userIcon from "../../assets/Images/user-icon.png"; // Import the user ico
 import Button from "../../Components/Button/Button";
 import loginImg from "../../assets/Images/signup-logo.png";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const LoginForm = () => {
+  const nav = useNavigate()
+  const Submit =()=>{
+    alert('Login successfull🤗')
+      nav('/welcomePage')
+  }
   return (
     // <section className="login-container">
       <section className="login-wrapper">
@@ -44,7 +50,7 @@ const LoginForm = () => {
             <NavLink to="/forgotpassword" className="forgot-password-link">Forget password</NavLink>
           
             <div className="login-form-actions">
-              <Button>Login</Button>
+              <Button onClick={Submit} >Login</Button>
             </div>
           </form>
           <section className="signup-prompt">

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./ResetPasswordAuth.css"; // Updated CSS file for styling
-import Button from "../../Components/Button/Button"; // Assuming you already have a button component
+import Button from "../../Components/Button/Button";
+import { useNavigate } from "react-router-dom";
 
 const ResetPasswordAuth = () => {
   const [code, setCode] = useState(new Array(4).fill(""));
+  const nav = useNavigate()
 
   const handleChange = (element, index) => {
     if (isNaN(element.value)) return;
@@ -20,6 +22,8 @@ const ResetPasswordAuth = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(`Entered code is: ${code.join("")}`);
+    nav('/profile')
+    
   };
 
   return (

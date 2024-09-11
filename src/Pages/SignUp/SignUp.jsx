@@ -3,8 +3,11 @@ import "./SignUp.css";
 import { NavLink } from "react-router-dom";
 import signuplogo from "../../assets/Images/signup-logo.png";
 import Button from "../../Components/Button/Button";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+  const nav = useNavigate()
+
   return (
     <section className="signup-wrapper">
       <div className="signup-container">
@@ -23,7 +26,7 @@ const SignUp = () => {
           <h1>Create an account</h1>
           <p className="signup-subtext">Sign up now and unlock exclusive access!</p>
 
-          <form className="signup-form">
+          <form className="signup-form" onSubmit={()=>nav('/resetPasswordAuth')}>
             <div className="input-group">
               <input
                 type="text"
@@ -91,13 +94,13 @@ const SignUp = () => {
               />
             </div>
             <div className="signup-btn">
-              <Button type="submit">Sign Up</Button>
+              <Button type="submit"  >Sign Up</Button>
             </div>
           </form>
 
           <p className="signup-terms-text">
             By Clicking Sign Up, you agree to our{" "}
-            <NavLink to="/terms">terms and conditions</NavLink>
+            <NavLink to="/about">terms and conditions</NavLink>
           </p>
         </section>
       </div>

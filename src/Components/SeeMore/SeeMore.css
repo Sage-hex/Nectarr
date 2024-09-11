@@ -1,0 +1,74 @@
+.Benefit{
+    
+    width: 90%;
+    height: max-content;
+    /* background: #000; */
+    gap: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    overflow: hidden;
+    
+
+    & h2{
+        color: gold;
+        font-size: 30px;  
+    }
+    h1{
+        font-size: 30px;
+    }
+    p{
+        font-family: Lora;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 31.97px;
+        text-align: center;
+        
+    }
+    /* background-color: antiquewhite; */
+}
+
+.Circle{
+    width: 400px;
+    height: 400px;
+    align-self: center;
+   
+}
+
+.information{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & p{
+        text-align: left;
+    }
+
+    & ul{
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+@media (max-width:1280px) {
+    .information{
+        width: 100%;
+        text-align: center;
+    }
+
+    .Benefit{
+        justify-content: center;
+    }
+
+
+}

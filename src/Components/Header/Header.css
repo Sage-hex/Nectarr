@@ -1,0 +1,141 @@
+.header{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Lora;
+    & p{
+        margin-left: 35px;
+        color: gold;
+        align-self: start;
+
+        & span{
+            color: white;
+        }
+    }
+}
+
+.section{
+    width: 100%;
+    height: 50px !important;
+    background: linear-gradient(90deg, rgba(92, 22, 3, 0.8) 0%, #7C1E04 21.86%, #532316 44.65%, #330E03 71.5%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    
+    & p{
+        font-size: 20px;
+        color: white;
+        
+    }
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(90deg, rgba(92, 22, 3, 0.849) 0%, #7c1e04e1 21.86%, #532316e7 44.65%, #330e03ef 71.5%);
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    /* padding-left: 50px; */
+}
+
+.icon{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.phone{
+    display: flex;
+    gap: 10px;
+}
+
+.LOGO{
+    width: 100px;
+    height: 50px;
+}
+
+
+nav{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & li{
+        list-style: none;
+        text-transform: uppercase;
+        font-size: 15px;
+        text-shadow: 1px 1px 3px gray;
+        cursor: pointer;
+        /* color: white; */
+
+
+    }
+}
+
+.active{
+    color: gold;
+}
+
+.notActive{
+    color: white;
+}
+/* li:hover{
+    transform: rotate(-180deg);
+} */
+
+.burger{
+    font-size: 40px;
+    display: none;
+}
+
+.account{
+    width:20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+   
+    
+}
+
+
+@media (max-width:768px) {
+
+    nav, .phone, .cart, .icon{
+       
+        display: none;
+    }
+   
+    .burger{
+        display: block;
+    }
+
+
+}
+
+@media (max-width:425px){
+    .section{
+        width: 100%;
+        height: 50px !important;
+        background: linear-gradient(90deg, rgba(92, 22, 3, 0.8) 0%, #7C1E04 21.86%, #532316 44.65%, #330E03 71.5%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        
+        & p{
+            font-size: 10px;
+            color: white;
+            
+        }
+
+    }
+}
+
