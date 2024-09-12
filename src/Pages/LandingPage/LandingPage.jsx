@@ -13,44 +13,37 @@ import SeeMore from '../../Components/SeeMore/SeeMore';
 import Benefit from '../../Components/Benefit/Benefit';
 import WhoWeAre from '../../Components/WhoWeAre/WhoWeAre';
 import Ourservice from '../../Components/OurService/Ourservice';
-import GetStarted from '../GetStarted/GetStarted';
-// import { useOutletContext } from 'react-router-dom';
-// import LandingHero from '../Components/LandingHero/LandingHero';
+import LandingHero from '../../Components/LandingHero/LandingHero';
 
 const LandingPage = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    // const context = useOutletContext();
-    // console.log(context); // Check if this logs { showModal, setShowModal }
-    // const { showModal, setShowModal } = context ;
-    // console.log(showModal)
+    // const [currentIndex, setCurrentIndex] = useState(0);
 
+    // useEffect(() => {
+    //     Aos.init();
+    // }, []);
 
-    useEffect(() => {
-        Aos.init();
-    }, []);
+    // const phrases = [
+    //     "E SHOCK YOU!",
+    //     "CAN'T BELIEVE THESE DEALS!",
+    //     "AMAZING OFFERS JUST FOR YOU!",
+    //     "EXCLUSIVE DISCOUNTS TODAY!",
+    //     "SHOP NOW AND SAVE BIG!"
+    // ];
 
-    const phrases = [
-        "E SHOCK YOU!",
-        "CAN'T BELIEVE THESE DEALS!",
-        "AMAZING OFFERS JUST FOR YOU!",
-        "EXCLUSIVE DISCOUNTS TODAY!",
-        "SHOP NOW AND SAVE BIG!"
-    ];
+    // useEffect(() => {
 
-    useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setCurrentIndex((prevIndex) => (prevIndex + 1) % phrases.length);
+    //     }, 3000);
 
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-        }, 3000);
-
-        return () => clearInterval(interval);
-    }, [phrases.length]);
+    //     return () => clearInterval(interval);
+    // }, [phrases.length]);
 
 
 
     return (
         <div className='LandingPage'>
-      <div className="Hero">
+      {/*<div className="Hero">
       
        <div className="HeroTextHold">
        <div className="Landing-text-overlay">
@@ -60,7 +53,8 @@ const LandingPage = () => {
         </div>
       </div>
        </div>
-      </div>
+      </div>*/}
+        <LandingHero/>
       
 
       <FeaturesBox/>
@@ -75,7 +69,7 @@ const LandingPage = () => {
 
       <SeeMore/>
 
-      {/* <Benefit/> */}
+      <Benefit/>
 
       <div className="Stories">
         <h1>Top Stories From Consumers</h1>
@@ -100,10 +94,8 @@ const LandingPage = () => {
       </div>
      
       <Origin/>
-      {/* {
-        {showModal} == true ? <GetStarted/> : null
-      } */}
-      
+
+      {/* <Footer/> */}
     </div>
     )
 }

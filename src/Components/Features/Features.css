@@ -1,13 +1,13 @@
 .featuresBox {
-    overflow: hidden;
+    /*    overflow: hidden;*/
     position: absolute;
     width: 90%;
     height: max-content;
-    top: 85%;
+    top: 90%;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    /* background-color: pink; */
+    /*    border: 12px solid black background-color: pink;*/
     align-items: center;
     justify-content: center;
     /* grid-template-columns: repeat(3, 1fr); */
@@ -15,53 +15,31 @@
 }
 
 .features {
-    width: 383px;
-    height: 300px;
+    width: 340px;
+    height: 350px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 5px;
-    background: #F3A089;
-
+    gap: 20px;
+    background: #F0F1EB;
     border-radius: 10px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.904);
-
-    & .remove {
-        width: 50%;
-        height: 90%;
-    }
-
-    & .two {
-        order: 2;
-
-    }
-
-    .bee2 {
-        height: 70%;
-    }
-
-    .text {
-        display: flex;
-        color: white;
-        flex-direction: column;
-        gap: 10px;
-
-        & p {
-            color: black;
-        }
-    }
-
 }
 
-.two {
-    flex-direction: column;
-
-    & .remove {
-        order: 2;
-
-    }
+.features .feature-card-image-container {
+    width: 90%;
+    height: 60%;
+    border: 2px solid green;
 }
 
+.feature-card-image-container .feature-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
 
 @media (max-width:1280px) {
 

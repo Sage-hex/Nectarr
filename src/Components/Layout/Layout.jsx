@@ -1,5 +1,6 @@
+import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Header from '../Header/Header';
+import Header from '../Header/Header2';
 import Footer from '../Footer/Footer';
 import './Layout.css'; // Ensure this file is correctly included
 

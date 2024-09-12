@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './LandingHero.css';
 import HeroTextImage from '../../assets/Images/Nectar-Buzz/hero-image.jpg'
+import Button from '../Button/Button'
+
 const LandingHero = () => {
 
 
@@ -33,6 +35,8 @@ const LandingHero = () => {
       <article className="Landing-text-overlay">
         <h1>{phrases[currentIndex]}</h1>
       </article>
+      <Button>shop now</Button>
+      {/*<button>bbh</button>*/}
     </section>
     );
 };
