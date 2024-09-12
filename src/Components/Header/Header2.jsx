@@ -5,6 +5,7 @@ import logo from '../../assets/Images/signup-logo.png'
 import { FaSearch } from "react-icons/fa";
 import { MdShoppingCart } from "react-icons/md";
 import { VscAccount } from "react-icons/vsc";
+import { MdCancel } from "react-icons/md";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +38,7 @@ const Navbar = () => {
             </div>
 
             <div className="navbar__hamburger" onClick={toggleMenu}>
-                {isOpen ? '✖' : '☰'}
+                {isOpen ? '✘' : '☰'}
             </div>
         </header>
     );

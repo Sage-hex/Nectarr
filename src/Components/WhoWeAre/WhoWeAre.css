@@ -53,3 +53,80 @@
     font-size: 1.5rem;
     line-height: 30px;
 }
+
+@media (max-width:768px) {
+    .who-we-are-wrapper {
+        margin-top: 50rem;
+        height: max-content;
+    }
+
+    .who-we-are-container {
+        width: 100%;
+    }
+
+    .who-we-are-container {
+        flex-direction: column;
+    }
+
+    .who-we-are-image-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .who-we-are-image-wrapper img {
+        width: 35%;
+        height: 35%;
+    }
+
+    .who-we-are-p-wrapper {
+        width: 100%;
+    }
+
+    .who-we-are-p-wrapper .who-we-are-p-text {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width:485px) {
+    .who-we-are-container {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .who-we-are-wrapper h1 {
+        font-size: 1.5rem;
+    }
+
+    .who-we-are-wrapper {
+        margin-top: 70rem;
+        /*        height: max-content;*/
+    }
+
+    .who-we-are-image-wrapper {
+        height: 50%;
+
+    }
+
+    .who-we-are-image-wrapper img {
+        width: 90%;
+        height: 35%;
+    }
+
+    .who-we-are-container {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .who-we-are-p-wrapper {
+        height: 50%;
+    }
+
+    .who-we-are-p-wrapper .who-we-are-p-text {
+        font-size: 15px;
+        line-height: 20px;
+
+    }
+}
