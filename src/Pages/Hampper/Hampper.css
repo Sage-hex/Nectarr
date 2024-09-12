@@ -1,9 +1,17 @@
 .hampper-container {
     width: 100%;
     height: auto;
-    /*    background-color: red;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(238, 238, 238);
     border: 10px solid black;
     /* overflow-wrap: normal; */
 
+}
+
+.hampper-container .hampper-title {
+    padding: 2rem;
+    font-size: 2.5rem;
 }

@@ -1,19 +1,55 @@
-.hold {
+.who-we-are-wrapper {
     width: 100%;
-    height: max-content;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     background: linear-gradient(rgba(255, 255, 255, 0.712), rgba(255, 255, 255, 0.767)), url(../assets/Images/Nectar-Buzz/honeywell.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    border: 2px solid red;
+    margin-top: 20rem;
+    padding: 1rem;
 }
 
+.who-we-are-wrapper h1 {
+    font-size: 2.3rem;
+}
 
-.Who {
-    width: 100%;
-    height: max-content;
+.who-we-are-container {
+    width: 95%;
+    height: 100%;
+    border: 2px solid green;
+    display: flex;
+    align-items: center;
+    /*    justify-content: center;*/
+    gap: 20px;
+}
+
+.who-we-are-image-wrapper {
+    width: 50%;
+    height: 100%;
+    border: 2px solid red;
+}
+
+.who-we-are-image-wrapper img {
+    width: 90%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.who-we-are-p-wrapper {
+    width: 50%;
+    height: 100%;
+    border: 2px solid green;
     display: flex;
     align-items: center;
     justify-content: center;
+}
 
+.who-we-are-p-wrapper .who-we-are-p-text {
+    font-size: 1.5rem;
+    line-height: 30px;
 }

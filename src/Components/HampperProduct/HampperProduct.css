@@ -1,0 +1,24 @@
+.hamper-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 30px;
+    /* margin-bottom: 20rem; */
+    background-color: lightgray;
+}
+
+.hampper-product-card {
+    width: 300px;
+    max-width: 50%;
+    border: 3px solid #000;
+    /*    border-radius: 0 0 30px 30px;*/
+    /*    overflow: hidden;*/
+    /*    position: relative;*/
+    text-align: center;
+    margin: 20px;
+    /*display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;nn
+*/
+}

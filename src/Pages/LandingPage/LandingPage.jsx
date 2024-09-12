@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
-
 import mamaruka from '../../assets/Images/Nectar-Buzz/mamaruka.jpg';
 import mrstan from '../../assets/Images/Nectar-Buzz/mr stanely.jpg';
 import "./LandingPage.css"
@@ -14,6 +12,7 @@ import Benefit from '../../Components/Benefit/Benefit';
 import WhoWeAre from '../../Components/WhoWeAre/WhoWeAre';
 import Ourservice from '../../Components/OurService/Ourservice';
 import LandingHero from '../../Components/LandingHero/LandingHero';
+
 
 const LandingPage = () => {
     // const [currentIndex, setCurrentIndex] = useState(0);
@@ -43,28 +42,19 @@ const LandingPage = () => {
 
     return (
         <div className='LandingPage'>
-      {/*<div className="Hero">
-      
-       <div className="HeroTextHold">
-       <div className="Landing-text-overlay">
-        <h1>{phrases[currentIndex]}</h1>
-        <div className="btnHold">
-          <button>shopnow</button>
-        </div>
-      </div>
-       </div>
-      </div>*/}
+        {/*<HeaderAd/>*/}
         <LandingHero/>
       
 
       <FeaturesBox/>
+      <WhoWeAre/>
 
       <div className="space"></div>
 
       <Ourservice/>
 
 
-      <WhoWeAre/>
+      
       
 
       <SeeMore/>
