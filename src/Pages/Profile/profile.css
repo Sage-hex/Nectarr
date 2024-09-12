@@ -1,5 +1,4 @@
-<<<<<<< HEAD:src/Pages/Profile/profile.css
-.Profile{
+.Profile {
     width: 100%;
     height: 100vh;
     background: linear-gradient(66.31deg, #a5793369 2.57%, rgba(63, 46, 19, 0.219) 98.46%), url(../../assets/Images/login-left-image.jpeg);
@@ -14,16 +13,16 @@
     /* background-size: cover; */
 }
 
-.logo{
+.logo {
     width: 120px;
     height: 50px;
     /* position: absolute; */
     top: 0;
-    
-    
+
+
 }
 
-.profileBox{
+.profileBox {
     width: 50%;
     height: 80%;
     background: #0000008c;
@@ -36,7 +35,7 @@
     justify-content: center;
     gap: 20px;
 
-    & .Button-custom{
+    & .Button-custom {
         width: 150px;
         color: black;
         background: #9e892c;
@@ -46,11 +45,11 @@
         padding: 10px;
         cursor: pointer;
         transition: 320ms ease-in-out;
-        
+
     }
 }
 
-.circular{
+.circular {
     width: 300px;
     height: 300px;
     border-radius: 100%;
@@ -64,7 +63,7 @@
     justify-content: center;
     cursor: pointer;
 
-    & img{
+    & img {
         width: 100%;
         height: 100%;
         border-radius: 100%;
@@ -75,137 +74,32 @@
 
 
 @media (max-width:768px) {
-    .circular{
+    .circular {
         width: 200px;
         height: 200px;
     }
 
-    
+
 }
 
 @media (max-width:425px) {
 
-    .logo{
+    .logo {
         align-self: flex-start;
         justify-self: flex-start;
     }
 
-    .profileBox{
+    .profileBox {
         width: 100%;
         height: 70%;
     }
-    .circular{
+
+    .circular {
         width: 150px;
         height: 150px;
     }
 
-    
 
-    
+
+
 }
-=======
-.Profile{
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(66.31deg, #a5793369 2.57%, rgba(63, 46, 19, 0.219) 98.46%), url(../../assets/Images/login-left-image.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    /* background-size: cover; */
-}
-
-.logo{
-    width: 120px;
-    height: 50px;
-    /* position: absolute; */
-    top: 0;
-    
-    
-}
-
-.profileBox{
-    width: 50%;
-    height: 80%;
-    background: #0000008c;
-    align-self: center;
-    justify-self: center;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-
-    & .Button-custom{
-        width: 150px;
-        color: black;
-        background: #9e892c;
-        border: none;
-        font-weight: 900;
-        border-radius: 5px;
-        padding: 10px;
-        cursor: pointer;
-        transition: 320ms ease-in-out;
-        
-    }
-}
-
-.circular{
-    width: 300px;
-    height: 300px;
-    border-radius: 100%;
-    border: 2px dotted white;
-    display: flex;
-    background: url(../../assets/Images/Nectar-Buzz/camerabg2-removebg-preview.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100px;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-
-    & img{
-        width: 100%;
-        height: 100%;
-        border-radius: 100%;
-    }
-}
-
-
-
-
-@media (max-width:768px) {
-    .circular{
-        width: 200px;
-        height: 200px;
-    }
-
-    
-}
-
-@media (max-width:425px) {
-
-    .logo{
-        align-self: flex-start;
-        justify-self: flex-start;
-    }
-
-    .profileBox{
-        width: 100%;
-        height: 70%;
-    }
-    .circular{
-        width: 150px;
-        height: 150px;
-    }
-
-    
-
-    
-}
->>>>>>> main:src/Pages/profile.css
