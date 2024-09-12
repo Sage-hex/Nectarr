@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-.AboutUs{
+.AboutUs {
     margin-top: 40px;
     width: 100%;
     height: max-content;
@@ -7,10 +6,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-     margin-bottom: 100px;  
+    margin-bottom: 100px;
 }
 
-.about{
+.about {
     width: 90%;
     height: max-content;
     display: flex;
@@ -21,7 +20,7 @@
 }
 
 
-.aboutImg{
+.aboutImg {
     width: 500px;
     height: max-content;
     /* background-color: red; */
@@ -31,53 +30,57 @@
     justify-content: center;
     gap: 20px;
 }
-.round{
+
+.round {
     width: 200px;
     height: 200px;
     border-radius: 100%;
     border: 2px dotted grey;
     box-shadow: 2px 2px 5px lightgray;
-    
+
 }
 
-.aboutText{
+.aboutText {
     width: 500px;
     height: max-content;
     text-align: left;
-    
-    & p{
+
+    & p {
         font-size: 25px;
         line-height: 38.99px;
     }
 }
 
-@media (max-width:1280px){
-  
-    .aboutText{
+@media (max-width:1280px) {
+
+    .aboutText {
         width: 100%;
     }
-    .aboutImg{
+
+    .aboutImg {
         width: 100%;
-        .round{
+
+        .round {
             width: 300px;
             height: 300px;
         }
     }
 
-    .AboutUs{
+    .AboutUs {
         gap: 10px;
     }
 }
 
 @media (max-width:500px) {
-    .AboutUs{
+    .AboutUs {
         margin-bottom: 200px;
     }
-    .aboutImg{
+
+    .aboutImg {
         width: 100%;
         height: max-content;
 
-        &  .round{
+        & .round {
             width: 130px;
             height: 130px;
             border: 1px dashed grey;
@@ -85,88 +88,14 @@
         }
     }
 
-    .aboutText{
+    .aboutText {
         text-align: center;
-        & p{
+
+        & p {
             font-size: 15px;
         }
     }
 
-   
-=======
-.AboutUs{
-    margin-top: 40px;
-    width: 100%;
-    height: max-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-     margin-bottom: 100px;  
-}
-
-.about{
-    width: 90%;
-    height: max-content;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 150px;
-}
 
 
-.aboutImg{
-    width: 500px;
-    height: max-content;
-    /* background-color: red; */
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-.round{
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
-    border: 2px dotted grey;
-    box-shadow: 2px 2px 5px lightgray;
-    
-}
-
-.aboutText{
-    width: 500px;
-    height: max-content;
-    text-align: left;
-    
-    & p{
-        font-size: 25px;
-        line-height: 38.99px;
-    }
-}
-
-@media (max-width:1280px){
-  
-    .aboutText{
-        width: 100%;
-    }
-}
-
-@media (max-width:500px) {
-    .AboutUs{
-        margin-bottom: 400px;
-    }
-    .aboutImg{
-        width: 100%;
-        height: max-content;
-    }
-
-    .round{
-        width: 200px;
-        height: 200px;
-        border: 1px dashed grey;
-        background-color: pink;
-    }
->>>>>>> main
 }

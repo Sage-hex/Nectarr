@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-.DoYouKnow{
+.DoYouKnow {
     width: 90%;
     height: max-content;
     display: flex;
@@ -9,12 +8,14 @@
     gap: 30px;
 }
 
-li, p{
+li,
+p {
     font-weight: 500;
     line-height: 21.97px;
     font-size: 15px;
 }
-.Honeykick{
+
+.Honeykick {
     width: 100%;
     height: max-content;
     display: flex;
@@ -25,143 +26,65 @@ li, p{
 }
 
 
-.HoneyCon{
+.HoneyCon {
     width: 350px;
     height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
 }
 
-.honeyjar{
+.honeyjar {
     width: 90%;
     height: 70%;
 }
 
 
 
-.HFT{
-   width: 90%;
-   height: max-content;
-   margin-bottom: 50px;
-   display: flex;
-   flex-wrap: wrap;
-  
-   gap: 350px !important;
+.HFT {
+    width: 90%;
+    height: max-content;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 350px !important;
 }
 
-.beeYourSelf{
-    
+.beeYourSelf {
+
     width: 400px;
     height: 400px;
-    
-   
+
+
 }
 
 
 
 
-@media (max-width:1220px){
-    .HFT{
+@media (max-width:1220px) {
+    .HFT {
         width: 90%;
         height: max-content;
         margin-bottom: 50px;
         display: flex;
         flex-wrap: wrap;
-       
+
         gap: 85px !important;
-     }
+    }
 
-     .beeYourSelf{
+    .beeYourSelf {
         width: 200px;
-     }
+    }
 
-    
+
 }
 
 @media (max-width:500px) {
-    .beeYourSelf{
+    .beeYourSelf {
         width: 400px;
     }
-    
-=======
-.DoYouKnow{
-    width: 90%;
-    height: max-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-}
 
-li, p{
-    font-weight: 500;
-    line-height: 21.97px;
-    font-size: 15px;
-}
-.Honeykick{
-    width: 100%;
-    height: max-content;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-
-.HoneyCon{
-    width: 400px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* background-color: red; */
-    
-}
-
-.honeyjar{
-    width: 90%;
-    height: 70%;
-}
-
-
-
-.HFT{
-   width: 90%;
-   height: max-content;
-   margin-bottom: 50px;
-   display: flex;
-   flex-wrap: wrap;
-   /* background: #000; */
-   gap: 364px;
-}
-
-.beeYourSelf{
-    
-    width: 400px;
-    height: 400px;
-    background: url(../../assets/Images/Nectar-Buzz/input.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
-    gap: 20px;
-    /* padding: 20px; */
-}
-
-
-
-
-@media (max-width:1280px){
-    .HFT{
-        gap: 0px;
-    }
->>>>>>> main
 }
