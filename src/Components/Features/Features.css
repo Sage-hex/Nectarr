@@ -59,6 +59,10 @@
 
     }
 
+    .bee {
+        order: -1;
+    }
+
 
 
     .text {
@@ -70,16 +74,48 @@
     }
 
 
-    @media (min-width:768px) {
-        .featuresBox {
-            margin-top: 5rem;
-        }
 
+
+
+
+
+
+
+
+}
+
+
+@media (max-width:500px) {
+
+    .featuresBox {
+        margin-bottom: 1100px;
+    }
+
+    .two {
+        flex-direction: column;
+
+        & .remove {
+            order: 2;
+        }
+    }
+
+    .origin {
+        width: 100vw;
+    }
+
+    .theOrigin {
+        width: 300px;
     }
 
 
-    @media (max-width:500px) {
+    .text {
+        text-align: center;
+        margin-bottom: 30px;
 
-        .featuresBox {
-            margin-top: 5rem;
+        h1 {
+            font-size: 40px;
         }
+    }
+
+
+}
