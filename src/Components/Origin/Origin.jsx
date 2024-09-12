@@ -6,9 +6,9 @@ import './Origin.css'
 import hive from '../../assets/Images/Nectar-Buzz/hive.png'
 
 const Origin = () => {
-  return (
-    <>
-          <section className='origin'>
+    return ( <
+        >
+        <section className='origin'>
         <img src={honeyT} alt="" className='HoneyT'/>
       
         <div className="theOrigin">
@@ -23,16 +23,16 @@ const Origin = () => {
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis animi voluptates fuga et provident minima magni ducimus accusantium porro laborum voluptate, beatae aliquam ipsam repellendus nostrum velit? Incidunt, atque laborum?</p>
         </div>
         <img src={hive} alt="" className='hive'/>
-      </section>
-      <section className='subscribe'>
+      </section> <
+        section className = 'subscribe' >
         <div className="wrap">
           <h2>Subscribe And Win Honey Hampers</h2>
           <input type="text" placeholder='Enter Your Email'  className='input'/>
           <button className='button'>Enter</button>
-        </div>
-      </section>
-    </>
-  )
+        </div> <
+        /section> <
+        />
+    )
 }
 
 export default Origin

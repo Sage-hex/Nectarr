@@ -6,8 +6,8 @@ import farmer3 from '../../assets/Images/Nectar-Buzz/Frame 1880.png'
 import farmer4 from '../../assets/Images/Nectar-Buzz/Frame 1879.png'
 
 const OurBeekeepers = () => {
-  return (
-    <div className="MeetBeeKeepers">
+    return (
+        <div className="MeetBeeKeepers">
             <h1>MEET OUR BEEKEEPERS</h1>
             <div className="BeeKeepers">
                 <div className="OurBeeKeeper">
@@ -80,7 +80,8 @@ const OurBeekeepers = () => {
                 </div>
             </div>
         </div>
-  )
+    )
 }
+
 
 export default OurBeekeepers

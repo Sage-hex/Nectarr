@@ -1,18 +1,18 @@
-.COlABO{
+.COlABO {
     width: 100%;
     height: max-content;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(255, 255, 255, 0.438),rgba(255, 255, 255, 0.514)),url(../../assets/Images/Nectar-Buzz/bee.png);
+    background: linear-gradient(rgba(255, 255, 255, 0.438), rgba(255, 255, 255, 0.514)), url(../../assets/Images/Nectar-Buzz/bee.png);
     background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-.Benefit{
-    
+.Benefit {
+
     width: 90%;
     height: max-content;
     gap: 50px;
@@ -22,34 +22,37 @@
     justify-content: space-between;
     margin-bottom: 100px;
     overflow: hidden;
-    
 
-    & h2{
+
+    & h2 {
         color: gold;
-        font-size: 30px;  
-    }
-    h1{
         font-size: 30px;
     }
-    p{
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
         font-family: Lora;
         font-size: 25px;
         font-weight: 400;
         line-height: 31.97px;
         text-align: center;
-        
+
     }
+
     /* background-color: antiquewhite; */
 }
 
-.Circle{
+.Circle {
     width: 400px;
     height: 400px;
     align-self: center;
-   
+
 }
 
-.information{
+.information {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,11 +62,11 @@
     flex-direction: column;
     gap: 20px;
 
-    & p{
+    & p {
         text-align: left;
     }
 
-    & ul{
+    & ul {
         align-self: flex-start;
         display: flex;
         flex-direction: column;
@@ -73,29 +76,31 @@
 
 
 @media (max-width:1280px) {
-    .information{
+    .information {
         width: 90%;
         font-size: 20px;
 
-        & p{
+        & p {
             font-size: 10px;
             text-align: center;
             line-height: 20.97px;
 
         }
+
         /* background: #000; */
     }
-    .p{
 
-    }
+    .p {}
 
-    .Benefit{
+    .Benefit {
         justify-content: center;
     }
-    .Circle{
+
+    .Circle {
         width: 300px;
         height: 300px;
     }
+
 
 
 }

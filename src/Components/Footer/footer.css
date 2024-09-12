@@ -1,5 +1,4 @@
-
-.footer{
+.footer {
     width: 100%;
     height: auto;
     display: flex;
@@ -9,7 +8,7 @@
     justify-content: center;
     font-family: Lora;
 
-    & .wrapper{
+    & .wrapper {
         width: 90%;
         height: max-content;
         color: rgba(255, 255, 255, 0.815);
@@ -24,40 +23,40 @@
     }
 }
 
-.logo{
+.logo {
     width: 20px;
 }
 
-.description{
-    
+.description {
+
     width: 100%;
     height: auto;
     display: flex;
-    gap: 20px ;
+    gap: 20px;
     background-color: #742712;
     align-items: flex-start;
 
 
-    
+
 }
 
 
-.instruction{
+.instruction {
     width: 100%;
     padding-top: 50px;
     height: max-content;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     font-size: 20px;
     gap: 30px;
 
-    & p{
+    & p {
         font-family: lora;
     }
 }
 
 
-.Intouch{
+.Intouch {
     width: 100%;
     height: max-content;
     display: flex;
@@ -65,11 +64,12 @@
     align-items: flex-start;
     font-size: 20px;
     gap: 20px;
-    & h3{
+
+    & h3 {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
-    & span{
+    & span {
         width: 40%;
         display: flex;
         align-items: center;
@@ -83,50 +83,51 @@
 
 
 @media (max-width:1280px) {
-    footer{
-        height: max-content; 
-      
+    footer {
+        height: max-content;
+
     }
 
-    .instruction{
-       
+    .instruction {
+
         align-self: flex-end;
         font-size: 20px;
         grid-template-columns: repeat(3, 1fr);
-       
+
     }
 
-    .Intouch{
+    .Intouch {
         width: 100%;
     }
- 
+
 }
 
 @media (max-width:500px) {
-    .description{
+    .description {
         font-size: 10px;
     }
 
-    
-    .copyright{ 
+
+    .copyright {
         align-self: center;
         font-size: 10px;
     }
 
-    footer{
-        height: max-content; 
-        & .wrapper{
+    footer {
+        height: max-content;
+
+        & .wrapper {
             height: 45vh;
         }
     }
-    .description{
+
+    .description {
         flex-direction: column;
     }
 
-    .instruction{
+    .instruction {
         font-size: 20px;
         padding-left: 30px;
         grid-template-columns: repeat(1, 1fr);
     }
-    
 }

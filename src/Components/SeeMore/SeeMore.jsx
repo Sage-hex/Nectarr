@@ -6,8 +6,8 @@ import { GiScarabBeetle } from "react-icons/gi";
 
 
 const SeeMore = () => {
-  return (
-  <div className='COlABO'>
+        return (
+            <div className='COlABO'>
     <h1>SEE MORE...</h1>
     <section className='Benefit'>
         <img src={gain} alt="" className='Circle' data-aos="fade-right"/>
@@ -40,7 +40,10 @@ const SeeMore = () => {
      <img src={bee4} alt="" className='Circle' data-aos="fade-left"/>
    </section>
   </div>
-  )
-}
+        )
+    }
 
-export default SeeMore
+    ===
+    === =
+
+    export default SeeMore

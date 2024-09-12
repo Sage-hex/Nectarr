@@ -8,61 +8,61 @@ import toast from "react-hot-toast";
 import axios from "axios";
 
 const SignUp = () => {
-  const nav = useNavigate();
-  const [username, setUserName] = useState('');
-  const [email, setEmail] = useState('');
-  const [passWord, setPassWord] = useState('');
-  const [phoneNo, setPhoneNo] = useState('');
-  const [location, setLocation] = useState('');
-  const [address, setAddress] = useState('');
-  const [gender, setGender] = useState('');
-  console.log(username);
-  console.log(email);
-  console.log(passWord);
-  console.log(phoneNo);
-  console.log(location);
-  console.log(address);
-  console.log(gender);
-  
+    const nav = useNavigate();
+    const [username, setUserName] = useState('');
+    const [email, setEmail] = useState('');
+    const [passWord, setPassWord] = useState('');
+    const [phoneNo, setPhoneNo] = useState('');
+    const [location, setLocation] = useState('');
+    const [address, setAddress] = useState('');
+    const [gender, setGender] = useState('');
+    console.log(username);
+    console.log(email);
+    console.log(passWord);
+    console.log(phoneNo);
+    console.log(location);
+    console.log(address);
+    console.log(gender);
 
-  const signUp = async (e) => {
-    e.preventDefault();
 
-    if (!username || !email || !passWord || !phoneNo || !location || !address || !gender) {
-      alert('All fields are required');
-      return;
-    }
+    const signUp = async (e) => {
+        e.preventDefault();
 
-    const signUpData = {
-      username,
-      email,
-      passWord,
-      phoneNo,
-      location,
-      address,
-      gender
+        if (!username || !email || !passWord || !phoneNo || !location || !address || !gender) {
+            alert('All fields are required');
+            return;
+        }
+
+        const signUpData = {
+            username,
+            email,
+            passWord,
+            phoneNo,
+            location,
+            address,
+            gender
+        };
+
+
+        try {
+            const url = "https://nectarbuzz.onrender.com/api/v1/user-signup";
+            const res = await axios.post(url, signUpData);
+            alert('Sign up successful 🎉🎉');
+            console.log(res.data);
+
+
+            // nav("/login"); /
+        } catch (err) {
+            toast.error('Sign up failed');
+            console.error(err);
+        }
     };
-    
-
-    try {
-      const url = "https://nectarbuzz.onrender.com/api/v1/user-signup";
-      const res = await axios.post(url, signUpData);
-      alert('Sign up successful 🎉🎉');
-      console.log(res.data);
 
 
-      // nav("/login"); /
-    } catch (err) {
-      toast.error('Sign up failed');
-      console.error(err);
-    }
-  };
 
- 
-  
 
-  return (
-    <section className="signup-wrapper">
+    return (
+        <section className="signup-wrapper">
       <div className="signup-container">
         <article className="signup-header">
           <div className="signup-logo">
@@ -165,7 +165,7 @@ const SignUp = () => {
         </section>
       </div>
     </section>
-  );
+    );
 };
 
 export default SignUp;

@@ -1,5 +1,4 @@
-
-.origin{
+.origin {
     width: 100%;
     height: max-content;
     padding: 30px;
@@ -12,8 +11,8 @@
     align-items: center;
     position: relative;
 
-    &{
-        .HoneyT{
+    & {
+        .HoneyT {
             height: 80px;
             width: 150px;
             left: 25px;
@@ -22,17 +21,17 @@
         }
     }
 
-    & .hive{
+    & .hive {
         height: 150px;
         width: 200px;
         justify-self: flex-end;
     }
-    
-    
+
+
 }
 
 
-.theOrigin{
+.theOrigin {
     width: 600px;
     height: 250px;
     background: #742712;
@@ -45,19 +44,19 @@
     color: rgba(255, 255, 255, 0.815);
     gap: 20px;
 
-   
 
 
-    .Top{
+
+    .Top {
         width: 100%;
         height: max-content;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 5px;
-        
 
-        & .HoneyTop{
+
+        & .HoneyTop {
             width: 50px;
             height: 50px;
             /* position: absolute; */
@@ -66,13 +65,13 @@
             /* right: 0px; */
         }
     }
-    
+
 }
 
-.subscribe{
+.subscribe {
     width: 100%;
     height: 60vh;
-    background: linear-gradient(rgba(255, 255, 255, 0.459),rgba(255, 255, 255, 0.37)), url(../../assets/Images/Nectar-Buzz/bee3.png);
+    background: linear-gradient(rgba(255, 255, 255, 0.459), rgba(255, 255, 255, 0.37)), url(../../assets/Images/Nectar-Buzz/bee3.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -80,25 +79,26 @@
     align-items: center;
     justify-content: center;
 
-& .wrap{
-    width: 90%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    & .wrap {
+        width: 90%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-    & h2{
-        font-size: 20px;
-        align-self: center;
-        /* margin-bottom: 90px; */
-        font-weight: 900;
-        margin-bottom: 20px;
+        & h2 {
+            font-size: 20px;
+            align-self: center;
+            /* margin-bottom: 90px; */
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
     }
 }
-}
 
-.wrap .input, .wrap .button{
+.wrap .input,
+.wrap .button {
     width: 40%;
     padding: 20px;
     border: none;
@@ -109,56 +109,60 @@
     border: 2px solid #742712
 }
 
-.wrap .button{
+.wrap .button {
     width: 15%;
     height: 20%;
     cursor: pointer;
-   
+
     color: black;
     font-weight: 800;
 }
 
 
-@media (max-width:1280px){
-       
-    .theOrigin{
+@media (max-width:1280px) {
+
+    .theOrigin {
         width: 400px;
     }
-  
 
-  .text{
-    text-align: center;
-  }
 
-    
-    .origin{
+    .text {
+        text-align: center;
+    }
+
+
+    .origin {
         /* flex-direction: column; */
         margin-top: 0;
-        .HoneyT{
+
+        .HoneyT {
             left: 0px;
         }
-        .theOrigin{
+
+        .theOrigin {
             height: 250px;
             width: 320px;
         }
     }
 }
 
-@media (max-width:500px){
-    .origin{
+@media (max-width:500px) {
+    .origin {
         width: 100vw;
     }
 
-    .theOrigin{
+    .theOrigin {
         width: 300px;
     }
 
 
-    .input, .button{
+    .input,
+    .button {
         width: 60%;
     }
-    
-    .button{
+
+    .button {
         width: 30%;
     }
+
 }

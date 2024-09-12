@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import { RxDropdownMenu } from 'react-icons/rx'
 import Drop from '../DropDown/Drop';
 import { FaCircleUser } from "react-icons/fa6";
@@ -11,15 +11,15 @@ import Logo from '../../assets/Images/signup-logo.png'
 // import { useOutletContext } from 'react-router-dom';
 
 const Header = () => {
-  const Nav = useNavigate()
-  const [nav, setNav]= useState(false) 
-  // const context = useOutletContext();
-  // console.log(context);
-  // const { showModal, setShowModal } = context ;
+    const Nav = useNavigate()
+    const [nav, setNav] = useState(false)
+    // const context = useOutletContext();
+    // console.log(context);
+    // const { showModal, setShowModal } = context ;
 
 
-  return (
-    <div className='header' >    
+    return (
+        <div className='header' >    
        <section className='section'>
         <p >Get 10% on your first Purchase. Sign Up to Mailing List</p>
        </section>
@@ -61,7 +61,7 @@ const Header = () => {
 
         
     </div>
-  )
+    )
 }
 
 export default Header

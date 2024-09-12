@@ -4,30 +4,30 @@ import Button from "../../Components/Button/Button";
 import { useNavigate } from "react-router-dom";
 
 const ResetPasswordAuth = () => {
-  const [code, setCode] = useState(new Array(4).fill(""));
-  const nav = useNavigate()
+    const [code, setCode] = useState(new Array(4).fill(""));
+    const nav = useNavigate()
 
-  const handleChange = (element, index) => {
-    if (isNaN(element.value)) return;
-    const newCode = [...code];
-    newCode[index] = element.value;
-    setCode(newCode);
+    const handleChange = (element, index) => {
+        if (isNaN(element.value)) return;
+        const newCode = [...code];
+        newCode[index] = element.value;
+        setCode(newCode);
 
-    // Move to next input box if not at the last one
-    if (element.nextSibling && element.value !== "") {
-      element.nextSibling.focus();
-    }
-  };
+        // Move to next input box if not at the last one
+        if (element.nextSibling && element.value !== "") {
+            element.nextSibling.focus();
+        }
+    };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Entered code is: ${code.join("")}`);
-    nav('/profile')
-    
-  };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        alert(`Entered code is: ${code.join("")}`);
+        nav('/profile')
 
-  return (
-    <section className="resetpasswordauth-wrapper">
+    };
+
+    return (
+        <section className="resetpasswordauth-wrapper">
       <section className="resetpasswordauth-box">
         <h2>Get your code</h2>
         <p>Please enter your 4 digit code sent to your email</p>
@@ -53,7 +53,7 @@ const ResetPasswordAuth = () => {
         </p>
       </section>
     </section>
-  );
+    );
 };
 
 export default ResetPasswordAuth;

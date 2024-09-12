@@ -1,11 +1,9 @@
-
-.featuresBox{
+.featuresBox {
     overflow: hidden;
-    padding: 20px;
     position: absolute;
     width: 90%;
     height: max-content;
-    top: 100%;
+    top: 85%;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -16,138 +14,130 @@
 
 }
 
-.features{
-    width: 370px;
+.features {
+    width: 383px;
     height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding: 5px; */
-    /* background: #F3A089; */
-    /* border-radius: 10px; */
-    /* box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.904); */
+    padding: 5px;
+    background: #F3A089;
 
-    & .remove{
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.904);
+
+    & .remove {
         width: 50%;
         height: 90%;
     }
-    & .two{
-       order: 2;
+
+    & .two {
+        order: 2;
 
     }
-    .bee2{
+
+    .bee2 {
         height: 70%;
     }
-    .text{
+
+    .text {
         display: flex;
         color: white;
         flex-direction: column;
         gap: 10px;
 
-        & p{
+        & p {
             color: black;
         }
     }
-    
+
 }
 
-.two{
+.two {
     flex-direction: column;
-    & .remove{
+
+    & .remove {
         order: 2;
-        
+
     }
 }
 
 
 @media (max-width:1280px) {
 
- 
- 
-    .featuresBox{
-       /* top: 1120%; */
-              
-       
+
+
+    .featuresBox {
+        top: 90%;
+
+
     }
-    
-  
-    .features{
-        width: 250px;
-        height: 300px; 
-        
-       
+
+
+    .features {
+        width: 300px;
+        height: 350px;
+
+
     }
-    
-    .bee{
+
+    .bee {
         order: -1;
     }
-   
-    
-    
-    .text{
+
+
+
+    .text {
         margin-bottom: 30px;
-        text-align: center;
-        h1{
+
+        h1 {
             font-size: 40px;
         }
-
     }
 
-    
-
-   
-
-   
-
-    
- 
-    
- }
 
 
- @media (max-width:500px) {   
-   
-    .featuresBox{
+
+
+
+
+
+
+
+}
+
+
+@media (max-width:500px) {
+
+    .featuresBox {
         margin-bottom: 1100px;
     }
-    .two{
+
+    .two {
         flex-direction: column;
-        & .remove{
+
+        & .remove {
             order: 2;
         }
     }
-    .origin{
+
+    .origin {
         width: 100vw;
     }
 
-    .theOrigin{
+    .theOrigin {
         width: 300px;
     }
 
 
-    .text{
+    .text {
         text-align: center;
         margin-bottom: 30px;
-        h1{
+
+        h1 {
             font-size: 40px;
         }
     }
-    
-   
-    }
- 
-    
-   
-                                                                
-    
 
 
-   
-
-   
-    
-  
-    
-
-
- 
+}
