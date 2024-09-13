@@ -142,7 +142,7 @@
 
 @media (max-width: 1280px) {
     .Benefit {
-        flex-direction: column;
+        /*        flex-direction: column;*/
         gap: 30px;
         justify-content: center;
     }
