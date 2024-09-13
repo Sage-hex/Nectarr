@@ -17,12 +17,11 @@
     height: max-content;
     gap: 50px;
     display: flex;
-    flex-wrap: wrap;
+    /*    flex-wrap: wrap;*/
     align-items: center;
     justify-content: space-between;
     margin-bottom: 100px;
-    overflow: hidden;
-
+    /*    overflow: hidden;*/
 
     & h2 {
         color: gold;
@@ -45,6 +44,88 @@
     /* background-color: antiquewhite; */
 }
 
+.Benefit .information {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /*    text-align: center;*/
+    display: flex;
+    gap: 20px;
+}
+
+.Benefit .information p {
+    font-size: 1.3rem;
+    line-height: 30px;
+
+}
+
+.Benefit .information .see-more-text {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.Benefit .information h1 {
+    color: #C37D07;
+    font-size: 1.7rem;
+
+}
+
+.Benefit .information h2 {
+    margin-left: 20rem;
+    color: #000;
+    font-size: 1.9rem;
+}
+
+.Benefit .info-two {
+    /*    width: 3000px;*/
+}
+
+
+
+.Benefit .info-two ul {
+    display: flex;
+    align-self: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    /*    border: 2px solid red;*/
+}
+
+.Benefit .info-two ul img {
+    width: 40px;
+}
+
+.Benefit .info-two ul .list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.Benefit .info-two {
+    width: 60%;
+
+}
+
+.Benefit .info-two p {
+    line-height: 40px;
+    font-size: 1.5rem;
+
+}
+
+.Benefit .info-two .head-text {
+    font-size: 3rem;
+}
+
+.see-more-image {
+    width: 60%;
+    height: 100%;
+    /*    border: 2px solid green;*/
+}
+
 .Circle {
     width: 400px;
     height: 400px;
@@ -52,47 +133,17 @@
 
 }
 
-.information {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    & p {
-        text-align: left;
-    }
-
-    & ul {
-        align-self: flex-start;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-}
 
 
-@media (max-width:1280px) {
-    .information {
-        width: 90%;
-        font-size: 20px;
 
-        & p {
-            font-size: 10px;
-            text-align: center;
-            line-height: 20.97px;
 
-        }
 
-        /* background: #000; */
-    }
+/* Existing styles remain unchanged */
 
-    .p {}
-
+@media (max-width: 1280px) {
     .Benefit {
+        flex-direction: column;
+        gap: 30px;
         justify-content: center;
     }
 
@@ -101,6 +152,176 @@
         height: 300px;
     }
 
+    .Benefit .information {
+        width: 90%;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .Benefit .information p {
+        font-size: 1rem;
+        line-height: 24px;
+    }
+
+    .Benefit .information h1 {
+        font-size: 1.5rem;
+    }
+
+    .Benefit .information h2 {
+        margin-left: 0;
+        font-size: 1.7rem;
+    }
+
+    .see-more-image {
+        width: 100%;
+        border: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .Benefit {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .Circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .Benefit .information {
+        width: 100%;
+        font-size: 1.2rem;
+        align-items: center;
+    }
 
 
+
+    .Benefit .information p {
+        font-size: 1.7rem;
+        line-height: 30px;
+        text-align: left;
+        width: 90%;
+    }
+
+    .Benefit .one p {
+        text-align: left;
+
+    }
+
+    .Benefit .information h1 {
+        font-size: 3rem;
+    }
+
+    .Benefit .one h1 {
+        font-size: 2.5rem;
+        width: 80%;
+        text-align: left;
+    }
+
+    .Benefit .information h2 {
+        font-size: 1rem;
+        margin-left: 0;
+    }
+
+    .Benefit .info-two ul {
+        margin-left: 2.3rem;
+    }
+
+    .see-more-image {
+        width: 100%;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .see-more-image img {
+        width: 50%;
+        height: 100%;
+    }
+
+    .benefit-two {
+        flex-direction: column-reverse;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .Benefit {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .Circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .Benefit .information {
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .Benefit .information p {
+        font-size: 0.8rem;
+        line-height: 18px;
+    }
+
+    .Benefit .information h1 {
+        font-size: 1.5rem;
+
+    }
+
+    .Benefit .one h1 {
+        font-size: 1.2rem;
+        color: black;
+    }
+
+    .Benefit .information h2 {
+        font-size: 1.3rem;
+        margin-left: 0;
+    }
+
+    .Benefit .one h2 {
+        font-size: 1rem;
+    }
+
+    .Benefit .one .see-more-text {
+        font-size: 1rem;
+    }
+
+    .Benefit .info-two ul {
+        margin-left: 0;
+    }
+
+    .Benefit .info-two ul span {
+        font-size: 1rem;
+    }
+
+    .Benefit .info-two p {
+        line-height: 1.8rem;
+    }
+
+    .see-more-image {
+        width: 100%;
+        border: none;
+    }
+
+    .see-more-image img {
+        width: 50%;
+        height: 100%;
+    }
+
+    .benefit-two {
+        flex-direction: column-reverse;
+
+    }
+
+    .Benefit .info-two ul {
+        margin-left: 1rem;
+    }
 }

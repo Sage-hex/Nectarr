@@ -1,6 +1,6 @@
 import React from 'react'
 import '../SeeMore/SeeMore.css'
-import Collection from '../../Components/Collections/Collection';
+// import Collection from '../../Components/Collections/Collection';
 import HoneyDrop from '../../assets/Images/Nectar-Buzz/HoneyDrop.png';
 
 

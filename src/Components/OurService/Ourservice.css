@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+    margin-top: 20px;
 }
 
 .Service {
@@ -15,6 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    /*    border: 2px solid red;*/
 }
 
 .Service img {
@@ -26,7 +28,26 @@
 
 @media (max-width:1200px) {
     .Ourservice {
+
         margin-bottom: 150px;
     }
 
+}
+
+@media (max-width:500px) {
+    .Ourservice {
+        margin-bottom: 2px;
+        margin-top: 20px;
+        height: 50%;
+    }
+
+    .Ourservice h1 {
+        font-size: 1.5rem;
+    }
+
+    .Service img {
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+    }
 }

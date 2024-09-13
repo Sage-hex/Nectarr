@@ -1,0 +1,133 @@
+.honey-section {
+    background-color: #f5e0c2;
+    padding: 100px 30px 30px 30px;
+
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 3rem;
+}
+
+
+.honey-text-icon {
+    position: absolute;
+    top: 55px;
+    left: 150px;
+    width: 200px;
+    height: 75px;
+    z-index: 100;
+}
+
+
+.honey-cards {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    flex-wrap: wrap;
+    /*    height: 70%;*/
+    width: 100%;
+    border: 2px solid red;
+}
+
+.hive-wrapper {
+    width: 100%;
+    height: 20%;
+    border: 2px solid red;
+    display: flex;
+    /*    align-items: center;*/
+    justify-content: flex-end;
+    padding-right: 8rem;
+}
+
+.hive-wrapper img {
+    width: 15%;
+    height: 50%;
+    object-fit: contain;
+}
+
+
+.honey-card {
+    background-color: #7f3b1f;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    height: 250px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: left;
+}
+
+.honey-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.honey-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.honey-card a {
+    color: #f5d782;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.honey-card a:hover {
+    text-decoration: underline;
+}
+
+.honey-icon,
+.buzz-icon {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .honey-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+    }
+
+    .honey-card {
+        width: 90%;
+        border-radius: 2px;
+    }
+
+    .honey-text-icon {
+        top: 40px;
+        left: 10px;
+    }
+
+    .hive-wrapper {
+        display: none;
+    }
+}
+
+@media(max-width:485px) {
+    .honey-cards {
+        gap: 2rem;
+    }
+
+    .honey-card {
+        border-radius: 2px;
+    }
+
+    .honey-text-icon {
+        top: 40px;
+        left: 10px;
+    }
+
+    .hive-wrapper {
+        display: none;
+    }
+}
