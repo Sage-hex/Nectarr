@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import './About.css'
 import honey1 from '../../assets/Images/Nectar-Buzz/honey1.png'
 
-import Origin from '../../Components/Origin/Origin'
+import HoneySection from '../../Components/HoneySection/HoneySection'
 
 import Aos from 'aos';
 import "aos/dist/aos.css";
@@ -42,7 +42,7 @@ const About = () => {
        
         <DoYouKnow/>
 
-        <Origin/>
+        <HoneySection/>
          
 
     </div>

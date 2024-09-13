@@ -8,7 +8,7 @@ const ChooseUs = () => {
             <h1>Why Choose Us</h1>
             <div className="bestOfAll">
                 <div className="bestText">
-                    <h2>we give You the Best</h2>
+                    <h2>We give You the Best</h2>
                     <li>
                         Pure and Natural Honey: Our honey is free from artificial additives 
                         and preservatives, ensuring a taste that's as pure as nature intended.

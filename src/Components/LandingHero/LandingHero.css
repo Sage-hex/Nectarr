@@ -37,6 +37,11 @@
 
 /* Responsive font size */
 @media (max-width: 1200px) {
+
+    .LandingHero .Button-custom {
+        top: 60%;
+    }
+
     .Landing-text-overlay {
         font-size: 1.8rem;
     }

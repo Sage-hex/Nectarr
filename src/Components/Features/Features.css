@@ -75,6 +75,13 @@
 }
 
 
+@media (max-width:950px) {
+    .featuresBox {
+        /*            margin-top: 5rem;*/
+        top: 110%;
+    }
+
+}
 
 @media (max-width:768px) {
     .featuresBox {
