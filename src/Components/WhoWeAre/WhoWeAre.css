@@ -9,7 +9,7 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    border: 2px solid red;
+    /*    border: 2px solid red;*/
     margin-top: 20rem;
     padding: 1rem;
 }
@@ -21,7 +21,7 @@
 .who-we-are-container {
     width: 95%;
     height: 100%;
-    border: 2px solid green;
+    /*    border: 2px solid green;*/
     display: flex;
     align-items: center;
     /*    justify-content: center;*/
@@ -31,7 +31,7 @@
 .who-we-are-image-wrapper {
     width: 50%;
     height: 100%;
-    border: 2px solid red;
+    /*    border: 2px solid red;*/
 }
 
 .who-we-are-image-wrapper img {
@@ -43,7 +43,7 @@
 .who-we-are-p-wrapper {
     width: 50%;
     height: 100%;
-    border: 2px solid green;
+    /*    border: 2px solid green;*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,6 +52,20 @@
 .who-we-are-p-wrapper .who-we-are-p-text {
     font-size: 1.5rem;
     line-height: 30px;
+}
+
+@media (max-width:1024px) {
+    .who-we-are-wrapper {
+        margin-top: 45rem;
+
+    }
+
+    .who-we-are-p-wrapper .who-we-are-p-text {
+        font-size: 20px;
+        line-height: 28px;
+
+    }
+
 }
 
 @media (max-width:768px) {
