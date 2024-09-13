@@ -87,6 +87,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 2rem;
     }
 
     .who-we-are-image-wrapper img {
@@ -136,6 +137,8 @@
 
     .who-we-are-p-wrapper {
         height: 50%;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 
     .who-we-are-p-wrapper .who-we-are-p-text {

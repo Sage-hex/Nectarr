@@ -70,6 +70,10 @@
     margin-left: 1rem;
 }
 
+.dropdown {
+    display: none;
+}
+
 .navbar__hamburger {
     display: none;
     font-size: 32px;
@@ -114,6 +118,10 @@
 
     .navbar__icons {
         display: none;
+    }
+
+    .dropdown {
+        display: block;
     }
 
     .navbar__hamburger {
