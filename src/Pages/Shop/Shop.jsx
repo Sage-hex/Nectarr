@@ -3,7 +3,8 @@ import './Shop.css';
 import ShopHero from '../../Components/HeroText/HeroText';
 import SpecialOffer from '../../Components/SpecialOffer/SpecialOffer';
 import ProductList from '../../Components/ProductList/ProductList'; // Import ProductList
-import Button from '../../Components/Button/Button';
+// import Button from '../../Components/Button/Button';
+import NewsLetter from '../../Components/NewsLetter/NewsLetter'
 
 const Shop = () => {
     return (
@@ -14,7 +15,8 @@ const Shop = () => {
                 <h1>Manuka Honey</h1>
             <ProductList />
             </section>
-            <section className="shop-newsletter">
+            <NewsLetter/>
+            {/*<section ggclassName="shop-newsletter">
                 <h1>Subscribe and win Honey Hampers</h1>
                 <form action="" method="get">
                     <div className="input-group">
@@ -22,7 +24,7 @@ const Shop = () => {
                         <Button>Send</Button>
                     </div>
                 </form>
-            </section>
+            </section>*/}
         </main>
     );
 }

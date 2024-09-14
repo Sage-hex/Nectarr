@@ -10,6 +10,7 @@ import AboutUs from '../../Components/AboutUs/AboutUs'
 import ChooseUs from '../../Components/ChooseUs/ChooseUs'
 import OurBeekeepers from '../../Components/OurBeeKeepers/OurBeekeepers'
 import DoYouKnow from '../../Components/DoYouKnow/DoYouKnow'
+import NewsLetter from '../../Components/NewsLetter/NewsLetter'
 
 
 const About = () => {
@@ -43,6 +44,7 @@ const About = () => {
         <DoYouKnow/>
 
         <HoneySection/>
+        <NewsLetter />
          
 
     </div>
