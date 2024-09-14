@@ -10,6 +10,7 @@
     background: url('../../assets/Images/hamper-hero-bg.png');
     background-size: cover;
     backgtound-postion: center;
+    background-repeat: no-repeat;
     padding: 40px;
 }
 
@@ -61,6 +62,7 @@
 @media (max-width: 768px) {
     .hampper-hero-text h1 {
         font-size: 2rem;
+        white-space: wrap;
     }
 
     .tagline {
@@ -69,12 +71,24 @@
 }
 
 @media (max-width: 576px) {
+    .hampper-hero-container {
+        height: 60vh;
+        /*background-repeat: no-repeat;
+background-size: cover;*/
+    }
+
     .hampper-hero-text h1 {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
+        /*        width: 70%;*/
+        /*        height: 200px;*/
+        display: flex;
+        text-align: center;
+        flex-wrap: wrap;
+        /*        background-color: green;*/
     }
 
     .tagline {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
         max-width: 100%;
     }
 

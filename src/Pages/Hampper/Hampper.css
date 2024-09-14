@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     background-color: rgb(238, 238, 238);
-    border: 10px solid black;
+    /*    border: 10px solid black;*/
     /* overflow-wrap: normal; */
 
 }
@@ -14,4 +14,11 @@
 .hampper-container .hampper-title {
     padding: 2rem;
     font-size: 2.5rem;
+}
+
+@media (max-width:576px) {
+    .hampper-container .hampper-title {
+        font-size: 2rem;
+    }
+
 }

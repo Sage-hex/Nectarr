@@ -5,8 +5,8 @@ import Button from "../../Components/Button/Button";
 import { NavLink } from "react-router-dom";
 
 const ForgotPasswordForm = () => {
-  return (
-    <section className="forgotpassword-wrapper">
+    return (
+        <section className="forgotpassword-wrapper">
       <section className="forgotpassword-form-section">
         <section className="forgotpassword-form-header">
           <div className="forgotpassword-title">
@@ -22,10 +22,10 @@ const ForgotPasswordForm = () => {
               type="email"
               id="email"
               name="email"
-              placeholder=" "
+              placeholder="Email"
               required
             />
-            <label htmlFor="email">Email</label>
+            { /*<label htmlFor="email">Email</label>*/}
           </div>
           <div className="forgotpassword-form-actions">
             <Button>Send OTP</Button>
@@ -38,7 +38,7 @@ const ForgotPasswordForm = () => {
         </section>
       </section>
     </section>
-  );
+    );
 };
 
 export default ForgotPasswordForm;

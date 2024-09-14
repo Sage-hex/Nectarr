@@ -5,8 +5,8 @@ import Button from "../../Components/Button/Button";
 import { NavLink } from "react-router-dom";
 
 const ResetPassword = () => {
-  return (
-    <section className="resetpassword-wrapper">
+    return (
+        <section className="resetpassword-wrapper">
       <section className="resetpassword-form-section">
         <section className="resetpassword-form-header">
           <div className="resetpassword-title">
@@ -21,11 +21,11 @@ const ResetPassword = () => {
           <input
                 type="password"
                 name="password"
-                placeholder=" "
+                placeholder="Password"
                 aria-label="Password"
                 required
               />
-            <label htmlFor="Confirm password">Create Password</label>
+            {/*<label htmlFor="Confirm password">Create Password</label>*/}
           </div>
           <div className="resetpassword-form-group">
           <input
@@ -48,7 +48,7 @@ const ResetPassword = () => {
         </section>
       </section>
     </section>
-  );
+    );
 };
 
 export default ResetPassword;

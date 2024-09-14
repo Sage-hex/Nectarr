@@ -14,6 +14,8 @@ import About from "../../Pages/AboutPage/About";
 import WelcomePage from '../../Pages/WelcomePage/WelcomePage'
 import GetStarted from '../../Pages/GetStarted/GetStarted';
 import BeeKeeperSingUp from "../../Pages/BeekeperSignUp/Beekeper"
+import Details from '../../Pages/Details/ViewDetails';
+import CartPage from '../../Pages/CartPage/CartPage';
 import Hampper from '../../Pages/Hampper/Hampper';
 // import beeKeeperSignUp  from '../../Pages/BeeKeeperSignUp/BeeKeeper '
 
@@ -27,8 +29,10 @@ const router = createHashRouter([
             { path: '/', element: <LandingPage /> },
             { path: 'about', element: <About /> },
             { path: 'shop', element: <Shop /> },
-            { path: 'hampper', element: <Hampper /> },
             { path: 'user', element: <UserHome /> },
+            { path: 'hampper', element: <Hampper /> },
+            { path: 'details', element: <Details/> },
+            { path: 'cart', element: <CartPage/> }
         ],
     },
 
@@ -41,6 +45,7 @@ const router = createHashRouter([
     { path: 'forgotPassword', element: <ForgotPassword /> },
     { path: 'resetPassword', element: <ResetPassword /> },
     { path: 'resetPasswordAuth', element: <ResetPasswordAuth/> },
+
 
 ]);
 

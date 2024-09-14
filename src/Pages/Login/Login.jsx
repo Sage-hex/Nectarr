@@ -24,25 +24,33 @@ const LoginForm = () => {
           </div>
           </section>
           <form className="login-form" action="#" method="POST">
-            <div class="login-form-group">
-              <input
+          {/*  <div class="login-form-group">
+               <input
                 type="email"
-                id="email"
                 name="email"
-                placeholder=" "
+                placeholder="Email"
+                aria-label="Email"
                 required
+                onChange={(e)=>setEmail(e.target.value)}
               />
-              <label for="email">Email</label>
-            </div>
+            </div>*/}
             <div class="login-form-group">
+                <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                aria-label="Email"
+                required
+                onChange={(e)=>setEmail(e.target.value)}
+              />
               <input
                 type="password"
                 id="password"
                 name="password"
-                placeholder=" "
+                placeholder="Password"
                 required
               />
-              <label for="password">Password</label>
+              {/*<label for="password">Password</label>*/}
             </div>
             {/* <div className="forget-password">
 

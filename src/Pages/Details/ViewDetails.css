@@ -1,0 +1,274 @@
+.ViewDetails {
+    width: 100%;
+    height: max-content;
+    background-color: rgb(235, 232, 232);
+    font-family: Lora;
+}
+
+.ViewDetails .top {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & button {
+        padding: 10px;
+        background-color: transparent;
+        font-size: 20px;
+        border: 1px solid black;
+        color: black;
+    }
+}
+
+.ViewDetails main {
+    width: 100%;
+    height: max-content;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .main-wrap {
+    width: 95%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 80px;
+    padding-bottom: 100px;
+}
+
+.Details-Requirement {
+    width: 60%;
+    height: 900px;
+    background-color: white;
+    border: 1px solid black;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.Details-Requirement .left {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+}
+
+.left .image-Hold {
+    width: 300px;
+    height: 350px;
+    box-shadow: 3px 3px 8px grey;
+    border: 1px solid grey;
+}
+
+.Details-Requirement .right {
+    width: 50%;
+    height: 100%;
+
+}
+
+.right section {
+    width: 100%;
+    height: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section h1 {
+    font-size: 30 px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.grey {
+    color: grey;
+    font-size: 25px;
+}
+
+.green {
+    color: rgba(8, 211, 99, 0.726);
+    font-size: 25px;
+}
+
+section .addToCart {
+    width: 70%;
+    height: 40px;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: gold;
+}
+
+.QualityControl {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.controls button {
+    border: 1px solid black;
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #fff;
+}
+
+.call {
+    width: 80%;
+    height: max-content;
+    background-color: rgb(253, 226, 230);
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    & p {
+        color: #862d2d;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
+
+.QualityControl .controls {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    gap: 3px;
+}
+
+
+
+.QualityControl section span {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+hr {
+    width: 100%;
+    height: 3px;
+    background-color: grey;
+}
+
+.delivery {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2px;
+    margin-bottom: 10px;
+}
+
+aside {
+    /* width: 400px; */
+    width: 30%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+aside hr {
+    height: 2px;
+}
+
+aside section {
+    padding-top: 10px;
+    width: 100%;
+    height: 90px;
+    /* background-color: red; */
+}
+
+aside section .space {
+    height: 50px;
+}
+
+section .Lagos {
+    color: black;
+    background-color: gold;
+}
+
+.orange {
+    color: orangered;
+    margin-top: 10px;
+}
+
+.return {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@media (max-width:1220px) {
+
+    main .main-wrap {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Details-Requirement {
+        width: 650px;
+    }
+
+    .image-Hold {
+        width: 100%;
+    }
+
+
+    .left {
+        /* background-color: black; */
+        display: flex;
+
+    }
+
+    aside {
+        display: none;
+    }
+
+}
+
+@media (max-width:500px) {
+    .Details-Requirement {
+        flex-direction: column;
+        height: max-content;
+    }
+
+    .Details-Requirement .left {
+        width: 300px;
+        /* background-color: red; */
+    }
+
+    .left .image-Hold {
+        height: 300px;
+    }
+
+    .Details-Requirement .right {
+        width: 300px;
+        /* background-color: red; */
+    }
+
+    .ViewDetails .top {
+        padding-left: 10px;
+    }
+
+    .right section {
+        padding: 10px;
+
+    }
+}
