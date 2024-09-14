@@ -11,6 +11,8 @@
     /*    background: url('../../assets/Images/Home-bg');*/
     background-size: cover;
     background-position: center;
+    overflow-x: hidden;
+    border: 2px solid red;
 
 
 }
@@ -220,6 +222,11 @@ button:hover {
 
 
 @media (max-width:500px) {
+    .LandingPage {
+        width: 100%;
+        /*        overflow-x: hidden;*/
+    }
+
     .space {
         display: none;
         border: 2px solid red;

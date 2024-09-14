@@ -13,3 +13,10 @@
 
     }
 }
+
+@media (max-width:568px) {
+    .section {
+        display: none;
+    }
+
+}
