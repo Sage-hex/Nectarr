@@ -1,6 +1,6 @@
 .GetStarted {
     width: 100%;
-    height: auto;
+    height: 100vh;
     background: linear-gradient(243.15deg, #D8AE28 3.25%, #A8871F 58.37%, #8C711A 77.88%, #725C15 95.11%);
     display: flex;
     flex-direction: column;
