@@ -7,6 +7,12 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 100px;
+    margin-top: 100px;
+    border: 2px solid red;
+}
+
+.AboutUs .title {
+    font-size: 3rem;
 }
 
 .about {
@@ -17,11 +23,12 @@
     align-items: center;
     justify-content: center;
     gap: 150px;
+    border: 2px solid red;
 }
 
 
 .aboutImg {
-    width: 500px;
+    width: 400px;
     height: max-content;
     /* background-color: red; */
     display: flex;
@@ -29,6 +36,13 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+
+}
+
+.aboutImg img {
+    width: 40%;
+    height: 40%;
+    object-fit: contain;
 }
 
 .round {
@@ -41,14 +55,18 @@
 }
 
 .aboutText {
-    width: 500px;
-    height: max-content;
+    display: flex;
+    /*    flex-direction: column;*/
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 100%;
     text-align: left;
+}
 
-    & p {
-        font-size: 25px;
-        line-height: 38.99px;
-    }
+.aboutText p {
+    font-size: 1.7rem;
+    line-height: 35px;
 }
 
 @media (max-width:1280px) {
@@ -71,6 +89,14 @@
     }
 }
 
+@media (max-width: 768px) {
+    .aboutImg img {
+        width: 27%;
+        height: 40%;
+        object-fit: contain;
+    }
+}
+
 @media (max-width:500px) {
     .AboutUs {
         margin-bottom: 200px;
@@ -90,12 +116,26 @@
 
     .aboutText {
         text-align: center;
-
-        & p {
-            font-size: 15px;
-        }
     }
 
+    .AboutUs .title {
+        font-size: 1.5rem;
+    }
 
+    .aboutText p {
+        font-size: .9rem;
+        line-height: 25px;
+        text-align: left;
+    }
+
+    .aboutImg img {
+        width: 27%;
+        height: 40%;
+        object-fit: contain;
+    }
+
+    .about {
+        gap: 20px;
+    }
 
 }

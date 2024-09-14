@@ -9,13 +9,12 @@ import Helen5 from '../../assets/Images/Nectar-Buzz/Ellipse 14.png'
 
 const AboutUs = () => {
     return (
-        <div className="AboutUs">
+        <div className="AboutUs" data-aos="flip-left">
+        <h1 className='title'>About Us</h1>
             
             <div className="about">
                 <div className="aboutText">
-                    <h1>About Us</h1>
-                    <br />
-                    <br />
+                    
                     <p>
                        Discover the Sweetness of Nature
                        Nestles in the heart of Lagos, Nectar Buzz is your go-to
