@@ -35,7 +35,7 @@ const Navbar = () => {
                 <NavLink to="/search" className="navbar__icon"><FaSearch />
 </NavLink>
                 <NavLink to="/cart" className="navbar__icon"><MdShoppingCart /></NavLink>
-                <NavLink to="/account" className="navbar__icon"><VscAccount /></NavLink>
+                <NavLink to="/getStarted" className="navbar__icon"><VscAccount /></NavLink>
             </div>
 
             <div className="navbar__hamburger" onClick={toggleMenu}>

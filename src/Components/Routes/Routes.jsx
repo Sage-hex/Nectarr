@@ -17,6 +17,7 @@ import BeeKeeperSingUp from "../../Pages/BeekeperSignUp/Beekeper"
 import Details from '../../Pages/Details/ViewDetails';
 import CartPage from '../../Pages/CartPage/CartPage';
 import Hampper from '../../Pages/Hampper/Hampper';
+// import GetStarted from '../../Pages/GetStarted /GetStarted ';
 // import beeKeeperSignUp  from '../../Pages/BeeKeeperSignUp/BeeKeeper '
 
 const router = createHashRouter([
