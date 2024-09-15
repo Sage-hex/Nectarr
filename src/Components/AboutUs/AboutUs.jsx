@@ -9,7 +9,7 @@ import Helen5 from '../../assets/Images/Nectar-Buzz/Ellipse 14.png'
 
 const AboutUs = () => {
     return (
-        <div className="AboutUs" data-aos="flip-left">
+        <div className="AboutUs" data-aos="zoom-in-up" data-aos-duration="1500">
         <h1 className='title'>About Us</h1>
             
             <div className="about">
@@ -27,7 +27,7 @@ const AboutUs = () => {
                     </p>
                 </div>
 
-                <div className="aboutImg" data-aos="zoom-in">
+                <div className="aboutImg" data-aos="zoom-in" data-aos-duration="1500">
                     <img src={Helen1} alt="" className='round' />
                     <img src={Helen2} alt="" className='round'/>
                     <img src={Helen3} alt="" className='round'/>
