@@ -11,8 +11,10 @@ const WhoWeAre = () => {
         <section className="who-we-are-wrapper">
         <h1> WHO WE ARE</h1>
         <div className='who-we-are-container'>
-          <div className="who-we-are-image-wrapper">
-            <img src={HoneyDrop} alt=""/>
+          <div className="who-we-are-image-wrapper"  data-aos="fade-right"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+            <img src={HoneyDrop} alt="" />
             </div>
             <div className="who-we-are-p-wrapper">
               <p className='who-we-are-p-text'>Discover the pure sweetness of nature at Nectar Buzz,

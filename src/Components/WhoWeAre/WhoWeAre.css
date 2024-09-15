@@ -56,7 +56,7 @@
 
 @media (max-width:1024px) {
     .who-we-are-wrapper {
-        margin-top: 45rem;
+        /*        margin-top: 19rem;*/
 
     }
 
@@ -116,7 +116,7 @@
     }
 
     .who-we-are-wrapper {
-        margin-top: 70rem;
+        margin-top: 50rem;
         /*        height: max-content;*/
     }
 
@@ -126,7 +126,7 @@
     }
 
     .who-we-are-image-wrapper img {
-        width: 90%;
+        width: 40%;
         height: 35%;
     }
 
@@ -142,8 +142,9 @@
     }
 
     .who-we-are-p-wrapper .who-we-are-p-text {
-        font-size: 15px;
+        font-size: 12px;
         line-height: 20px;
+        font-weight: 400;
 
     }
 }
