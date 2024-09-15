@@ -9,7 +9,8 @@ import Helen5 from '../../assets/Images/Nectar-Buzz/Ellipse 14.png'
 
 const AboutUs = () => {
     return (
-        <div className="AboutUs" data-aos="zoom-in-up" data-aos-duration="1500">
+        <div className="AboutUs" data-aos="fade-up"
+     data-aos-anchor-placement="center-center" data-aos-duration="2000">
         <h1 className='title'>About Us</h1>
             
             <div className="about">

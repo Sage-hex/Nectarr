@@ -89,6 +89,7 @@
 @media (max-width: 768px) {
     .navbar {
         padding: 20px;
+        height: 70px;
     }
 
     .navbar__links {
