@@ -131,6 +131,11 @@
         display: none;
     }
 
+    .who-we-are-image-wrapper .honey-mobile {
+        display: block;
+    }
+
+
     .who-we-are-image-wrapper img {
         width: 45%;
         height: auto;
