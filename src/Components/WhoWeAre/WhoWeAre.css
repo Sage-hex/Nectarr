@@ -9,7 +9,6 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    /*    border: 2px solid red;*/
     margin-top: 20rem;
     padding: 1rem;
 }
@@ -21,17 +20,14 @@
 .who-we-are-container {
     width: 95%;
     height: 100%;
-    /*    border: 2px solid green;*/
     display: flex;
     align-items: center;
-    /*    justify-content: center;*/
     gap: 20px;
 }
 
 .who-we-are-image-wrapper {
     width: 50%;
     height: 100%;
-    /*    border: 2px solid red;*/
 }
 
 .who-we-are-image-wrapper img {
@@ -40,45 +36,50 @@
     object-fit: contain;
 }
 
+.who-we-are-image-wrapper .honey-mobile {
+    display: none;
+}
+
 .who-we-are-p-wrapper {
     width: 50%;
     height: 100%;
-    /*    border: 2px solid green;*/
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    /* Ensure proper layout */
 }
 
 .who-we-are-p-wrapper .who-we-are-p-text {
     font-size: 1.5rem;
     line-height: 30px;
+    text-align: center;
+    /* Center align text for better mobile view */
+    white-space: normal;
+    /* Allow text to wrap */
 }
 
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
     .who-we-are-wrapper {
-        /*        margin-top: 19rem;*/
-
+        margin-top: 15rem;
+        /* Adjust margin-top if needed */
     }
 
     .who-we-are-p-wrapper .who-we-are-p-text {
         font-size: 20px;
         line-height: 28px;
-
     }
-
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
     .who-we-are-wrapper {
         margin-top: 50rem;
-        height: max-content;
+        height: auto;
+        /* Adjust height to fit content */
     }
 
     .who-we-are-container {
         width: 100%;
-    }
-
-    .who-we-are-container {
         flex-direction: column;
     }
 
@@ -92,7 +93,8 @@
 
     .who-we-are-image-wrapper img {
         width: 35%;
-        height: 35%;
+        height: auto;
+        /* Maintain aspect ratio */
     }
 
     .who-we-are-p-wrapper {
@@ -101,11 +103,12 @@
 
     .who-we-are-p-wrapper .who-we-are-p-text {
         font-size: 18px;
+        line-height: 24px;
+        /* Adjust line-height for readability */
     }
-
 }
 
-@media (max-width:485px) {
+@media (max-width: 485px) {
     .who-we-are-container {
         width: 100%;
         flex-wrap: wrap;
@@ -117,18 +120,21 @@
 
     .who-we-are-wrapper {
         margin-top: 55rem;
-        /*        height: max-content;*/
     }
 
     .who-we-are-image-wrapper {
-        height: 50%;
+        height: auto;
+        /* Adjust height to fit content */
+    }
 
-
+    .who-we-are-image-wrapper .honey-desktop {
+        display: none;
     }
 
     .who-we-are-image-wrapper img {
         width: 45%;
-        height: 35%;
+        height: auto;
+        /* Maintain aspect ratio */
     }
 
     .who-we-are-container {
@@ -137,7 +143,8 @@
     }
 
     .who-we-are-p-wrapper {
-        height: 50%;
+        height: auto;
+        /* Adjust to fit content */
         justify-content: flex-start;
         align-items: flex-start;
         width: 100%;
@@ -147,9 +154,7 @@
 
     .who-we-are-p-wrapper .who-we-are-p-text {
         font-size: 14px;
-        line-height: 35px;
-        font-weight: 400;
-
-
+        line-height: 20px;
+        /* Adjust line-height for readability */
     }
 }
