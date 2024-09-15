@@ -1,81 +1,171 @@
-.Forfree{
-    width: 70%;
-    height: 450px;
+.Forfree {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: auto;
     background-color: #fff;
-    font-family: Lora;
+    font-family: 'Lora', serif;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-
+    padding: 20px;
+    /*    border: 2px solid red;*/
 }
-.ForfreeHead{
+
+.ForfreeHead {
     width: 100%;
-    height: 90px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.btn{
-    border: 1px solid black;
-    background-color: white;
-    color: black;
-    font-weight: 700;
+.ForfreeHead h1 {
+    font-size: 32px;
     margin-bottom: 10px;
 }
 
-.GetStartedBox{
-    width: 80%;
-    height: 80%;
+.ForfreeHead p {
+    font-size: 18px;
+}
+
+.GetStartedBox {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 10rem;
 }
 
-.MainBox{
-    width: 350px;
-    height: 250px;
+.MainBox {
+    width: 320px;
+    height: 300px;
     background-color: #fff;
     border: 1px solid grey;
     padding: 20px;
-    box-shadow: 1px 1px 2px grey;
+    box-shadow: 1px 1px 5px grey;
     display: flex;
-    flex-direction:column ;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* gap: 20px; */
+    text-align: center;
 }
 
-.GetStartedImage{
+.GetStartedImage {
     width: 100px;
-    height: 80px;
+    height: 100px;
     margin-bottom: 20px;
+    object-fit: cover;
     box-shadow: 3px 1px 2px lightgray;
 }
 
-@media (max-width:1200px) {
+.btn {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
 
-    .ForfreeHead{
-        & h1{
-            font-size: 20px;
-        }
-    }
-   
-    .MainBox{
-        width: 300px;
-        height: 150px;
-        & h1{
-            font-size: 15px;
-        }
+.MainBox p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+@media (max-width: 1024px) {
+    .ForfreeHead h1 {
+        font-size: 28px;
     }
 
-    .GetStartedImage{
-        width: 50px;
-        height: 50px;
+    .ForfreeHead p {
+        font-size: 16px;
+    }
+
+    .MainBox {
+        width: 280px;
+        height: 250px;
+    }
+
+    .GetStartedImage {
+        width: 80px;
+        height: 80px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ForfreeHead h1 {
+        font-size: 24px;
+    }
+
+    .ForfreeHead p {
+        font-size: 14px;
+    }
+
+    .MainBox {
+        width: 240px;
+        height: 220px;
+    }
+
+    .GetStartedImage {
+        width: 70px;
+        height: 70px;
+    }
+
+    .btn {
+        font-size: 12px;
+    }
+
+    .MainBox p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .ForfreeHead {
+        height: max-content;
+        /*        border: 2px solid red;*/
+    }
+
+    .Forfree {
+        height: max-content;
+    }
+
+    .ForfreeHead h1 {
+        font-size: 20px;
+    }
+
+    .ForfreeHead p {
+        font-size: 12px;
+    }
+
+    .MainBox {
+        width: 200px;
+        height: 200px;
+        padding: 15px;
+    }
+
+    .GetStartedImage {
+        width: 60px;
+        height: 60px;
+    }
+
+    .btn {
+        font-size: 12px;
+    }
+
+    .MainBox p {
+        font-size: 11px;
+    }
+
+    .GetStartedBox {
+        gap: 20px;
     }
 }

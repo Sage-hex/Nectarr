@@ -1,25 +1,75 @@
-.getStartedHead{
+.getStartedHead {
     width: 100%;
     height: 70px;
     background: #532316B2;
     display: flex;
     align-items: center;
     justify-content: center;
+    /*    border: 2px solid green;*/
 }
-.getStartedHeadWrap{
+
+.getStartedHeadWrap {
     width: 70%;
+    max-width: 1200px;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
 
+.getLogo {
+    width: 100px;
+}
 
-    & p{
-        color: white;
+.getStartedHeadWrap p {
+    color: white;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .getStartedHeadWrap {
+        width: 90%;
     }
 
-    .getLogo{
-        width:  100px;
-        
+    .getLogo {
+        width: 80px;
+    }
+
+    .getStartedHeadWrap p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .getStartedHeadWrap {
+        width: 95%;
+        justify-content: space-around;
+    }
+
+    .getLogo {
+        width: 70px;
+    }
+
+    .getStartedHeadWrap p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 500px) {
+    .getStartedHeadWrap {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .getLogo {
+        width: 60px;
+    }
+
+    .getStartedHeadWrap p {
+        font-size: 12px;
+        margin-top: 10px;
     }
 }

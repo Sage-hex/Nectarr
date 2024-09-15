@@ -9,3 +9,9 @@
     gap: 70px;
     position: absolute;
 }
+
+@media (max-width:485px) {
+    .GetStarted {
+        height: max-content;
+    }
+}
