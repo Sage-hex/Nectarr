@@ -264,11 +264,14 @@
         width: 100%;
         font-size: 1rem;
         text-align: center;
+        padding: 20px;
     }
 
     .Benefit .information p {
         font-size: 0.8rem;
-        line-height: 18px;
+        line-height: 15px;
+        /*        color: red;*/
+        width: 100%;
     }
 
     .Benefit .information h1 {
@@ -302,8 +305,13 @@
         font-size: 1rem;
     }
 
+    .Benefit .one p {
+        padding-left: 30px;
+    }
+
     .Benefit .info-two p {
         line-height: 1.8rem;
+        padding-left: 20px;
     }
 
     .see-more-image {
