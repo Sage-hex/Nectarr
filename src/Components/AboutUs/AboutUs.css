@@ -103,15 +103,15 @@
     }
 
     .aboutImg {
-        width: 90%;
+        width: 100%;
         height: max-content;
+    }
 
-        /*& .round {
-    width: 130px;
-    height: 130px;
-    border: 1px dashed grey;
-    background-color: pink;
-}*/
+    .round {
+        width: 100px;
+        height: 100px;
+        border: 1px dashed grey;
+        background-color: pink;
     }
 
     .aboutText {
@@ -129,7 +129,7 @@
     }
 
     .aboutImg img {
-        width: 15%;
+        width: 20%;
         height: 40%;
         object-fit: contain;
     }
