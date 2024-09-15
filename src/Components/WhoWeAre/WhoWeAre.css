@@ -123,6 +123,7 @@
     .who-we-are-image-wrapper {
         height: 50%;
 
+
     }
 
     .who-we-are-image-wrapper img {
@@ -139,11 +140,15 @@
         height: 50%;
         justify-content: flex-start;
         align-items: flex-start;
+        width: 100%;
+        border: 2px solid red;
+
+        /*        margin: 15px;*/
     }
 
     .who-we-are-p-wrapper .who-we-are-p-text {
-        font-size: 12px;
-        line-height: 20px;
+        font-size: 14px;
+        line-height: 25px;
         font-weight: 400;
 
     }
