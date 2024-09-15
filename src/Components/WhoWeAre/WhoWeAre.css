@@ -142,7 +142,7 @@
         align-items: flex-start;
         width: 100%;
         border: 2px solid red;
-
+        padding: 10px;
         /*        margin: 15px;*/
     }
 
@@ -150,6 +150,7 @@
         font-size: 14px;
         line-height: 25px;
         font-weight: 400;
+
 
     }
 }
