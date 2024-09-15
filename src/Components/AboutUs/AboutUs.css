@@ -107,7 +107,7 @@
         height: max-content;
 
         & .round {
-            width: 100px;
+            width: 130px;
             height: 130px;
             border: 1px dashed grey;
             background-color: pink;
