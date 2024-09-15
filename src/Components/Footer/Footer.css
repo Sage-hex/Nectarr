@@ -25,7 +25,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    /*    justify-content: flex-start;*/
+}
+
+.contact-section address {
+    text-align: left;
 }
 
 .logo {

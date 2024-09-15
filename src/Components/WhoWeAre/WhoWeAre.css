@@ -51,7 +51,8 @@
 }
 
 .who-we-are-p-wrapper .who-we-are-p-text {
-    font-size: 1.5rem;
+    /*    font-size: 1.5rem;*/
+    font-size: 17px;
     line-height: 30px;
     text-align: center;
     /* Center align text for better mobile view */

@@ -162,9 +162,9 @@ const Footer = () => {
             <a href="mailto:info@nectarbuzz.com">info@nectarbuzz.com</a>
           </address>
           <div className="social-icons">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaCameraRetro /></a>
+            <a href="https://instagram.com/sage.pixel" target="_blank" rel="noopener noreferrer"><FaCameraRetro /></a>
             <a href="https://twitter.com/nuelsage" target="_blank" rel="noopener noreferrer"><AiOutlineX/></a>
-            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
+            <a href="https://whatsapp.com/+2347062059128" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
           </div>
         </div>
 

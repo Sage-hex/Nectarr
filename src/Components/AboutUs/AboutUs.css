@@ -65,7 +65,8 @@
 }
 
 .aboutText p {
-    font-size: 1.7rem;
+    /*    font-size: 1.7rem;*/
+    font-size: 20px;
     line-height: 35px;
 }
 
