@@ -103,4 +103,8 @@ background: linear-gradient(351deg, rgba(120,119,136,0) 0%, rgba(0,0,0,0.3715861
 
     }
 
+    .features p {
+        font-size: 1rem;
+    }
+
 }
