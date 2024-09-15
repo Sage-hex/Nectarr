@@ -106,12 +106,12 @@
         width: 100%;
         height: max-content;
 
-        & .round {
-            width: 130px;
-            height: 130px;
-            border: 1px dashed grey;
-            background-color: pink;
-        }
+        /*& .round {
+    width: 130px;
+    height: 130px;
+    border: 1px dashed grey;
+    background-color: pink;
+}*/
     }
 
     .aboutText {
