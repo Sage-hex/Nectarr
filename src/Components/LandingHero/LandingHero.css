@@ -77,11 +77,22 @@
     .LandingHero .Button-custom {
         padding: 10px 15px;
         border-radius: 5px;
+        top: 70%;
+        left: 35%;
+        border-radius: 2px;
+        text-transform: capitalize;
     }
 
     .Landing-text-overlay {
-        font-size: 0.6rem;
+        font-size: 1.5rem;
         top: 35%;
+        left: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        width: 100%;
+        /*        height: 100px;*/
+        /*        background-color: green;*/
     }
 }
 
