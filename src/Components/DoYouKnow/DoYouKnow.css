@@ -6,25 +6,29 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
+    margin-top: 5rem;
 }
 
-li,
+.DoYouKnow h1 {
+    margin: 20px;
+}
+
+/*li,
 p {
     font-weight: 500;
     line-height: 21.97px;
     font-size: 15px;
-}
+}*/
 
 .Honeykick {
     width: 100%;
     height: max-content;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
-}
 
+}
 
 .HoneyCon {
     width: 350px;
@@ -33,7 +37,25 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /*    border: 2px solid red;*/
+}
 
+.HoneyCon img {
+    width: 200px;
+    object-fit: contain;
+}
+
+.HoneyCon h2 {
+    font-size: 1.5rem;
+    /*    margin: 30px*/
+}
+
+.HoneyCon h3 {
+    text-align: left;
+    width: 70%;
+    /*    background-color: red;*/
+    font-size: 1rem;
+    /*    margin: 10px*/
 }
 
 .honeyjar {
@@ -41,50 +63,150 @@ p {
     height: 70%;
 }
 
-
-
 .HFT {
-    width: 90%;
+    width: 100%;
     height: max-content;
     margin-bottom: 50px;
     display: flex;
-    flex-wrap: wrap;
-
-    gap: 350px !important;
+    justify-content: space-between;
+    align-items: center;
+    /*    border: 2px solid red;*/
 }
 
-.beeYourSelf {
+.HFT .HoneyCon {
+    border: 2px solid green;
+    gap: 2px;
+}
 
-    width: 400px;
-    height: 400px;
+.newsletterForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('../../assets/Images/bee-yourself-form-bg.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*    border: 2px solid red;*/
+    height: 350px;
+    width: 220px;
+    padding-top: 45px;
+    color: #fff;
+}
 
+.newsletterForm form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
+.newsletterForm input {
+    margin-bottom: 10px;
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    border-radius: 0;
+}
 
+.newsletterForm .Button-custom {
+    padding: 7px 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffcc00;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0;
+}
 
+/* Responsive Styles */
+@media (max-width: 1220px) {
+    .Honeykick {
 
-@media (max-width:1220px) {
+        /*        flex-direction: column;*/
+        align-items: center;
+    }
+
     .HFT {
-        width: 90%;
-        height: max-content;
-        margin-bottom: 50px;
-        display: flex;
-        flex-wrap: wrap;
-
-        gap: 85px !important;
+        /*        flex-direction: column;*/
+        align-items: center;
     }
-
-    .beeYourSelf {
-        width: 200px;
-    }
-
 
 }
 
-@media (max-width:500px) {
-    .beeYourSelf {
-        width: 400px;
+
+@media (max-width: 768px) {
+    .HoneyCon h2 {
+        font-size: 1.2rem;
+        margin: 10px;
+        width: 100%;
     }
+
+}
+
+
+
+
+@media (max-width: 500px) {
+    .DoYouKnow {
+        gap: 0rem;
+        height: max-content;
+        /*        border: 2px solid black;*/
+    }
+
+    .DoYouKnow h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .Honeykick {
+        flex-direction: column;
+        /*        flex-wrap: wrap;*/
+        align-items: center;
+        width: 100%;
+        height: 60%;
+        /*        justify-content: space-around;*/
+        /*        border: 2px solid red;*/
+    }
+
+    .Honeykick h2 {
+        font-size: 1.3rem;
+    }
+
+    .HFT {
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+        justify-content: center;
+        height: max-content;
+    }
+
+    .HFT .HoneyCon {
+        margin: 0;
+        /*        border: 2px solid blue;*/
+    }
+
+    .Honeykick .HoneyCon {
+        width: 100%;
+        height: 30%;
+        /*        border: 2px solid green;*/
+        margin: 0;
+    }
+
+    .honeyjar {
+        width: 100%;
+        height: auto;
+    }
+
+    .HFT .HoneyCon h2 {
+        font-size: 1.5rem;
+        /*        background-color: red;*/
+        width: 70%;
+        margin: 0;
+        /*        padding: 0;*/
+    }
+
 
 }
