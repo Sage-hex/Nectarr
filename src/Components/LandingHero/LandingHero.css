@@ -77,14 +77,14 @@
     .LandingHero .Button-custom {
         padding: 10px 15px;
         border-radius: 5px;
-        top: 70%;
+        top: 60%;
         left: 35%;
         border-radius: 2px;
         text-transform: capitalize;
     }
 
     .Landing-text-overlay {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         top: 35%;
         left: 50%;
         display: flex;

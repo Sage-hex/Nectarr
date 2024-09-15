@@ -116,6 +116,7 @@
 
     .text h1 {
         font-size: 1.5rem;
+        margin-bottom: 15px;
     }
 
     .text p {
@@ -125,10 +126,18 @@
     .boxhold {
         width: 90%;
         height: 250px;
+        /*        border: 1px solid red;*/
+    }
+
+    .box-text h3 {
+        margin-bottom: 15px;
+
     }
 
     .boxhold img {
         width: 200px;
+        object-fit: cover;
+        border-radius: 4px;
     }
 
     .box {
@@ -138,6 +147,7 @@
     .box-text p {
         width: 100%;
         /*        background-color: red;*/
+        font-size: 12px;
         font-weight: 400;
 
     }

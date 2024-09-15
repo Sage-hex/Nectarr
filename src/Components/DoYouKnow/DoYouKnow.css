@@ -74,7 +74,7 @@ p {
 }
 
 .HFT .HoneyCon {
-    border: 2px solid green;
+    /*    border: 2px solid green;*/
     gap: 2px;
 }
 
@@ -151,7 +151,7 @@ p {
 
 @media (max-width: 500px) {
     .DoYouKnow {
-        gap: 0rem;
+        gap: 1rem;
         height: max-content;
         /*        border: 2px solid black;*/
     }
@@ -169,10 +169,12 @@ p {
         height: 60%;
         /*        justify-content: space-around;*/
         /*        border: 2px solid red;*/
+        gap: 5rem;
     }
 
     .Honeykick h2 {
-        font-size: 1.3rem;
+        font-size: 1rem;
+        padding: .5rem;
     }
 
     .HFT {
@@ -202,11 +204,38 @@ p {
 
     .HFT .HoneyCon h2 {
         font-size: 1.5rem;
-        /*        background-color: red;*/
         width: 70%;
-        margin: 0;
+        /*        margin-top: 1.5rem;*/
         /*        padding: 0;*/
+        font-size: 1rem;
+        padding: .5rem;
     }
 
+    .HoneyCon h3 {
+        font-size: 0.7rem;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .HoneyCon h2 {
+        padding-bottom: 1.5rem;
+    }
+
+    .HoneyCon img {
+        width: 100px;
+        object-fit: contain;
+    }
+
+    .newsletterForm {
+        width: 100%;
+        border: 2px dotted silver;
+        background-size: cover;
+
+    }
+
+    .newsletterForm input {
+        width: 100%;
+
+    }
 
 }

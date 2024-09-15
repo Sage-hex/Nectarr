@@ -11,12 +11,12 @@ const UserReviews = () => {
         {
             image: mamaruka,
             text: "Nectar Buzz is my go-to for high-quality honey. Their commitment to sustainability makes me feel good about every purchase.",
-            name: "Jane Doe",
+            name: "Iya Deji",
         },
         {
             image: mrstan,
             text: "The taste is always consistent, and I trust their products to be pure and organic. Great experience overall!",
-            name: "John Smith",
+            name: "Pa J",
         },
     ];
 
@@ -31,7 +31,7 @@ const UserReviews = () => {
 
         return () => clearInterval(interval);
     }, [reviews.length]);
-return (
+    return (
         <div style={styles.container}>
       <h2 style={styles.heading}>TOP STORIES FROM OUR CONSUMERS</h2>
       <div style={styles.imageContainer}>
@@ -62,7 +62,7 @@ const styles = {
         boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
     },
     heading: {
-        fontSize: "1.8rem",
+        fontSize: "1.5rem",
         fontWeight: "bold",
         marginBottom: "30px",
         fontFamily: "'Georgia', serif",
