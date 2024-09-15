@@ -106,12 +106,12 @@
         width: 100%;
         height: max-content;
 
-        /*& .round {
-    width: 130px;
-    height: 130px;
-    border: 1px dashed grey;
-    background-color: pink;
-}*/
+        & .round {
+            width: 100px;
+            height: 130px;
+            border: 1px dashed grey;
+            background-color: pink;
+        }
     }
 
     .aboutText {
@@ -125,11 +125,11 @@
         text-align: left;
     }
 
-    .aboutImg img {
+    /*.aboutImg img {
         width: 10%;
         height: 10%;
         object-fit: contain;
-    }
+    }*/
 
     .about {
         gap: 20px;
