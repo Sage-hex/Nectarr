@@ -45,29 +45,31 @@ import featuresImageThree from '../../assets/Images/feature-image-three.png';
 const FeaturesBox = () => {
     return (
         <div className="featuresBox">
-        <div className="features" data-aos="fade-right">
+        <div className="features" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
           <div className="feature-card-image-container">
           <img src={featuresImageOne} alt="" className='feature-card-image' />
           </div>
-          <h2>features 01</h2>
-            <p>providing genuine, unadulterated
+            <p>Providing genuine, unadulterated
 honey</p>
         </div>
-        <div className="features two" data-aos="fade-down">
+        <div className="features two"  data-aos="zoom-in"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
         <div className="feature-card-image-container">
           <img src={featuresImageTwo} alt="" className='feature-card-image' />
           </div>
-          <h2>features 0
-        2</h2>
             <p>Visibility for beekeepers</p>
 
         </div>
 
-        <div className="features" data-aos="fade-left">
+        <div className="features"  data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
         <div className="feature-card-image-container">
           <img src={featuresImageThree} alt="" className='feature-card-image' />
           </div>
-          <h2>features 03</h2>
             <p>Varieties of Honey</p>
         </div>
       </div>

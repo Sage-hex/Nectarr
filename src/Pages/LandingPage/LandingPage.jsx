@@ -18,31 +18,6 @@ import UserReview from '../../Components/UserReviews/UserReview';
 
 const LandingPage = () => {
 
-    // const [currentIndex, setCurrentIndex] = useState(0);
-
-    // useEffect(() => {
-    //     Aos.init();
-    // }, []);
-
-    // const phrases = [
-    //     "E SHOCK YOU!",
-    //     "CAN'T BELIEVE THESE DEALS!",
-    //     "AMAZING OFFERS JUST FOR YOU!",
-    //     "EXCLUSIVE DISCOUNTS TODAY!",
-    //     "SHOP NOW AND SAVE BIG!"
-    // ];
-
-    // useEffect(() => {
-
-    //     const interval = setInterval(() => {
-    //         setCurrentIndex((prevIndex) => (prevIndex + 1) % phrases.length);
-    //     }, 3000);
-
-    //     return () => clearInterval(interval);
-    // }, [phrases.length]);
-
-
-
     return (
         <div className='LandingPage'>
         {/*<HeaderAd/>*/}
@@ -52,7 +27,7 @@ const LandingPage = () => {
       <FeaturesBox/>
       <WhoWeAre/>
 
-      <div className="space"></div>
+      { /*<div className="space"></div>*/}
 
       <Ourservice/>
       <Collection/>
@@ -60,7 +35,7 @@ const LandingPage = () => {
 
       <UserReview/>
 
-      <HoneySection/>
+      {/*<HoneySection/>*/}
 
       {/* <Footer/> */}
     </div>
