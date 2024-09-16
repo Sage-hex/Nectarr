@@ -14,6 +14,7 @@ import Ourservice from '../../Components/OurService/Ourservice';
 import LandingHero from '../../Components/LandingHero/LandingHero';
 import Collection from '../../Components/Collection/Collection';
 import UserReview from '../../Components/UserReviews/UserReview';
+import NewsLetter from '../../Components/NewsLetter/NewsLetter'
 
 
 const LandingPage = () => {
@@ -35,7 +36,8 @@ const LandingPage = () => {
 
       <UserReview/>
 
-      {/*<HoneySection/>*/}
+      <HoneySection/>
+      <NewsLetter/>
 
       {/* <Footer/> */}
     </div>
