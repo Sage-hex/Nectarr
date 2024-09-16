@@ -31,6 +31,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border: 2px solid green;
 }
 
 .boxhold {
@@ -40,11 +41,12 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    /* border: 2px solid red; */
 }
 
 .box {
     width: 100%;
-    height: 200px;
+    height: 400px;
     object-fit: cover;
     border-radius: 10px;
 }
