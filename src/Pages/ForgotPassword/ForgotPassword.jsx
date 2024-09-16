@@ -28,7 +28,8 @@ const ForgotPasswordForm = () => {
             { /*<label htmlFor="email">Email</label>*/}
           </div>
           <div className="forgotpassword-form-actions">
-            <Button>Send OTP</Button>
+          <NavLink to="/resetPasswordAuth"><Button>Send OTP</Button></NavLink>
+            
           </div>
         </form>
         <section className="signup-prompt">

@@ -34,8 +34,8 @@
 }
 
 .OurBeeKeeper img {
-    /*    object-fit: contain;*/
-    /*    flex: 1;*/
+       object-fit: contain;
+       flex: 1;
     /*    object-fit: cover;*/
 }
 
