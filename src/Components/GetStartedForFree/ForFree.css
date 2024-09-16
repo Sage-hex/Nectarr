@@ -10,7 +10,7 @@
     justify-content: center;
     flex-direction: column;
     padding: 20px;
-    /*    border: 2px solid red;*/
+       /* border: 2px solid red; */
 }
 
 .ForfreeHead {
@@ -34,7 +34,8 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 10rem;
+    gap: 5rem;
+      /* border: 2px solid red; */
 }
 
 .MainBox {

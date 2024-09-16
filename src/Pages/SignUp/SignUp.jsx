@@ -25,38 +25,38 @@ const SignUp = () => {
     console.log(gender);
 
 
-    const signUp = async (e) => {
-        e.preventDefault();
+    // const signUp = async (e) => {
+    //     e.preventDefault();
 
-        if (!username || !email || !passWord || !phoneNo || !location || !address || !gender) {
-            alert('All fields are required');
-            return;
-        }
+    //     if (!username || !email || !passWord || !phoneNo || !location || !address || !gender) {
+    //         alert('All fields are required');
+    //         return;
+    //     }
 
-        const signUpData = {
-            username,
-            email,
-            passWord,
-            phoneNo,
-            location,
-            address,
-            gender
-        };
-
-
-        try {
-            const url = "https://nectarbuzz.onrender.com/api/v1/user-signup";
-            const res = await axios.post(url, signUpData);
-            alert('Sign up successful 🎉🎉');
-            console.log(res.data);
+    //     const signUpData = {
+    //         username,
+    //         email,
+    //         passWord,
+    //         phoneNo,
+    //         location,
+    //         address,
+    //         gender
+    //     };
 
 
-            // nav("/login"); /
-        } catch (err) {
-            toast.error('Sign up failed');
-            console.error(err);
-        }
-    };
+    //     try {
+    //         const url = "https://nectarbuzz.onrender.com/api/v1/user-signup";
+    //         const res = await axios.post(url, signUpData);
+    //         alert('Sign up successful 🎉🎉');
+    //         console.log(res.data);
+
+
+    //         // nav("/login"); /
+    //     } catch (err) {
+    //         toast.error('Sign up failed');
+    //         console.error(err);
+    //     }
+    // };
 
 
 
@@ -79,7 +79,7 @@ const SignUp = () => {
           <h1>Create an account</h1>
           <p className="signup-subtext">Sign up now and unlock exclusive access!</p>
 
-          <form className="signup-form" onSubmit={signUp}>
+          <form className="signup-form" onSubmit={()=>nav('/profile')}>
             <div className="input-group">
               <input
                 type="text"
@@ -99,7 +99,9 @@ const SignUp = () => {
               />
             </div>
             <div className="input-group">
-              <select name="gender" aria-label="Gender" required onChange={(e)=>setGender(e.target.value)}>
+              <select name="gender" aria-label="Gender" required 
+              // onChange={(e)=>setGender(e.target.value)}
+              >
                 <option value="" disabled selected>
                   Select Gender
                 </option>
@@ -114,7 +116,7 @@ const SignUp = () => {
                 placeholder="Tel"
                 aria-label="Telephone"
                 required
-                onChange={(e)=>setPhoneNo(e.target.value)}
+                // onChange={(e)=>setPhoneNo(e.target.value)}
               />
             </div>
             <div className="input-group">
@@ -124,7 +126,7 @@ const SignUp = () => {
                 placeholder="Location"
                 aria-label="Location"
                 required
-                onChange={(e)=>setLocation(e.target.value)}
+                // onChange={(e)=>setLocation(e.target.value)}
               />
               <input
                 type="email"
@@ -132,7 +134,7 @@ const SignUp = () => {
                 placeholder="Email"
                 aria-label="Email"
                 required
-                onChange={(e)=>setEmail(e.target.value)}
+                // onChange={(e)=>setEmail(e.target.value)}
               />
             </div>
             <div className="input-group">
@@ -142,7 +144,7 @@ const SignUp = () => {
                 placeholder="Password"
                 aria-label="Password"
                 required
-                onChange={(e)=>setPassWord(e.target.value)}
+                // onChange={(e)=>setPassWord(e.target.value)}
               />
               <input
                 type="password"
@@ -150,7 +152,7 @@ const SignUp = () => {
                 placeholder="Confirm password"
                 aria-label="Confirm password"
                 required
-                onChange={(e)=>setUserName(e.target.value)}
+                // onChange={(e)=>setUserName(e.target.value)}
               />
             </div>
             <div className="signup-btn">
