@@ -59,6 +59,19 @@
     white-space: normal;
     /* Allow text to wrap */
 }
+/* styling for the 4k screen */
+
+@media (min-width:2560px){
+    .who-we-are-wrapper{
+        margin-top: 40rem;
+    }
+    .who-we-are-p-wrapper .who-we-are-p-text {
+        font-size: 2.3rem;
+        line-height: 55px;
+    }
+
+
+}
 
 @media (max-width: 1024px) {
     .who-we-are-wrapper {
