@@ -8,7 +8,7 @@ import ForgotPassword from "../../Pages/ForgotPassword/ForgotPassword";
 import ResetPassword from "../../Pages/ResetPassword/ResetPassword";
 import ResetPasswordAuth from "../../Pages/ResetPasswordAuth/ResetPasswordAuth";
 import Shop from "../../Pages/Shop/Shop";
-import UserDashboard from "../../Pages/UserDashBoard/UserDashBoard";
+import UserDashboard from "../../Pages/UserDashboard/UserDashboard";
 import Profile from "../../Pages/Profile/Profile";
 import About from "../../Pages/AboutPage/About";
 import WelcomePage from '../../Pages/WelcomePage/WelcomePage'
