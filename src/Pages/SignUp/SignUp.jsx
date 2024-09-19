@@ -49,8 +49,8 @@ const SignUp = () => {
       
 
       setTimeout(() => {
-        nav("/welcomePage");
-      }, 5000);
+      nav("/congrats");
+      }, 3000);
       
     } catch (err) {
       console.error(err);

@@ -26,7 +26,7 @@ const FarmerForgot = () => {
     };
 
     try {
-      const url = "https://nectarbuzz.onrender.com/api/v1/forgot-password/farmer";
+      const url = "https://nectarbuzz.onrender.com/api/v1/farmer-forgot-password";
       const res = await axios.post(url, signUpData);
       console.log(res.data);
       // toast.success('vyw 🤗🎉');

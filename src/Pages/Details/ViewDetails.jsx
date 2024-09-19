@@ -4,11 +4,24 @@ import './ViewDetails.css'
 import { BiCar } from 'react-icons/bi'
 import { BsArrowClockwise } from 'react-icons/bs'
 import { BiBadgeCheck } from 'react-icons/bi'
-
+import { useDispatch } from 'react-redux'
+import { useParams  } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { useSelector } from 'react-redux'
 const ViewDetails = () => {
-        return ( <
-                >
-                <div className='ViewDetails'>
+
+  const dispatch = useDispatch()
+  const [detailArray, setDetailArray] = useState({});
+  const { id } = useParams();
+  const  cart  = useSelector((state) => state?.cart)
+
+  useEffect(() => {
+    const catItems = cart.find((e) => e.id == id)
+    setDetailArray(catItems)
+  }, [id])
+
+ return ( <>
+   <div className='ViewDetails'>
       <div className="top">
         <h1>You are almost there</h1>
       </div>
@@ -49,7 +62,7 @@ const ViewDetails = () => {
                   </div>
                 </div>
                 <div className="call">
-                    <h2>Call For Bulk Purchase</h2>
+                    <h3>Call For Bulk Purchase</h3>
                     <p color='brown'>08036229920</p>
                   </div>
                

@@ -1,5 +1,5 @@
 .CartItems {
-    width: 70%;
+    width: 60%;
     height: 100vh;
     border: 1px solid black;
 
@@ -59,6 +59,14 @@ hr {
     height: 100%;
     border: 1px solid grey;
     box-shadow: 3px 3px 8px grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & img{
+        width: 70%;
+        height: 70%;
+    }
 }
 
 .main-cart .Controls {

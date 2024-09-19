@@ -1,12 +1,17 @@
 import React from 'react'
 import './Order.css'
+import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const Order = () => {
+  const cart = useSelector((state) => state?.cart)
+  const total = useSelector((state)=> state?.total)
+  const nav = useNavigate()
     return (
         <div className='Summary'>
       <div className="orderSum">
         <h2>Order Summary</h2>
-        <h2>Items()</h2>
+        <h2>Items({cart.length})</h2>
       </div>
       <hr />
       <section className='delivery-Charges'>
@@ -19,14 +24,14 @@ const Order = () => {
 
       <section className='total'>
             <h3>Subtotal: <span>₦</span></h3>
-            <h1>Subtotal: <span>₦</span></h1>
+            <h2>Total: <span>₦ {total}</span></h2>
       </section>
       <hr />
 
 
       <div className="free-delivery">
         <h3>Free delivery offer? Enter Code</h3>
-        <button>Continue on checkout</button>
+        <button  onClick={()=>nav('/checkOut')}>Continue on checkout</button>
         <p>we accept</p>
         <div className="grey">Transaction are 100% safe and secured</div>
       </div>

@@ -27,10 +27,10 @@
 .Landing-text-overlay {
     position: absolute;
     top: 20%;
-    left: 35%;
+    font-size: 2em;    
+    left: 30%;
     transform: translate(-50%, -50%);
     color: rgb(236, 70, 70);
-    font-size: 3rem;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     animation: fadeIn 1s ease-in-out;
@@ -120,13 +120,16 @@
     }
 
     .Landing-text-overlay {
-        font-size: 1.3rem;
+        font-size: 1.3rem !important;
         top: 35%;
         left: 50%;
         display: flex;
         flex-wrap: wrap;
         text-align: center;
         width: 100%;
+
+
+        
         /*        height: 100px;*/
         /*        background-color: green;*/
     }
