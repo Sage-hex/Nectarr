@@ -67,8 +67,11 @@
     margin-bottom: 90px;
 }
 
-@media (max-width:1220px) {
+@media (min-width:1220px) {
     .CartItems-Wrap {
         justify-content: center;
+        gap: 100px;
     }
+
+ 
 }

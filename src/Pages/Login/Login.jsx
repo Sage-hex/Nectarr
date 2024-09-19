@@ -5,11 +5,56 @@ import Button from "../../Components/Button/Button";
 import loginImg from "../../assets/Images/signup-logo.png";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import {toast, Toaster} from "react-hot-toast";
+import axios from "axios";
+
+
 const LoginForm = () => {
     const nav = useNavigate()
+
     const Submit = () => {
-        alert('Login successfull🤗')
+        toast.success('Login successfull🤗')
         nav('/welcomePage')
+    }  
+  
+
+    const [email, setEmail] = useState('');
+    const [passWord, setPassWord] = useState('');
+   
+  
+    
+    console.log(passWord);
+    console.log(email);
+   
+    
+  
+    const Login = async (e) => {
+      e.preventDefault();
+  
+      const signUpData = {
+        
+        email,
+        password : passWord,
+        
+      };
+  
+      try {
+        const url = "https://nectarbuzz.onrender.com/api/v1/log-in";
+        const res = await axios.post(url, signUpData);
+        console.log(res.data);
+        toast.success('Login Successful 🤗🎉');
+        
+  
+        setTimeout(() => {
+          nav("/welcomePage");
+        }, 5000);
+        
+      } catch (err) {
+        console.error(err);
+        toast.error(err.response.data.message);
+       
+      }
     }
     return (
         // <section className="login-container">
@@ -23,17 +68,8 @@ const LoginForm = () => {
             <img src={userIcon} alt="User Icon" />
           </div>
           </section>
-          <form className="login-form" action="#" method="POST">
-          {/*  <div class="login-form-group">
-               <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                aria-label="Email"
-                required
-                onChange={(e)=>setEmail(e.target.value)}
-              />
-            </div>*/}
+           <form className="login-form" action="#" method="POST">
+    
             <div class="login-form-group">
                 <input
                 type="email"
@@ -48,6 +84,7 @@ const LoginForm = () => {
                 id="password"
                 name="password"
                 placeholder="Password"
+                onChange={(e)=>setPassWord(e.target.value)}
                 required
               />
               {/*<label for="password">Password</label>*/}
@@ -58,15 +95,16 @@ const LoginForm = () => {
             <NavLink to="/forgotpassword" className="forgot-password-link">Forget password</NavLink>
           
             <div className="login-form-actions">
-              <Button onClick={Submit} >Login</Button>
+              <Button onClick={Login} >Login</Button>
             </div>
           </form>
           <section className="signup-prompt">
-            <p>
+            <p style={{color:'white'}}>
               Don't have an account? <NavLink to="/signup">Sign up</NavLink>
             </p>
           </section>
         </section>
+        <Toaster/>
       </section>
         // </section>
     );

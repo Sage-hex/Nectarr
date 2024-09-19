@@ -43,6 +43,32 @@
     display: none;
 }
 
+
+@media (min-width: 2560px) {
+    .whyUs{
+        margin-bottom: 500px;
+    }
+    .bestOfAll{
+        justify-content: space-between;
+    }
+
+    .bestimg{
+        width: 50%;
+        height: 50vh;
+        border: 2px solid black;
+    }
+    .bestText{
+        width: 40%;
+    }
+    .bestText li, .bestText p{
+        font-size: 2.2rem;
+        /* line-height: 50px; */
+    }
+
+    .bestText h2{
+        font-size: 3rem;
+    }
+}
 @media (max-width:768px) {
     .bestText {
         display: none;

@@ -1,0 +1,49 @@
+.Messager{
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.Messager h2{
+    color: rgb(39, 38, 38);
+}
+
+.Messagess{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.Messagess textarea{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.Messagess button{
+    width: 10%;
+    align-self: end;
+    color: black;
+    font-weight: 900;
+    background-color: #fff;
+}
+
+.decline{
+    color: black;
+    border: 1px solid black;
+    background-color: #fff;
+    font-weight: 700;
+}

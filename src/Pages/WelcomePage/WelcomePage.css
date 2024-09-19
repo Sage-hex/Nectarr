@@ -107,6 +107,16 @@
 }
 
 /* Responsive Styles */
+
+@media (min-width:2560px){
+    .welcome-box{
+        max-width: 100% ;
+        height: 50%;
+    }
+
+}
+
+
 @media (max-width: 768px) {
     .welcome-box {
         width: 90%;

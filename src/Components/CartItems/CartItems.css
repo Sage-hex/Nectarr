@@ -1,6 +1,6 @@
 .CartItems {
     width: 70%;
-    height: 700px;
+    height: 100vh;
     border: 1px solid black;
 
 }
@@ -37,7 +37,7 @@ hr {
 
 .Cart-body {
     width: 100%;
-    height: 88.3%;
+    height: 100%;
     overflow: auto;
     background-color: #fff;
 }
@@ -109,4 +109,10 @@ hr {
     .CartItems-head {
         display: none;
     }
+
+    .CartItems hr{
+        display: none;
+    }
+
+    
 }

@@ -7,11 +7,14 @@
 }
 
 .LandingHero .Button-custom {
+    width: 200px;
+    height: 70px;
     position: absolute;
     top: 70%;
     left: 10%;
     padding: 15px 25px;
     border-radius: 8px;
+    font-size: 30px;
 
 }
 
@@ -23,18 +26,46 @@
 
 .Landing-text-overlay {
     position: absolute;
-    top: 50%;
-    left: 30%;
+    top: 20%;
+    left: 35%;
     transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2rem;
+    color: rgb(236, 70, 70);
+    font-size: 3rem;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     animation: fadeIn 1s ease-in-out;
     text-align: center;
     padding: 0 10px;
 }
+.Landing-text-overlay .fade-in {
+    opacity: 1;
+  }
 
+.Landing-text-overlay h1{
+    opacity: 5;
+    transition: opacity 1s ease-in-out;
+  }
+
+.Landing-text-overlay span{
+    color: gold;
+    width: 2px;    
+    animation: blink;
+    transition: all 350ms ease-in;
+}
+
+/* @keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+        transition: all 350ms ease-in;
+    }
+
+    50% {
+        opacity: 0;
+        transition: all 350ms ease-in;
+    }
+} */
 /* Responsive font size */
 @media (max-width: 1200px) {
 
@@ -62,6 +93,8 @@
         font-size: 1.4rem;
         top: 40%;
     }
+
+   
 }
 
 @media (max-width: 576px) {
@@ -79,6 +112,9 @@
         border-radius: 5px;
         top: 60%;
         left: 35%;
+        width: 100px;
+        height: 40px;
+        font-size: 15px;
         border-radius: 2px;
         text-transform: capitalize;
     }

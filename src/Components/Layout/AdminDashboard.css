@@ -1,8 +1,7 @@
 .dashboard-container {
     width: 100%;
     height: 100vh;
-    background-color: blue;
-    border: 2px solid red;
+    background-color: rgb(252, 250, 250);
     display: flex;
     /*    gap: 3rem;*/
 }
@@ -11,7 +10,6 @@
 .dashboard-content-wrapper {
     width: 100%;
     height: 100%;
-    border: 2px solid yellow;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +19,6 @@
     width: 95%;
     height: 90%;
     /*    overflow-y: auto;*/
-    border: 5px solid green;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +29,6 @@
 .Main-content {
     width: 100%;
     height: 100%;
-    border: 10px solid red;
     overflow-y: auto;
 }
 

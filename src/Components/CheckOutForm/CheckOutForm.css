@@ -1,0 +1,83 @@
+.CheckOutForm{
+    width: 50%;
+    height: 100%;
+    background-color: inherit;
+    box-shadow: 3px 3px 7px rgb(156, 155, 155);
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 20px;
+}
+
+.checkoutInfo{
+    width: 95%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.checkoutInfo input{
+    width: 100%;
+    height: 60%;
+    margin-top: 10px;
+    border: 2px solid lightgray;
+    padding-left: 10px;
+    color: gray;
+    outline: none;
+}
+
+.check-group-Input{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.check-group-Input input{
+    height: 100%;
+}
+.span-hold{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.CheckOutForm button{
+    width: 50%;
+    height: 5%;
+    align-self: center;
+    background-color: black;
+}
+
+@media (max-width:768px) {
+    .CheckOutForm{
+        width: 100%;
+        height: 170vh;
+    }
+}
+
+@media (max-width:500px) {
+    .check-group-Input{
+     
+        gap: 5px;
+    }
+
+
+    .CheckOutForm button{
+        font-size: 13px;
+        width: 70%;
+    }
+
+   
+
+    
+}
+
+
+

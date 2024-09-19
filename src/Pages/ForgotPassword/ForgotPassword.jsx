@@ -1,10 +1,48 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import "./ForgotPassword.css"; // Updated CSS file
 import userIcon from "../../assets/Images/user-icon.png"; // Import the user icon image
 import Button from "../../Components/Button/Button";
 import { NavLink } from "react-router-dom";
+import {toast, Toaster} from "react-hot-toast";
+import axios from "axios";
 
 const ForgotPasswordForm = () => {
+
+
+  const [passWord, setPassWord] = useState('');
+ 
+
+  
+  console.log(passWord);
+ 
+  
+
+  const ForgetPW = async (e) => {
+    e.preventDefault();
+    const signUpData = {  
+      password : passWord
+      
+    };
+
+    try {
+      const url = "https://nectarbuzz.onrender.com/api/v1/forgot-password";
+      const res = await axios.post(url, signUpData);
+      console.log(res.data);
+      // toast.success('vyw 🤗🎉');
+      
+
+      setTimeout(() => {
+        nav("/ressetPassword");
+      }, 5000);
+      
+    } catch (err) {
+      console.error(err);
+      toast.error(err.response.data.message);
+    }
+  }
+  
+
     return (
         <section className="forgotpassword-wrapper">
       <section className="forgotpassword-form-section">
@@ -24,11 +62,12 @@ const ForgotPasswordForm = () => {
               name="email"
               placeholder="Email"
               required
+              onChange={(e)=>setPassWord(e.target.value)}
             />
             { /*<label htmlFor="email">Email</label>*/}
           </div>
           <div className="forgotpassword-form-actions">
-          <NavLink to="/resetPasswordAuth"><Button>Send OTP</Button></NavLink>
+          <Button onClick={ForgetPW}>Send OTP</Button>
             
           </div>
         </form>
@@ -38,6 +77,7 @@ const ForgotPasswordForm = () => {
           </p>
         </section>
       </section>
+      <Toaster/>
     </section>
     );
 };

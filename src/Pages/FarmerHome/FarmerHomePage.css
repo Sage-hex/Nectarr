@@ -1,0 +1,116 @@
+.FarmerHomePage{
+    width: 100%;
+    height: 85%;
+    background-color: white;
+    overflow: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    
+}
+
+.FarmerHomePageTop{
+    width: 90%;
+    height: 60%;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.productUpload{
+    width: 50%;
+    height: 100%;
+    background-color: #7c520f;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+    gap: 20px;
+}
+
+.Uploaded-Product{
+    width: 50%;
+    height: 60%;
+    background-color: #fff;
+}
+
+.FarmerHomePageBottom{
+    width: max-content;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    
+}
+
+.FarmerHomePageBottom select{
+    outline: none;
+    height: 35px;
+}
+
+
+
+.productDescription{
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    
+    
+}
+
+.Product-Details{
+    width: 100%;
+    height: 70%;
+}
+
+.Product-Details input{
+    margin-bottom: 5px;
+    outline: none;
+    padding: 3px;
+}
+.Product-Details input:nth-child(6){
+    width: 10%;
+    border-radius: 4px;
+    outline: none;
+}
+
+.Product-Details input:nth-child(4){
+    width: 40%;
+    border-radius: 4px;
+}
+.button-holds{
+    width: 50%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    align-self: flex-end;
+}
+
+ .FarmerHomePage .add{
+    color: black;
+    font-weight: 700;
+    background: #80A9FE;
+
+}
+
+.FarmerHomePage .discard{
+    color: black;
+    border: 1px solid black;
+    background-color: #fff;
+    font-weight: 700;
+}
+
