@@ -183,7 +183,7 @@ const Overview = () => {
         { product: 'Manuka', code: '#MNK-123', date: '6-8-2024', status: 'Reviewed', quantity: 30 },
         { product: 'Acacia', code: '#KHR-233', date: '6-8-2024', status: 'Reviewed', quantity: 15 },
         { product: 'Wildflower', code: '#WDF-190', date: '6-8-2024', status: 'Reviewed', quantity: 18 },
-        { product: 'Hamper', code: '#NIT-323', date: '6-8-2024', status: 'Reviewed', quantity: 32 },
+        // { product: 'Hamper', code: '#NIT-323', date: '6-8-2024', status: 'Reviewed', quantity: 32 },
     ]);
 
     const [selectedDate, setSelectedDate] = useState('This month');
@@ -310,15 +310,35 @@ const Overview = () => {
         <div className="recent-uploads">
           <h2>Recent Upload</h2>
           <div className="upload-cards">
-            {recentUploads.map((upload, index) => (
+            <div className="uploadCard-head">
+              <div className="productHead">Product</div>
+              <div className="productHead">Code</div>
+              <div className="productHead">Date</div>
+              <div className="productHead">Price</div>
+              <div className="productHead">Quantity</div>
+            </div>
+            <div className="upload-body">
+           {
+            recentUploads.map((upload,index) =>(
+              <div className="main-upload" key={index}>
+              <p>{upload.product}</p>
+              <p>{upload.code}</p>
+                <p>{upload.date}</p>
+                <p>{upload.status}</p>
+                <p>{upload.quantity}</p>
+            </div>
+            ))
+           }
+            </div>
+            {/* {recentUploads.map((upload, index) => (
               <div key={index} className="upload-card">
-                <p>{upload.product}</p>
+                <p>gfhj{upload.product} </p>
                 <p>{upload.code}</p>
                 <p>{upload.date}</p>
                 <p>{upload.status}</p>
                 <p>{upload.quantity}</p>
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
         <div className="recent-orders">

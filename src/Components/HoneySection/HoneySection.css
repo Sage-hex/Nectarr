@@ -1,7 +1,6 @@
 .honey-section {
     background-color: #f5e0c2;
     padding: 100px 30px 30px 30px;
-
     text-align: center;
     width: 100%;
     display: flex;
@@ -53,11 +52,13 @@
     color: white;
     padding: 20px;
     border-radius: 10px;
-    width: 500px;
+    width: 43%;
     height: 250px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
     text-align: left;
+    border-radius: 10px !important;
+
 }
 
 .honey-card h2 {
@@ -68,6 +69,7 @@
 .honey-card p {
     font-size: 16px;
     line-height: 1.5;
+    /* font-size: 20px; */
 }
 
 .honey-card a {
@@ -90,6 +92,19 @@
 }
 
 /* Mobile responsiveness */
+@media (min-width:2560px) {
+    p{
+        font-size: 25px;
+    }
+
+    .honey-card p{
+        font-size: 25px;
+    }
+    .honey-card{
+        height: 300px;
+    }
+    
+}
 @media (max-width: 768px) {
     .honey-cards {
         flex-direction: column;

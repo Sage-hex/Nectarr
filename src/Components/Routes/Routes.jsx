@@ -6,6 +6,7 @@ import LandingPage from "../../Pages/LandingPage/LandingPage";
 import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/SignUp/SignUp";
 import ForgotPassword from "../../Pages/ForgotPassword/ForgotPassword";
+import FarmerForget from "../../Pages/ForgotPassword/FarmerForget";
 import ResetPassword from "../../Pages/ResetPassword/ResetPassword";
 import ResetPasswordAuth from "../../Pages/ResetPasswordAuth/ResetPasswordAuth";
 import Shop from "../../Pages/Shop/Shop";
@@ -18,6 +19,13 @@ import BeeKeeperSingUp from "../../Pages/BeekeperSignUp/Beekeper"
 import Details from '../../Pages/Details/ViewDetails';
 import CartPage from '../../Pages/CartPage/CartPage';
 import Hampper from '../../Pages/Hampper/Hampper';
+import FarmerLogin from '../../Pages/Login/FarmerLogin';
+import FarmerLayout from '../../Pages/FarmersDashboard/FarmerLayout'
+import FarmerResetPassword from '../../Pages/ResetPassword/FarmerResetPassword';
+import FarmerHomePage from '../../Pages/FarmerHome/FarmerHomePage';
+import Checkout from '../../Pages/CheckOut/Checkout';
+import Message from '../../Pages/MessagePage/Message';
+// import FarmerHomePage from '../../Pages/FarmersDashboard/FarmerHomePage';
 // import GetStarted from '../../Pages/GetStarted /GetStarted ';
 // import beeKeeperSignUp  from '../../Pages/BeeKeeperSignUp/BeeKeeper '
 
@@ -41,7 +49,8 @@ const router = createHashRouter([
             { path: 'shop', element: <Shop /> },
             { path: 'hampper', element: <Hampper /> },
             { path: 'details', element: <Details/> },
-            { path: 'cart', element: <CartPage/> }
+            { path: 'cart', element: <CartPage/> },
+            { path: 'checkout', element: <Checkout/>}
         ],
     },
 
@@ -51,9 +60,12 @@ const router = createHashRouter([
     { path: 'beekeeperSignup', element: <BeeKeeperSingUp /> },
     { path: 'signup', element: <SignUp /> },
     { path: 'login', element: <Login /> },
+    { path: 'farmerLogin', element: <FarmerLogin /> },
     { path: 'user', element: <UserDashboard /> },
     { path: 'forgotPassword', element: <ForgotPassword /> },
+    { path: 'farmerforgot', element: <FarmerForget /> },
     { path: 'resetPassword', element: <ResetPassword /> },
+    { path: 'farmerResetPassword', element: <FarmerResetPassword /> },
     { path: 'resetPasswordAuth', element: <ResetPasswordAuth/> },
 
     // Dashboard section with DashboardLayout wrapping it
@@ -68,6 +80,24 @@ const router = createHashRouter([
             { path: 'payment', element: <Payment /> },
         ],
     },
+
+
+    {
+        element:<FarmerLayout/>,
+        children:[
+            {path: 'farmersHome', element: <FarmerHomePage/> },
+            {path: 'messagePage', element: <Message/> }
+        ]
+     }
+
+
+    // {
+    //     element:<FarmerLayout/>,
+    //     children:[
+    //         {path: 'farmersHome', element: <FarmerHomePage/> },
+    //         {path: 'messagePage', element: <Message/> }
+    //     ]
+    //  }
 
 
 ]);

@@ -1,6 +1,6 @@
 .Summary {
-    width: 300px;
-    height: 500px;
+    width: 25%;
+    height: 75vh;
     border-radius: 10px;
     border: 1px solid black;
     background-color: #fff;
@@ -8,7 +8,7 @@
 
 .orderSum {
     width: 100%;
-    height: 70px;
+    height: 15%;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -21,7 +21,7 @@ hr {
 
 .delivery-Charges {
     width: 100%;
-    height: 130px;
+    height: 17%;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -34,7 +34,7 @@ hr {
 
 .total {
     width: 100%;
-    height: 100px;
+    height: 18%;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -54,7 +54,7 @@ h3 {
 .free-delivery {
     height: max-content;
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -70,11 +70,20 @@ h3 {
 }
 
 .free-delivery button {
+    width: 80%;
+    align-self: center;
     background-color: rgb(2, 146, 110);
 }
-
-@media (max-width:1200px) {
-    .Summary {
-        display: none;
+@media (max-width:768px) {
+    .Summary{
+        width: 50%;
+        height: 550px;
+        
+    }
+}
+@media (max-width:500px) {
+    .Summary{
+        padding: 10px;
+        width: 100%;
     }
 }

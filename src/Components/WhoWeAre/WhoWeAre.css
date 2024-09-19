@@ -9,7 +9,7 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 20rem;
+    margin-top: 30rem;
     padding: 1rem;
 }
 
@@ -27,7 +27,7 @@
 
 .who-we-are-image-wrapper {
     width: 50%;
-    height: 100%;
+    height: 80%;
 }
 
 .who-we-are-image-wrapper img {
@@ -55,6 +55,7 @@
     font-size: 17px;
     line-height: 30px;
     text-align: center;
+    text-align: left;
     /* Center align text for better mobile view */
     white-space: normal;
     /* Allow text to wrap */
@@ -87,7 +88,7 @@
 
 @media (max-width: 768px) {
     .who-we-are-wrapper {
-        margin-top: 50rem;
+        margin-top: 20rem;
         height: auto;
         /* Adjust height to fit content */
     }
@@ -112,7 +113,8 @@
     }
 
     .who-we-are-p-wrapper {
-        width: 100%;
+        width: 90%;
+        text-align: center;
     }
 
     .who-we-are-p-wrapper .who-we-are-p-text {

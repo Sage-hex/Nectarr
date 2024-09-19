@@ -154,10 +154,32 @@ input:not(:placeholder-shown)+label {
     text-align: end;
 }
 
+.signup-prompt{
+    color: white;
+}
+
 
 
 
 /* Responsive Styles */
+
+@media (min-width:2560px) {
+    .login-form-section{   
+
+        max-width: 30%;
+        height: 70%;
+    }
+
+    .login-form-group input {
+        height: 75px;
+    }
+
+    
+
+
+
+
+}
 @media (max-width: 768px) {
     .login-wrapper {
         flex-direction: column;

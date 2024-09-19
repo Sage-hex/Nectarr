@@ -51,14 +51,16 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    /*    text-align: center;*/
+    text-align: start;
     display: flex;
     gap: 20px;
 }
 
 .Benefit .information p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    /* font-size: calc(); */
     line-height: 30px;
+    text-align: start;
 
 }
 
@@ -127,8 +129,8 @@
 }
 
 .Circle {
-    width: 400px;
-    height: 400px;
+    width: 80%;
+    height: 80%;
     align-self: center;
 
 }
@@ -139,6 +141,22 @@
 
 
 /* Existing styles remain unchanged */
+
+@media (min-width:2560px) {
+    .information p {
+        font-size: 2.2rem !important;
+        line-height: 90px;
+    }
+    h1{
+        font-size:  50px !important;
+    }
+
+    .Benefit .info-two ul .list {
+        font-size: 2.2rem !important;
+        line-height: 90px;
+    }
+   
+}
 
 @media (max-width: 1280px) {
     .Benefit {
