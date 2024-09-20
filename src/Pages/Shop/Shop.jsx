@@ -8,34 +8,6 @@ import NewsLetter from '../../Components/NewsLetter/NewsLetter'
 
 const Shop = () => {
     
-    // const getAllProduct = async (e) => {
-    //     e.preventDefault();
-    
-    //     const signUpData = {
-          
-    //       email,
-    //       password : passWord,
-          
-    //     };
-    
-    //     try {
-    //       const url = "https://nectarbuzz.onrender.com/api/v1/log-in";
-    //       const res = await axios.post(url, signUpData);
-    //     //   console.log(res.data);
-    //       toast.success('Login Successful 🤗🎉');
-          
-    
-    //       setTimeout(() => {
-    //         nav("/welcomePage");
-    //       }, 5000);
-          
-    //     } catch (err) {
-    //       console.error(err);
-    //       toast.error(err.response.data.message);
-    //       toast.error('asdfgjhkl')
-         
-    //     }
-    //   }
     return (
         <main className='shop-container'>
             <ShopHero />
