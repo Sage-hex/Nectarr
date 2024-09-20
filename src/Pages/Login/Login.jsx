@@ -41,10 +41,16 @@ const LoginForm = () => {
   
       try {
         const url = "https://nectarbuzz.onrender.com/api/v1/log-in";
-        const res = await axios.post(url, signUpData);
-        console.log(res.data);
-        toast.success('Login Successful 🤗🎉');
-        
+        const res = await axios.post(url, signUpData,
+      
+      );
+  
+const token = res.data.token;  // Directly access the token, no destructuring needed
+localStorage.setItem("token",  token );
+
+axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;  // Add space after 'Bearer'
+toast.success('Login Successful 🤗🎉');
+
   
         setTimeout(() => {
           nav("/welcomePage");
