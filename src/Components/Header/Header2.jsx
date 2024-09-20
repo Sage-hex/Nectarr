@@ -5,9 +5,11 @@ import logo from '../../assets/Images/signup-logo.png'
 import { FaSearch } from "react-icons/fa";
 import { MdShoppingCart } from "react-icons/md";
 import { VscAccount } from "react-icons/vsc";
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const cart = useSelector((state) => state?.cart)
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -34,6 +36,7 @@ const Navbar = () => {
             <div className="navbar__icons">
                 <NavLink to="/search" className="navbar__icon"><FaSearch />
 </NavLink>
+                <div className="cart-quantity">{cart.length}</div>
                 <NavLink to="/cart" className="navbar__icon"><MdShoppingCart /></NavLink>
                 <NavLink to="/getStarted" className="navbar__icon"><VscAccount /></NavLink>
             </div>

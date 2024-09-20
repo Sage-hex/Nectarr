@@ -34,9 +34,12 @@
 
 import React, { useState } from 'react';
 import './ProductCard.css';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../Global/slice';
 import { MdOutlineShoppingCart } from "react-icons/md";
 
 const ProductCard = ({ product }) => {
+  const dispatch = useDispatch()
     const [hovered, setHovered] = useState(false);
 
     return (
@@ -54,7 +57,7 @@ const ProductCard = ({ product }) => {
           <p>{product.weight}</p>
           {/*<div className='hover-div'>*/}
             <p>#{product.price}</p>
-            <button className="add-to-cart">Add to cart</button>
+            <button className="add-to-cart" onClick={()=>{dispatch(addToCart(product))}}>Add to cart</button>
           {/*</div>*/}
         </div>
       )}

@@ -1,9 +1,14 @@
 import React from 'react'
 import './CartItems.css'
+import { deleteCart, incrementQty, decrementQTY } from '../../Global/slice'
+import { useDispatch, useSelector } from 'react-redux'
 
 const CartItems = () => {
 
-    const items = [1, 2, 3, 4, 5]
+    const dispatch = useDispatch();
+    const  cart  = useSelector((state) => state?.cart)
+    const total = useSelector((state)=> state?.total)
+
     return (
 
         <div className='CartItems'>
@@ -27,21 +32,23 @@ const CartItems = () => {
 
       <div className="Cart-body">
         {
-            items.map(()=>(
-                <div className="main-cart">
-                <div className="image-box"></div>
+            cart?.map((e, index)=>(
+                <div className="main-cart" key={index}>
+                <div className="image-box">
+                    <img src={e.image} alt="" />
+                </div>
                 <div className="Controls">
-                    <button>-</button>
-                    <button>1</button>
-                    <button>+</button>
+                    <button onClick={()=>{dispatch(decrementQTY(e))}}>-</button>
+                    <button>{e.QTY}</button>
+                    <button onClick={()=>{dispatch(incrementQty(e))}}>+</button>
                 </div>
     
                 <div className="Controls">
-                    <h1>₦ 2,500</h1>
+                    <h1>{e.price}</h1>
                 </div>
     
                 <div className="Controls">
-                    <h3>Remove Item</h3>
+                    <h3 onClick={()=>{dispatch(deleteCart(e))}} style={{cursor:'pointer'}}>Remove Item</h3>
                 </div>
              </div>
             ))

@@ -50,7 +50,7 @@ console.log("Signup data",signUpData)
       console.log(res.data);
 
       setTimeout(() => {
-         nav("/login");
+         nav("/congrats");
       }, 5000);
        
     } catch (err) {

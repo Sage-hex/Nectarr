@@ -35,6 +35,7 @@ import Messages from '../../Pages/Admin/Messages';
 import Order from '../../Pages/Admin/Order';
 import Product from '../../Pages/Admin/Products';
 import Payment from '../../Pages/Admin/Payment';
+import Congrats from '../../Pages/Cograts/Congrats';
 
 
 const router = createHashRouter([
@@ -63,10 +64,11 @@ const router = createHashRouter([
     { path: 'farmerLogin', element: <FarmerLogin /> },
     { path: 'user', element: <UserDashboard /> },
     { path: 'forgotPassword', element: <ForgotPassword /> },
-    { path: 'farmerforgot', element: <FarmerForget /> },
+    { path: 'farmerforget', element: <FarmerForget /> },
     { path: 'resetPassword', element: <ResetPassword /> },
     { path: 'farmerResetPassword', element: <FarmerResetPassword /> },
     { path: 'resetPasswordAuth', element: <ResetPasswordAuth/> },
+    { path: 'congrats', element: <Congrats/> },
 
     // Dashboard section with DashboardLayout wrapping it
     {
