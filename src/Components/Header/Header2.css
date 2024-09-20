@@ -1,32 +1,35 @@
+/* General styling for the navbar */
 .navbar {
     display: flex;
     height: 13vh;
     align-items: center;
     justify-content: space-between;
-    align-items: center;
     background: linear-gradient(90deg, rgba(92, 22, 3, 0.8) 0%, #532316 44.65%, #330E03 71.5%);
-    padding: 0.5rem 5rem;
+    padding: 1rem 8rem;
+    /* Increase padding for larger screens */
     position: relative;
     z-index: 1000;
-
 }
 
-.cart-quantity{
-    width: 15px;
-    height: 15px;
-    border-radius: 100%;
+/* Adjusting the cart quantity badge */
+.cart-quantity {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
     background-color: red;
     position: absolute;
-    right: 10.2%;
+    top: 25%;
+    /* Adjusted to place it vertically near the cart icon */
+    right: 10.2rem;
+    /* Close to the cart icon */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 10px;
+    font-size: 0.8rem;
     color: white;
     font-weight: 600;
-
-    /* bottom: 0.9px; */
-
+    z-index: 1010;
+    /* Ensure it overlaps the cart icon */
 }
 
 /* When the hamburger menu is open, fix the navbar */
@@ -42,7 +45,7 @@
     justify-content: center;
 }
 
-/* Logo styling */
+/* Styling for the logo */
 .navbar__logo {
     display: flex;
     flex-direction: column;
@@ -51,9 +54,13 @@
 }
 
 .navbar__logo img {
-    width: 120px;
+    width: 10vw;
+    /* Use viewport width for responsiveness */
+    max-width: 200px;
+    /* Prevent logo from becoming too large */
 }
 
+/* Styling the navigation links */
 .navbar__links {
     display: flex;
     list-style: none;
@@ -69,7 +76,8 @@
 .navbar__links ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 18px;
+    font-size: 1.2rem;
+    /* Using rem for scalability */
     font-weight: bold;
 }
 
@@ -77,24 +85,23 @@
     color: #f1b24a;
 }
 
+/* Icon styling */
 .navbar__icons {
     display: flex;
     align-items: center;
 }
 
 .navbar__icon {
-    font-size: 24px;
+    font-size: 1.5rem;
+    /* Adjusted size */
     color: #fff;
     margin-left: 1rem;
 }
 
-.dropdown {
-    display: none;
-}
-
+/* Hamburger menu */
 .navbar__hamburger {
     display: none;
-    font-size: 32px;
+    font-size: 2rem;
     color: white;
     cursor: pointer;
     z-index: 1001;
@@ -104,10 +111,46 @@
 }
 
 /* Responsive Mobile View */
+@media (max-width: 1024px) {
+    .cart-quantity {
+        width: 1rem;
+        height: 1rem;
+        font-size: 1rem;
+        top: 31%;
+        /* Adjust for better vertical alignment */
+        right: 8rem;
+        /* Slightly further for large screens */
+    }
+}
+
+@media (min-width: 1440px) {
+    .cart-quantity {
+        width: 1rem;
+        height: 1rem;
+        font-size: 1rem;
+        top: 31%;
+        /* Adjust for better vertical alignment */
+        right: 10.4rem;
+        /* Slightly further for large screens */
+    }
+}
+
+@media (min-width: 2560px) {
+    .cart-quantity {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+        top: 30%;
+        /* Adjust for better vertical alignment */
+        right: 14rem;
+        /* Slightly further for large screens */
+    }
+}
+
 @media (max-width: 768px) {
     .navbar {
-        padding: 20px;
-        height: 70px;
+        padding: 1rem;
+        height: 10vh;
     }
 
     .navbar__links {
@@ -150,6 +193,35 @@
 
     .navbar__logo p {
         display: none;
+    }
+}
 
+/* Responsive for larger screens (4K and above) */
+@media (min-width: 2560px) {
+    .navbar {
+        padding: 1.5rem 12rem;
+        /* Adjust padding for 4K */
+    }
+
+    .navbar__links ul li a {
+        font-size: 1.8rem;
+        /* Larger text for readability on big screens */
+    }
+
+    .navbar__logo img {
+        width: 15vw;
+        /* Larger logo for 4K */
+        max-width: 300px;
+    }
+
+    .navbar__icon {
+        font-size: 2rem;
+        /* Larger icons */
+    }
+
+    .cart-quantity {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
     }
 }

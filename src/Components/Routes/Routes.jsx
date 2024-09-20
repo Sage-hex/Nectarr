@@ -25,6 +25,7 @@ import FarmerResetPassword from '../../Pages/ResetPassword/FarmerResetPassword';
 import FarmerHomePage from '../../Pages/FarmerHome/FarmerHomePage';
 import Checkout from '../../Pages/CheckOut/Checkout';
 import Message from '../../Pages/MessagePage/Message';
+import HampperProduct from '../HampperProduct/HampperProduct'
 // import FarmerHomePage from '../../Pages/FarmersDashboard/FarmerHomePage';
 // import GetStarted from '../../Pages/GetStarted /GetStarted ';
 // import beeKeeperSignUp  from '../../Pages/BeeKeeperSignUp/BeeKeeper '
@@ -51,7 +52,7 @@ const router = createHashRouter([
             { path: 'hampper', element: <Hampper /> },
             { path: 'details', element: <Details/> },
             { path: 'cart', element: <CartPage/> },
-            { path: 'checkout', element: <Checkout/>}
+            { path: 'checkout', element: <Checkout/> }
         ],
     },
 
@@ -85,12 +86,13 @@ const router = createHashRouter([
 
 
     {
-        element:<FarmerLayout/>,
-        children:[
-            {path: 'farmersHome', element: <FarmerHomePage/> },
-            {path: 'messagePage', element: <Message/> }
+        element: <FarmerLayout/>,
+        children: [
+            { path: 'farmersHome', element: <FarmerHomePage/> },
+            { path: 'messagePage', element: <Message/> },
+            { path: 'hamperProduct', element: <HampperProduct /> },
         ]
-     }
+    }
 
 
     // {

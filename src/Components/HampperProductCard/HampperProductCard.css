@@ -1,0 +1,83 @@
+.hamper-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 30px;
+    background-color: lightgray;
+}
+
+.hampper-product-card {
+    width: 100%; /* Make it responsive */
+    max-width: 300px; /* Maximum width for the card */
+    border: 3px solid #000;
+    border-radius: 10px; /* Rounded corners */
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: white; /* Card background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: transform 0.2s; /* Smooth scale effect on hover */
+    position: relative; /* For absolute positioning of button */
+}
+
+.hampper-product-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.hampper-product-image {
+    width: 100%; /* Make the image responsive */
+    max-height: 200px; /* Limit image height */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 10px; /* Match the card's border radius */
+}
+
+.hampper-product-title {
+    font-size: 1.5rem; /* Responsive font size */
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.hampper-product-pricing,
+.hampper-product-quantity {
+    font-size: 1rem; /* Responsive font size */
+    color: #555;
+}
+
+.add-to-cart-button {
+    background-color: #28a745; /* Green background */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners for button */
+    padding: 10px 15px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Button font size */
+    position: absolute; /* Positioning it absolutely */
+    bottom: 20px; /* Position it at the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, 0); /* Center the button without shifting */
+    opacity: 0; /* Hide by default */
+    transition: opacity 0.3s, transform 0.2s; /* Transition for opacity and transform */
+}
+
+.hampper-product-card:hover .add-to-cart-button {
+    opacity: 1; /* Show the button on hover */
+    transform: translate(-50%, 0) scale(1.05); /* Scale up without shifting */
+}
+
+
+/* Additional responsive styling */
+@media (max-width: 1920px) {
+    .hampper-product-card {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .hampper-product-title {
+        font-size: 1.3rem; /* Smaller font size for smaller screens */
+    }
+
+    .hampper-product-pricing,
+    .hampper-product-quantity {
+        font-size: 0.9rem; /* Smaller font size for smaller screens */
+    }
+}
