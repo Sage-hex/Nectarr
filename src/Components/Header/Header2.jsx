@@ -10,6 +10,9 @@ import { useSelector } from 'react-redux';
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const cart = useSelector((state) => state?.cart)
+    // const user= JSON.parse(localStorage.getItem("user"))
+
+    // console.log(user.firstName)
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -38,7 +41,7 @@ const Navbar = () => {
 </NavLink>
                 <div className="cart-quantity">{cart.length}</div>
                 <NavLink to="/cart" className="navbar__icon"><MdShoppingCart /></NavLink>
-                <NavLink to="/getStarted" className="navbar__icon"><VscAccount /></NavLink>
+                <NavLink to="/getStarted" className="navbar__icon"><VscAccount /> {""}</NavLink>
             </div>
 
             <div className="navbar__hamburger" onClick={toggleMenu}>

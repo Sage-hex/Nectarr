@@ -53,8 +53,8 @@ const ProductCard = ({ product }) => {
       </div>
       {hovered && (
         <div className="hover-details"> {/* Fixed typo */}
-          <p>{product.name}</p>
-          <p>{product.weight}</p>
+          <p>{product.honeyName}</p>
+          <p>{product.price}</p>
           {/*<div className='hover-div'>*/}
             <p>#{product.price}</p>
             <button className="add-to-cart" onClick={()=>{dispatch(addToCart(product))}}>Add to cart</button>
