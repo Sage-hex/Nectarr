@@ -42,7 +42,6 @@ const LoginForm = () => {
       try {
         const url = "https://nectarbuzz.onrender.com/api/v1/log-in";
         const res = await axios.post(url, signUpData,
-      
       );
   
 const token = res.data.token;  // Directly access the token, no destructuring needed
