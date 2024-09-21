@@ -35,6 +35,7 @@ const CartItems = () => {
           console.log(response.data?.data?.items)
           setCart(response.data?.data?.items)
         //   toast.success(data.message)
+        // toast.sucecess
       
         }
         
