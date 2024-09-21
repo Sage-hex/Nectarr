@@ -38,7 +38,6 @@ export const slice = createSlice({
 export const { 
   userResData,
   farmerResData,
-  n
  } = slice.actions
 
 export default slice.reducer
