@@ -66,12 +66,12 @@ const ProductList = () => {
         const [error, setError] = useState(null);
         const token= localStorage.getItem("token")
      
-
+    console.log("token: ",token)
         const fetchProducts = async () => {
             try {
                 const response = await axios.get('https://nectarbuzz.onrender.com/api/v1/getall-approved-product',{
                     headers:{
-                        "Authorization":`Bearer ${token}`
+                        "Authorization": `Bearer ${token}`
                     }
                 });
                 console.log(response)

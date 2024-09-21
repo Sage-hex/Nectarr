@@ -7,6 +7,7 @@ import ProductList from '../../Components/ProductList/ProductList'; // Import Pr
 import NewsLetter from '../../Components/NewsLetter/NewsLetter'
 
 const Shop = () => {
+    
     return (
         <main className='shop-container'>
             <ShopHero />
