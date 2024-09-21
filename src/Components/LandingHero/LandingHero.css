@@ -25,7 +25,6 @@
 }
 
 .Landing-text-overlay {
-    width: 100%;
     margin-left: 70px;
     
     position: absolute;
@@ -40,7 +39,7 @@
     padding: 0 10px;
 }
 .Landing-text-overlay .hie{
-    font-size: 65px !important;
+    font-size: 65px ;
     /* background-color: red; */
 }
 .Landing-text-overlay .fade-in {
@@ -75,8 +74,13 @@
 /* Responsive font size */
 @media (max-width: 1200px) {
 
+    .Landing-text-overlay .hie{
+        font-size: 40px;
+    }
+
     .LandingHero .Button-custom {
-        top: 60%;
+        top: 100%;
+        
     }
 
     .Landing-text-overlay {
@@ -85,8 +89,9 @@
 }
 
 @media (max-width: 992px) {
-    .Landing-text-overlay {
+    .Landing-text-overlay .hie {
         font-size: 1.6rem;
+        text-align: center;
     }
 }
 
@@ -97,7 +102,9 @@
 
     .Landing-text-overlay {
         font-size: 1.4rem;
-        top: 40%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
     }
 
    
@@ -128,9 +135,12 @@
     .Landing-text-overlay {
         font-size: 1.3rem !important;
         top: 35%;
-        left: 50%;
+        /* left: 10%; */
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-wrap: wrap;
+        /* border: 5px solid red; */
         text-align: center;
         width: 100%;
 

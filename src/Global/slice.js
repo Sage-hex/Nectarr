@@ -22,13 +22,23 @@ export const slice = createSlice({
     },
     farmerResData: (state, {payload}) => {
       state.farmer = payload;
+    },
+    increaseQty: (state, {payload})=>{
+      const array = state.cart.map((e)=>{
+        if (e.id == payload.id) {
+          e.price
+        } else {
+          
+        }
+      })
     }
   }
 })
 
 export const { 
   userResData,
-  farmerResData
+  farmerResData,
+  n
  } = slice.actions
 
 export default slice.reducer

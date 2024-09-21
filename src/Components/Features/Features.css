@@ -135,9 +135,7 @@ background: linear-gradient(351deg, rgba(120,119,136,0) 0%, rgba(0,0,0,0.3715861
 @media (max-width:768px) {
     .featuresBox2 {
         height: 40vh;
-        /* background-color: red; */
-        /*            margin-top: 5rem;*/
-        /* top: 100%; */
+       
     }
 
     .featured{
@@ -152,6 +150,14 @@ background: linear-gradient(351deg, rgba(120,119,136,0) 0%, rgba(0,0,0,0.3715861
 
 
 @media (max-width:500px) {
+
+    .featured{
+        display: none;
+    }
+
+    .featuresBox{
+        display: flex;
+    }
 
     .featuresBox {
         /*        margin-bottom: 5rem;*/
