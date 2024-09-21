@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import './CartItems.css'
-import { deleteCart, incrementQty, decrementQTY } from '../../Global/slice'
 import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
 import toast, {Toaster} from 'react-hot-toast'
 
 const CartItems = () => {
 
-    // const dispatch = useDispatch();
-    // const  cart  = useSelector((state) => state?.cart)
-    // const total = useSelector((state)=> state?.total)
+    const dispatch = useDispatch();
+    const  Cart  = useSelector((state) => state?.cart)
+    const total = useSelector((state)=> state?.total)                
+    // console.log('total:',total);
+    
     const [cart, setCart] = useState([])
     const token = localStorage.getItem("token")
     
@@ -21,8 +22,6 @@ const CartItems = () => {
         }
     }
     
-    
-    console.log("t",token);
     // console.log("head",headers);
 
 
@@ -30,12 +29,10 @@ const CartItems = () => {
         const url = "https://nectarbuzz.onrender.com/api/v1/viewcart" 
       
         try{
-      
           const response = await axios.get(url,config)
           console.log(response.data?.data?.items)
           setCart(response.data?.data?.items)
-        //   toast.success(data.message)
-        // toast.sucecess
+          toast.success(data.message)
       
         }
         
@@ -70,11 +67,14 @@ const CartItems = () => {
 // useEffect(()=>{
 //     getCart()
 // },[reload])
-const url = 'https://nectarbuzz.onrender.com/api/v1/removecartitem'
 
 const DeleteCart = async(productID)=>{
+    const url = `https://nectarbuzz.onrender.com/api/v1/removecartitem/${productID}`
+    const data = {productID: productID}
+
     try{
-        const response = await axios.delete(url,{productID: `${productID}`},config)
+        const response = await axios.delete(url,data,config)
+        console.log(response)
     }
 
     catch (error){
@@ -86,7 +86,7 @@ const DeleteCart = async(productID)=>{
 }
  
 const increment = async (productID)=>{
-    url = 'https://nectarbuzz.onrender.com/api/v1/increasecartitemconst'
+    url = 'https://nectarbuzz.onrender.com/api/v1/increasecartitem'
 
     try{
         const response =await axios.put(url, {productID :`${productID}`, config})
@@ -143,9 +143,9 @@ const decrement = async (productID)=>{
 
                 </div>
                 <div className="Controls">
-                    <button onClick={decrement}>-</button>
-                    <button>{e.quantity}</button>
-                    <button onClick={increment}>+</button>
+                    <button onClick={()=>dispatch(decrementQTY)}>-</button>
+                    <button>{e.QTY}</button>
+                    <button onClick={()=>dispatch(incrementQty)}>+</button>
                 </div>
     
                 <div className="Controls">

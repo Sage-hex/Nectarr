@@ -18,6 +18,7 @@ const SignUp = () => {
   const [phoneNo, setPhoneNo] = useState('');
   const [location, setLocation] = useState('');
   const [gender, setGender] = useState('');
+  const [loading, setLoading] = useState(false)
 
   console.log(firstName);
   console.log(lastName);
@@ -46,6 +47,7 @@ const SignUp = () => {
       const res = await axios.post(url, signUpData);
       console.log(res.data);
       toast.success('Sign up successful 🎉');
+      setLoading(true)
       
 
       setTimeout(() => {
@@ -54,6 +56,7 @@ const SignUp = () => {
       
     } catch (err) {
       console.error(err);
+      setLoading(true)
       toast.error(err.response.data.message);
      
     }
@@ -153,7 +156,7 @@ const SignUp = () => {
               />
             </div>
             <div className="signup-btn">
-              <Button type="submit">Sign Up</Button>
+              <Button type="submit">{loading? 'Loading...' : 'Sign Up'}</Button>
             </div>
           </form>
 

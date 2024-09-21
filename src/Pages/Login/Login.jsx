@@ -8,15 +8,19 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import {toast, Toaster} from "react-hot-toast";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { userResData } from "../../Global/slice";
+
 
 
 const LoginForm = () => {
     const nav = useNavigate()
-
-    const Submit = () => {
-        toast.success('Login successfull🤗')
-        nav('/welcomePage')
-    }  
+    const dispatch = useDispatch()
+    // const Submit = () => {
+    //     toast.success('Login successfull🤗')
+    //     nav('/welcomePage')
+    // }  
+    const [loading, setLoading] = useState(false)
   
 
     const [email, setEmail] = useState('');
@@ -41,25 +45,22 @@ const LoginForm = () => {
   
       try {
         const url = "https://nectarbuzz.onrender.com/api/v1/log-in";
-        const res = await axios.post(url, signUpData,
-      );
-  
-const token = res.data.token;  // Directly access the token, no destructuring needed
-localStorage.setItem("token",  token );
-
-axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;  // Add space after 'Bearer'
-toast.success('Login Successful 🤗🎉');
-
-  
+        setLoading(true)
+        const res = await axios.post(url, signUpData) 
+        dispatch(userResData(res?.data?.data))
+        console.log(res.data.data.profile); 
+        const token = res.data.token;
+        localStorage.setItem("token",  token );
+        axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;  // Add space after 'Bearer'
+        toast.success('Login Successful 🤗🎉');
         setTimeout(() => {
           nav("/welcomePage");
         }, 5000);
         
       } catch (err) {
+        setLoading(false)
         console.error(err);
         toast.error(err.response.data.message);
-        // toast.error('dfghjk')
-       
       }
     }
     return (
@@ -101,7 +102,7 @@ toast.success('Login Successful 🤗🎉');
             <NavLink to="/forgotpassword" className="forgot-password-link">Forget password</NavLink>
           
             <div className="login-form-actions">
-              <Button onClick={Login} >Login</Button>
+              <Button onClick={Login}>{loading? 'Loading...':'Login'}</Button>
             </div>
           </form>
           <section className="signup-prompt">

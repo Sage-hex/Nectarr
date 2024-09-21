@@ -35,7 +35,6 @@
 import React, { useState } from 'react';
 import './ProductCard.css';
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../../Global/slice';
 import { MdOutlineShoppingCart } from "react-icons/md";
 import axios from 'axios';
 

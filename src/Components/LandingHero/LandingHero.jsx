@@ -5,19 +5,23 @@ import Button from '../Button/Button';
 
 const LandingHero = () => {
   const headlines = [
-    <h1 key="1">
+    <h1 key="1" className='hie'>
       HELLO <span style={{ color: 'gold' }}>HO</span>
       <span style={{ color: 'grey' }}>NEY</span>
     </h1>,
-    <h1 key="2">
+    <h1 key="1" className='hie'>
+    WELCOME TO<span style={{ color: 'gold' }}> NECTAR</span>
+    <span style={{ color: 'grey' }}>BUZZ</span>
+  </h1>,
+    <h1 key="2"  className='hie'>
       Hi <span style={{ color: 'gold' }}>BEE</span>
       <span style={{ color: 'grey' }}> INTUSIATISTIST</span>
     </h1>,
-    <h1 key="3">
+    <h1 key="3"  className='hie'>
       HELLO <span style={{ color: 'gold' }}> BEE</span>
       <span style={{ color: 'grey' }}> LOVERS</span>
     </h1>,
-    <h1 key="4">
+    <h1 key="4" className='hie'>
       HELLO <span style={{ color: 'gold' }}>HO</span>
       <span style={{ color: 'grey' }}>NEY</span>
     </h1>,

@@ -8,10 +8,13 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import {toast, Toaster} from "react-hot-toast";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { farmerResData } from "../../Global/slice";
 
 
 const FarmerLogin = () => {
     const nav = useNavigate()
+    const dispatch = useDispatch()
 
     const Submit = () => {
         toast.success('Login successfull🤗')
@@ -21,6 +24,7 @@ const FarmerLogin = () => {
 
     const [email, setEmail] = useState('');
     const [passWord, setPassWord] = useState('');
+    const [loading, setLoading] = useState(false)
    
   
     
@@ -42,15 +46,20 @@ const FarmerLogin = () => {
       try {
         const url = "https://nectarbuzz.onrender.com/api/v1/farmer-login";
         const res = await axios.post(url, signUpData);
+        dispatch(userResData(res?.data?.data))
+        setLoading(true)
         console.log(res.data);
+        const token = res.data.token;
+        localStorage.setItem("token",  token );
+        axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;  // Add space after 'Bearer'
         toast.success('Login Successful 🤗🎉');
         
-  
         setTimeout(() => {
-          nav("/welcomePage");
+          nav("/farmersHome");
         }, 5000);
         
       } catch (err) {
+        setLoading(false)
         console.error(err);
         toast.error(err.response.data.message);
        
@@ -95,7 +104,7 @@ const FarmerLogin = () => {
             <NavLink to="/forgotpassword" className="forgot-password-link">Forget password</NavLink>
           
             <div className="login-form-actions">
-              <Button onClick={Login} >Login</Button>
+              <Button onClick={Login} >{loading? 'Loading...' : 'Login'}</Button>
             </div>
           </form>
           <section className="signup-prompt">
