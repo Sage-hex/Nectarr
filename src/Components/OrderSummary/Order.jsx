@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './Order.css'
-
+import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const Order = () => {
   const [cart,setCart] = useState([]);
@@ -37,8 +38,8 @@ const total = cart.reduce((sum, item) => {
       <hr />
 
       <section className='total'>
-            <h3>Subtotal:{total}<span>₦</span></h3>
-            <h2>Total: <span>₦</span></h2>
+            <h3>Subtotal: <span>₦</span></h3>
+            <h2>Total: <span>₦ {total}</span></h2>
       </section>
       <hr />
 

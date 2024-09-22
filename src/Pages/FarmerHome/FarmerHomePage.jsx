@@ -421,10 +421,13 @@ const FarmerHomePage = () => {
     productPicture: null,
   });
 
+  const [name, setName] = useState('');
+  const [pricing, setPricing] = useState('');
+  const [quantity, setQuantity] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('');
   const [imagePreview, setImagePreview] = useState(null);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
-  const [selectedCategory, setSelectedCategory] = useState('');
 
   const handleDiscard = () => {
     resetForm();
@@ -479,7 +482,6 @@ const FarmerHomePage = () => {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
-        }
       );
 
       if (response.status === 201) {
