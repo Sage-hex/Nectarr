@@ -10,6 +10,8 @@ const FarmerHomePage = ({ farmerID, categoryID }) => {
     price: '',
     productPicture: null
   });
+
+  console.log("FarmerID:",farmerID)
   const [name, setName] = useState('');
   const [pricing, setPricing] = useState('');
   const [quantity, setQuantity] = useState('');
@@ -61,7 +63,7 @@ const FarmerHomePage = ({ farmerID, categoryID }) => {
 
     console.log('FormData:',formData)
     try {
-      const response = await axios.post(`https://nectarbuzz.onrender.com/api/v1/66eec869f8169e58112e287b/product-post/`,submitData, {
+      const response = await axios.post(`https://nectarbuzz.onrender.com/api/v1/product-post:/66ef41a70333318213a8574b`,submitData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }

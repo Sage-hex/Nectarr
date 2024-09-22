@@ -1,12 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Order.css'
-import { useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+
 
 const Order = () => {
-  const cart = useSelector((state) => state?.cart)
-  const total = useSelector((state)=> state?.total)
-  const nav = useNavigate()
+  const [cart,setCart] = useState([]);
+ 
+
+
+useEffect(()=>{
+  const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+  setCart(cartItems);
+},[])
+
+const total = cart.reduce((sum, item) => {
+  const price = parseFloat(item.price);
+  console.log(item.price)
+  if (isNaN(price)) {
+    return sum;
+  }
+
+  return sum + price;
+}, 0);
+console.log(total)
     return (
         <div className='Summary'>
       <div className="orderSum">
@@ -23,8 +38,8 @@ const Order = () => {
       <hr />
 
       <section className='total'>
-            <h3>Subtotal: <span>₦</span></h3>
-            <h2>Total: <span>₦ {total}</span></h2>
+            <h3>Subtotal:{total}<span>₦</span></h3>
+            <h2>Total: <span>₦</span></h2>
       </section>
       <hr />
 

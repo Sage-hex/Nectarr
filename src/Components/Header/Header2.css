@@ -158,7 +158,7 @@
         height: 10vh;
     }
     .dropdown{
-        display: block;
+        display: none;
     }
     .navbar__links {
         position: absolute;
