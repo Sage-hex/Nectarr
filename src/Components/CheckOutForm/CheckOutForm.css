@@ -63,6 +63,13 @@
 }
 
 @media (max-width:500px) {
+    
+    .CheckOutForm{
+        padding: 20px;
+    }
+    .checkoutInfo{
+        width: 100%;
+    }
     .check-group-Input{
      
         gap: 5px;

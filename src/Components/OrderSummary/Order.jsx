@@ -11,17 +11,16 @@ useEffect(()=>{
   const cartItems = JSON.parse(localStorage.getItem('cartItems'));
   setCart(cartItems);
 },[])
-
 const total = cart.reduce((sum, item) => {
   const price = parseFloat(item.price);
-  console.log(item.price)
+  
   if (isNaN(price)) {
     return sum;
   }
 
   return sum + price;
 }, 0);
-console.log(total)
+
     return (
         <div className='Summary'>
       <div className="orderSum">

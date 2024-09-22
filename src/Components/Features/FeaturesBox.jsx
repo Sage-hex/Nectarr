@@ -44,7 +44,8 @@ import featuresImageThree from '../../assets/Images/feature-image-three.png';
 
 const FeaturesBox = () => {
     return (
-        <div className="featuresBox">
+      <>
+             <div className="featuresBox">
         <div className="features" data-aos="fade-down"
      data-aos-easing="linear"
      data-aos-duration="1500">
@@ -73,6 +74,51 @@ honey</p>
             <p>Varieties of Honey</p>
         </div>
       </div>
+
+      
+
+
+
+
+      <div className="featured">
+      <h1>OUR FEATURES</h1>
+      <div className="featuresBox2">
+        
+        <div className="features" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+          <div className="feature-card-image-container">
+          <img src={featuresImageOne} alt="" className='feature-card-image' />
+          </div>
+            <p>Providing genuine, unadulterated honey</p>
+        </div>
+        <div className="features two"  data-aos="zoom-in"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+        <div className="feature-card-image-container">
+          <img src={featuresImageTwo} alt="" className='feature-card-image' />
+          </div>
+            <p>Visibility for beekeepers</p>
+
+        </div>
+
+        <div className="features"  data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+        <div className="feature-card-image-container">
+          <img src={featuresImageThree} alt="" className='feature-card-image' />
+          </div>
+            <p>Varieties of Honey</p>
+        </div>
+      </div>
+      </div>
+
+      </>
+
+
+
+
+
+
+
     )
 }
 

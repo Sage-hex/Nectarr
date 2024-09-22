@@ -11,6 +11,11 @@
     z-index: 1000;
 }
 
+.navbar_cart_icon_container{
+    position: relative;
+    /* background-color: yellow; */
+}
+
 /* Adjusting the cart quantity badge */
 .cart-quantity {
     width: 1rem;
@@ -18,9 +23,8 @@
     border-radius: 50%;
     background-color: red;
     position: absolute;
-    top: 25%;
-    /* Adjusted to place it vertically near the cart icon */
-    right: 10.2rem;
+    top: 0px;
+    left: 10px;
     /* Close to the cart icon */
     display: flex;
     align-items: center;
@@ -28,7 +32,7 @@
     font-size: 0.8rem;
     color: white;
     font-weight: 600;
-    z-index: 1010;
+    z-index: 9;
     /* Ensure it overlaps the cart icon */
 }
 
@@ -89,13 +93,14 @@
 .navbar__icons {
     display: flex;
     align-items: center;
+    /* background-color: green; */
+    gap: 15px;
 }
 
 .navbar__icon {
     font-size: 1.5rem;
     /* Adjusted size */
     color: #fff;
-    margin-left: 1rem;
 }
 
 /* Hamburger menu */
@@ -108,6 +113,35 @@
     position: relative;
     background-color: transparent;
     border: none;
+}
+
+.loggedin_user_profile_container{
+    position: relative;
+}
+
+.loggedin_user{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.home_logout{
+    position: absolute;
+    bottom: -70px;
+    background-color: yellow;
+    padding: 10px 30px;
+    border-radius: 4px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #fff;
+    cursor: pointer;
 }
 
 

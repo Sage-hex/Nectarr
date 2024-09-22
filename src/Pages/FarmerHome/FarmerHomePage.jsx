@@ -1,25 +1,430 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
+// import './FarmerHomePage.css';
+// import axios from 'axios';
+// import toast, { Toaster } from 'react-hot-toast';
+
+// const FarmerHomePage = ({ farmerID, categoryID }) => { 
+//   const [formData, setFormData] = useState({
+//     honeyName: '',
+//     quantity: '',
+//     price: '',
+//     productPicture: null
+//   });
+
+//   console.log("FarmerID:",farmerID)
+//   const [name, setName] = useState('');
+//   const [pricing, setPricing] = useState('');
+//   const [quantity, setQuantity] = useState('');
+//   const [selectedCategory, setSelectedCategory] = useState('');
+//   const [imagePreview, setImagePreview] = useState(null);
+//   const [error, setError] = useState(null);
+//   const [success, setSuccess] = useState(null);
+
+
+//   const handleDiscard = () => {
+//     resetForm();
+//     toast.info('Form cleared.');
+//   };
+
+//   const resetForm = () => {
+//     setFormData({
+//       honeyName: '',
+//       quantity: '',
+//       price: '',
+//       productPicture: null
+//     });
+//     setSelectedCategory('');
+//     setImagePreview(null);
+//   };
+
+//   const handleFileChange = (e) => {
+//     const file = e.target.files[0];
+//     setFormData({
+//       ...formData,
+//       productPicture: file
+//     });
+
+//     // Display image preview
+//     const reader = new FileReader();
+//     reader.onload = () => {
+//       setImagePreview(reader.result);
+//     };
+//     reader.readAsDataURL(file);
+//   };
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+    
+//     const submitData = new FormData();
+//     submitData.append('honeyName', formData.honeyName);
+//     submitData.append('quantity', formData.quantity);
+//     submitData.append('price', formData.price);
+//     submitData.append('productPicture', formData.productPicture);
+
+//     console.log('FormData:',formData)
+//     try {
+//       const response = await axios.post(`https://nectarbuzz.onrender.com/api/v1/product-post/${farmerID}`,submitData, {
+//         headers: {
+//           'Content-Type': 'multipart/form-data'
+//         }
+//       });
+
+//       if (response.status === 201) {
+//         setSuccess('Product created successfully!');
+//         setError(null);
+ 
+//         setFormData({
+//           honeyName: '',
+//           quantity: '',
+//           price: '',
+//           productPicture: null
+//         });
+//         setName('');
+//         setPricing('');
+//         setQuantity('');
+//         setSelectedCategory('');
+//         setImagePreview(null);
+//         toast.success('Product added successfully!');
+//       }
+//     } catch (err) {
+//       setError('An error occurred while creating the product. Please try again.');
+//       setSuccess(null);
+//       toast.error('Failed to add product!');
+//     }
+//   };
+
+//   return (
+//     <form onSubmit={handleSubmit} className='FarmerHomePage'>
+
+//       <Toaster />
+//       <div className="FarmerHomePageTop">
+//         <div className="productUpload">
+//           <h2>Upload Product</h2>
+//           {imagePreview && <img src={imagePreview} alt="Uploaded product" className='Uploaded-Product' />}
+//         </div>
+
+//         <div className="productDescription">
+//           <h2>Product Description</h2>
+//           <div className="Product-Details">
+//             <h4>Product Name</h4>
+//             <input 
+//               type="text" 
+//               placeholder="Honey Name"
+//               onChange={(e) => setFormData({ ...formData, honeyName: e.target.value })} 
+//               value={formData.honeyName} 
+//               required 
+//             />
+//             <h4>Description</h4>
+//             <input 
+//               placeholder="Product Description" 
+//               onChange={(e) => setFormData({ ...formData, quantity: e.target.value })} 
+//               value={formData.quantity} 
+//               required 
+//             />
+//             <h4>Price</h4>
+//             <input 
+//               type="number" 
+//               placeholder='₦' 
+//               onChange={(e) => setFormData({ ...formData, price: e.target.value })} 
+//               value={formData.price} 
+//               required 
+//             />
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className="FarmerHomePageBottom">
+//         <h2>Category</h2>
+//         <select onChange={(e) => setSelectedCategory(e.target.value)} value={selectedCategory}>
+//           <option value="">Select Category</option>
+//           <option value="Single">Single</option>
+//           <option value="Hamper">Hamper</option>
+//         </select>
+//       </div>
+
+//       <input type="file" hidden id='fileUpload' onChange={handleFileChange} />
+//       <label htmlFor="fileUpload" className='upload'>Upload Product Image</label>
+
+//       <div className="button-holds">
+//         <button className='add' type='submit' >Add Product</button>
+//         <button className='discard' onClick={handleDiscard}>Discard</button>
+//       </div>
+//     </form>
+//   );
+// };
+
+// export default FarmerHomePage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useState } from 'react';
+// import './FarmerHomePage.css';
+// import axios from 'axios';
+// import toast, { Toaster } from 'react-hot-toast';
+
+// const FarmerHomePage = ({ farmerID }) => { 
+//     console.log("FarmerID:", farmerID)
+//   const [formData, setFormData] = useState({
+//     honeyName: '',
+//     quantity: '',
+//     price: '',
+//     productPicture: null
+//   });
+
+//   const [imagePreview, setImagePreview] = useState(null);
+//   const [error, setError] = useState(null);
+//   const [success, setSuccess] = useState(null);
+//   const [selectedCategory, setSelectedCategory] = useState('');
+
+//   const handleDiscard = () => {
+//     resetForm();
+//     toast.info('Form cleared.');
+//   };
+
+//   const resetForm = () => {
+//     setFormData({
+//       honeyName: '',
+//       quantity: '',
+//       price: '',
+//       productPicture: null
+//     });
+//     setSelectedCategory('');
+//     setImagePreview(null);
+//   };
+
+//   const handleFileChange = (e) => {
+//     const file = e.target.files[0];
+//     setFormData({
+//       ...formData,
+//       productPicture: file
+//     });
+
+//     const reader = new FileReader();
+//     reader.onload = () => {
+//       setImagePreview(reader.result);
+//     };
+//     reader.readAsDataURL(file);
+//   };
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+    
+//     const submitData = new FormData();
+//     submitData.append('honeyName', formData.honeyName);
+//     submitData.append('quantity', formData.quantity);
+//     submitData.append('price', formData.price);
+//     submitData.append('category', selectedCategory);
+//     submitData.append('productPicture', formData.productPicture);
+
+//     try {
+//       const response = await axios.post(
+//         `https://nectarbuzz.onrender.com/api/v1/product-post/66ef41a70333318213a8574b`,
+//         submitData, 
+//         {
+//           headers: {
+//             'Content-Type': 'multipart/form-data'
+//           }
+//         }
+//       );
+
+//       if (response.status === 201) {
+//         setSuccess('Product created successfully!');
+//         setError(null);
+//         resetForm();
+//         toast.success('Product added successfully!');
+//       }
+//     } catch (err) {
+//       setError('An error occurred while creating the product. Please try again.');
+//       setSuccess(null);
+//       toast.error('Failed to add product!');
+//     }
+//   };
+
+//   return (
+//     <form onSubmit={handleSubmit} className='FarmerHomePage'>
+//       <Toaster />
+//       <div className="FarmerHomePageTop">
+//         <div className="productUpload">
+//           <h2>Upload Product</h2>
+//           {imagePreview && <img src={imagePreview} alt="Uploaded product" className='Uploaded-Product' />}
+//         </div>
+
+//         <div className="productDescription">
+//           <h2>Product Description</h2>
+//           <div className="Product-Details">
+//             <h4>Product Name</h4>
+//             <input 
+//               type="text" 
+//               placeholder="Honey Name"
+//               onChange={(e) => setFormData({ ...formData, honeyName: e.target.value })} 
+//               value={formData.honeyName} 
+//               required 
+//             />
+//             <h4>Description</h4>
+//             <input 
+//               placeholder="Product Description" 
+//               onChange={(e) => setFormData({ ...formData, quantity: e.target.value })} 
+//               value={formData.quantity} 
+//               required 
+//             />
+//             <h4>Price</h4>
+//             <input 
+//               type="number" 
+//               placeholder='₦' 
+//               onChange={(e) => setFormData({ ...formData, price: e.target.value })} 
+//               value={formData.price} 
+//               required 
+//             />
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className="FarmerHomePageBottom">
+//         <h2>Category</h2>
+//         <select onChange={(e) => setSelectedCategory(e.target.value)} value={selectedCategory}>
+//           <option value="">Select Category</option>
+//           <option value="Single">Single</option>
+//           <option value="Hamper">Hamper</option>
+//         </select>
+//       </div>
+
+//       <input type="file" hidden id='fileUpload' onChange={handleFileChange} />
+//       <label htmlFor="fileUpload" className='upload'>Upload Product Image</label>
+
+//       <div className="button-holds">
+//         <button className='add' type='submit' >Add Product</button>
+//         <button className='discard' onClick={handleDiscard}>Discard</button>
+//       </div>
+//     </form>
+//   );
+// };
+
+// export default FarmerHomePage;
+
+
+
+import React, { useEffect, useState } from 'react';
 import './FarmerHomePage.css';
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
+import { useSelector } from 'react-redux'; // Import useSelector to access Redux state
+import { useDispatch } from 'react-redux';
+import farmerResData from '../../Global/slice'
 
-const FarmerHomePage = ({ farmerID, categoryID }) => { 
+const FarmerHomePage = () => {
+    const dispatch = useDispatch()
+  const {farmer} = useSelector((state) => state); // Access farmerID from Redux state
+  console.log("FarmerID from Redux:", farmer._id );
+  const farmerId = farmer._id
+
   const [formData, setFormData] = useState({
     honeyName: '',
     quantity: '',
     price: '',
-    productPicture: null
+    productPicture: null,
   });
 
-  console.log("FarmerID:",farmerID)
-  const [name, setName] = useState('');
-  const [pricing, setPricing] = useState('');
-  const [quantity, setQuantity] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('');
   const [imagePreview, setImagePreview] = useState(null);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
-
+  const [selectedCategory, setSelectedCategory] = useState('');
 
   const handleDiscard = () => {
     resetForm();
@@ -31,7 +436,7 @@ const FarmerHomePage = ({ farmerID, categoryID }) => {
       honeyName: '',
       quantity: '',
       price: '',
-      productPicture: null
+      productPicture: null,
     });
     setSelectedCategory('');
     setImagePreview(null);
@@ -41,10 +446,9 @@ const FarmerHomePage = ({ farmerID, categoryID }) => {
     const file = e.target.files[0];
     setFormData({
       ...formData,
-      productPicture: file
+      productPicture: file,
     });
 
-    // Display image preview
     const reader = new FileReader();
     reader.onload = () => {
       setImagePreview(reader.result);
@@ -54,36 +458,34 @@ const FarmerHomePage = ({ farmerID, categoryID }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
+    if (!farmerId) {
+      toast.error('Farmer ID is missing! Please log in.');
+      return;
+    }
+
     const submitData = new FormData();
     submitData.append('honeyName', formData.honeyName);
     submitData.append('quantity', formData.quantity);
     submitData.append('price', formData.price);
+    submitData.append('category', selectedCategory);
     submitData.append('productPicture', formData.productPicture);
 
-    console.log('FormData:',formData)
     try {
-      const response = await axios.post(`https://nectarbuzz.onrender.com/api/v1/product-post:/66ef41a70333318213a8574b`,submitData, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
+      const response = await axios.post(
+        `https://nectarbuzz.onrender.com/api/v1/product-post/${farmerId}`, // Use farmerID from Redux
+        submitData,
+        {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
         }
-      });
+      );
 
       if (response.status === 201) {
         setSuccess('Product created successfully!');
         setError(null);
- 
-        setFormData({
-          honeyName: '',
-          quantity: '',
-          price: '',
-          productPicture: null
-        });
-        setName('');
-        setPricing('');
-        setQuantity('');
-        setSelectedCategory('');
-        setImagePreview(null);
+        resetForm();
         toast.success('Product added successfully!');
       }
     } catch (err) {
@@ -95,7 +497,6 @@ const FarmerHomePage = ({ farmerID, categoryID }) => {
 
   return (
     <form onSubmit={handleSubmit} className='FarmerHomePage'>
-
       <Toaster />
       <div className="FarmerHomePageTop">
         <div className="productUpload">
@@ -115,8 +516,8 @@ const FarmerHomePage = ({ farmerID, categoryID }) => {
               required 
             />
             <h4>Description</h4>
-            <input 
-              placeholder="Product Description" 
+            <input type='number'
+              placeholder="quantity" 
               onChange={(e) => setFormData({ ...formData, quantity: e.target.value })} 
               value={formData.quantity} 
               required 
@@ -146,7 +547,7 @@ const FarmerHomePage = ({ farmerID, categoryID }) => {
       <label htmlFor="fileUpload" className='upload'>Upload Product Image</label>
 
       <div className="button-holds">
-        <button className='add' type='submit' >Add Product</button>
+        <button className='add' type='submit'>Add Product</button>
         <button className='discard' onClick={handleDiscard}>Discard</button>
       </div>
     </form>
@@ -154,6 +555,10 @@ const FarmerHomePage = ({ farmerID, categoryID }) => {
 };
 
 export default FarmerHomePage;
+
+
+
+
 
 
 
