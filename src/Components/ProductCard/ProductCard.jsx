@@ -32,7 +32,7 @@ import "./ProductCard.css";
 import { useDispatch } from "react-redux";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import axios from "axios";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import { useCartStore } from "../../Context/cart-context";
 
 const ProductCard = ({ product, products }) => {
@@ -61,6 +61,7 @@ const ProductCard = ({ product, products }) => {
       toast.success(response.data.message);
     } catch (error) {
       console.log(error);
+      toast.success(error.response.data.message);
     }
   };
   return (
@@ -88,6 +89,7 @@ const ProductCard = ({ product, products }) => {
       <div className="card-cart">
         <MdOutlineShoppingCart className="card-cart-icon" />
       </div>
+      <Toaster/>
     </div>
   );
 };

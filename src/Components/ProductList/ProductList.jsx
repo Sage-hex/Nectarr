@@ -49,8 +49,11 @@ const ProductList = () => {
         marginInline: "auto",
         display: "grid",
         gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+         
       }}
-    //   className="product-list"
+      
+      
+      className="product-list"
     >
       {products?.map((product, index) => (
         <ProductCard key={index} product={product} products={products}/>

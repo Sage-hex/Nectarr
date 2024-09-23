@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './LandingHero.css';
 import HeroTextImage from '../../assets/Images/Nectar-Buzz/hero-image.jpg';
 import Button from '../Button/Button';
+import { useNavigate } from 'react-router-dom';
 
 const LandingHero = () => {
+  const nav = useNavigate()
   const headlines = [
     <h1 key="1" className='hie'>
       HELLO <span style={{ color: 'gold' }}>HO</span>
@@ -47,7 +49,7 @@ const LandingHero = () => {
       <article className="Landing-text-overlay" >
         {headlines[currentIndex]}    
       </article>
-      <Button>shop now</Button>
+      <Button onClick={()=>nav('/shop')}>shop now</Button>
     </section>
   );
 };
