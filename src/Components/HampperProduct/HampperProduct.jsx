@@ -10,7 +10,7 @@ const HampperProduct = () => {
   useEffect(() => {
     axios({
       method: "get",
-      url: `https://nectarbuzz.onrender.com/api/v1/getall-harmperproduct`,
+      url: `https://nectarbuzz.onrender.com/api/v1/getall-product`,
     }).then((response) => {
       console.log(response);
       if (response.status === 200) {
