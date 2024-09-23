@@ -63,160 +63,148 @@
 
 // export default CheckOutForm
 
-import React, { useState } from 'react';
-import "./CheckOutForm.css";
+import React, { useState, useEffect } from "react";
 import { IoArrowBack } from "react-icons/io5";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+import axios from "axios";
+import KorapayModal from '../../Components/Modal/KorapayModal'
+import './checkOutForm.css'
 
 const CheckOutForm = () => {
-  const [email, setEmail] = useState('');
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [address, setAddress] = useState('');
-  const [state, setState] = useState('');
-  const [city, setCity] = useState('');
-  const [phone, setPhone] = useState('');
-  const [cardNumber, setCardNumber] = useState('');
-  const [voucher, setVoucher] = useState('');
-  const [expiryDate, setExpiryDate] = useState('');
+  const [shipping, setShipping] = useState({
+    address: "",
+    state: "",
+    city: "",
+  });
+  const [showModal, setShowModal] = useState(false); 
+  const navigate = useNavigate();
 
-  const nav = useNavigate();
+  // Korapay script
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://korahq.com/js/korapay-inline.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
-  const token = localStorage.getItem('jwtToken'); 
-  const handleSubmit = async (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setShipping({
+      ...shipping,
+      [name]: value,
+    });
+  };
+
+  const handleCheckout = (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch('https://nectarbuzz.onrender.com/api/v1/checkout/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`, 
-        },
-        body: JSON.stringify({
-          currentAddress: address,
-        }),
-      });
-
-      const data = await response.json();
-      if (response.ok) {
-        // Handle successful checkout
-        alert("Checkout successful!");
-        nav('/thankyou'); // Redirect after successful checkout
-      } else {
-        // Handle error
-        alert(`Checkout failed: ${data.message}`);
-      }
-    } catch (error) {
-      console.error("Error during checkout:", error);
-      alert("An error occurred during checkout.");
+    if (shipping.address === "" || shipping.state === "" || shipping.city === "") {
+      return toast.error("Please fill all fields");
     }
+
+    const currentAddress = `${shipping.address}, ${shipping.city}, ${shipping.state}`;
+    const token = localStorage.getItem("token");
+
+    axios({
+      method: "POST",
+      url: "https://nectarbuzz.onrender.com/api/v1/checkout",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      data: {
+        currentAddress,
+      },
+    })
+      .then((res) => {
+        if (res.data.status === "success") {
+          toast.success("Order Placed Successfully");
+          setShowModal(true); // Show the payment modal after checkout success
+        } else {
+          toast.error("An error occurred, please try again");
+        }
+      })
+      .catch((err) => {
+        toast.error("An error occurred while processing your order.");
+      });
+  };
+
+  const payKorapay = () => {
+    window.Korapay.initialize({
+      key: "pk_juigfweofyfewby732gwo8923e",
+      reference: `ref-${Date.now()}`, 
+      amount: 3000, 
+      currency: "NGN",
+      customer: {
+        name: "John Doe",
+        email: "john@doe.com",
+      },
+      onClose: function () {
+        toast.info("Payment process closed.");
+      },
+      onSuccess: function (data) {
+        toast.success("Payment successful!");
+        setShowModal(false); // Close the modal after success
+        navigate("/shop");
+      },
+      onFailed: function (data) {
+        toast.error("Payment failed. Please try again.");
+      },
+    });
   };
 
   return (
-    <form className='CheckOutForm' onSubmit={handleSubmit}>
-      <div className="checkoutInfo">
-        <h2>Information</h2>
-        <input 
-          type="email" 
-          placeholder='Email' 
-          value={email} 
-          onChange={(e) => setEmail(e.target.value)} 
-          required 
-        />
-      </div>
-
-      <div className="checkoutInfo">
+    <>
+      <form className="CheckOutForm">
         <h2>Shipping Address</h2>
-        <div className="check-group-Input">
-          <input 
-            type="text" 
-            placeholder='First Name' 
-            value={firstName} 
-            onChange={(e) => setFirstName(e.target.value)} 
-          />
-          <input 
-            type="text" 
-            placeholder='Last Name' 
-            value={lastName} 
-            onChange={(e) => setLastName(e.target.value)} 
+        <div className="checkoutInfo">
+          <input
+            type="text"
+            placeholder="Address"
+            required
+            name="address"
+            onChange={handleChange}
           />
         </div>
-      </div>
-
-      <div className="checkoutInfo">
-        <input 
-          type="text" 
-          placeholder='Address' 
-          value={address} 
-          onChange={(e) => setAddress(e.target.value)} 
-          required 
-        />
-      </div>
-
-      <div className="checkoutInfo">
-        <div className="check-group-Input">
-          <input 
-            type="text" 
-            placeholder='State' 
-            value={state} 
-            onChange={(e) => setState(e.target.value)} 
-          />
-          <input 
-            type="text" 
-            placeholder='City' 
-            value={city} 
-            onChange={(e) => setCity(e.target.value)} 
-          />
+        <div className="checkoutInfo">
+          <div className="check-group-Input">
+            <input
+              type="text"
+              placeholder="State"
+              name="state"
+              onChange={handleChange}
+            />
+            <input
+              type="text"
+              placeholder="City"
+              name="city"
+              onChange={handleChange}
+            />
+          </div>
         </div>
-      </div>
-
-      <div className="checkoutInfo">
-        <input 
-          type="number" 
-          placeholder='Phone' 
-          value={phone} 
-          onChange={(e) => setPhone(e.target.value)} 
-          required 
-        />
-      </div>
-
-      <div className="payment">
-        <span onClick={() => nav('/shop')} className='span-hold'>
-          <IoArrowBack/><span>Return to Cart</span>
-        </span>
-        <h2>Payment</h2>
-        <span>All Transactions are Secured and Encrypted</span>
-      </div>
-
-      <div className="checkoutInfo">
-        <input 
-          type="text" 
-          placeholder='Card Number' 
-          value={cardNumber} 
-          onChange={(e) => setCardNumber(e.target.value)} 
-          required 
-        />
-      </div>
-
-      <div className="checkoutInfo">
-        <div className="check-group-Input">
-          <input 
-            type="date" 
-            placeholder='Expiry Date' 
-            value={expiryDate} 
-            onChange={(e) => setExpiryDate(e.target.value)} 
-          />
-          <input 
-            type="text" 
-            placeholder='Voucher code if any' 
-            value={voucher} 
-            onChange={(e) => setVoucher(e.target.value)} 
-          />
+        <div className="payment">
+          <span onClick={() => navigate("/shop")} className="span-hold">
+            <IoArrowBack />
+            <span>Return to Cart</span>
+          </span>
+          <h2>Payment</h2>
+          <span>All Transactions are Secured and Encrypted</span>
         </div>
-      </div>
+        <button onClick={handleCheckout} className="checkOutBtn" type="submit">
+          CHECK OUT PAYMENT
+        </button>
+      </form>
 
-      <button type="submit">CHECK OUT PAYMENT</button>
-    </form>
+      {/* Modal Popup for Payment */}
+      <KorapayModal show={showModal} handleClose={() => setShowModal(false)}>
+        <h2>Complete Your Payment</h2>
+        <p>Click the button below to proceed with the payment.</p>
+        <button onClick={payKorapay}>Confirm Payment with Korapay</button>
+      </KorapayModal>
+    </>
   );
 };
 
