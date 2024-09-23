@@ -13,7 +13,7 @@ const CheckOutForm = () => {
     state: "",
     city: "",
   });
-  const { setCart, setTotal } = useCartStore();
+  const { setCart, total, setTotal } = useCartStore();
 
   const navigate = useNavigate();
   const { buyer } = useSelector((state) => state);
@@ -25,7 +25,7 @@ const CheckOutForm = () => {
     const ref = `ref-${Date.now() + Math.floor(Math.random() * 1000)}`;
 
     const data = {
-      amount: 1000, // Amount in the smallest currency unit, e.g., kobo for NGN
+      amount: Number(total), // Amount in the smallest currency unit, e.g., kobo for NGN
       reference: ref,
       currency: "NGN",
       customer: {
@@ -85,7 +85,7 @@ const CheckOutForm = () => {
     })
       .then((res) => {
         toast.dismiss();
-        toast.success("Redirecting to order...");
+        toast.loading("Redirecting to order...");
         setCart([]);
         setTotal(0);
         initializePayment();
