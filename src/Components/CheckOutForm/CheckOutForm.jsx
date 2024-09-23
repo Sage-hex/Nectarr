@@ -69,7 +69,7 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import axios from "axios";
 import KorapayModal from '../../Components/Modal/KorapayModal'
-import './checkOutForm.css'
+import './CheckOutForm.css'
 
 const CheckOutForm = () => {
   const [shipping, setShipping] = useState({
