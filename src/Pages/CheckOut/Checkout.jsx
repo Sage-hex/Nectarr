@@ -8,7 +8,7 @@ const Checkout = () => {
     <div className='CheckOut'> 
        <div className="checkOutWrap">
         <CheckOutForm/>
-        <CheckoutItems/>
+        <CheckoutItems/>hh
 
        </div>
     </div>
