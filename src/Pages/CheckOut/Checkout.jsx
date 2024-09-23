@@ -9,7 +9,6 @@ const Checkout = () => {
        <div className="checkOutWrap">
         <CheckOutForm/>
         <CheckoutItems/>
-
        </div>
     </div>
   )
