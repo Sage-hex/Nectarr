@@ -71,7 +71,7 @@ const CheckOutForm = () => {
 
     const currentAddress = `${shipping.address}, ${shipping.city}, ${shipping.state}`;
     const token = localStorage.getItem("token");
-
+    toast.loading("Creating Order....")
     axios({
       method: "POST",
       url: "https://nectarbuzz.onrender.com/api/v1/checkout",
@@ -84,7 +84,8 @@ const CheckOutForm = () => {
       },
     })
       .then((res) => {
-        toast.success("Order Placed Successfully");
+        toast.dismiss();
+        toast.success("Redirecting to order...");
         setCart([]);
         setTotal(0);
         initializePayment();
