@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import "./CheckOutForm.css";
 import { useSelector } from "react-redux";
+import { useCartStore } from "../../Context/cart-context";
 
 const CheckOutForm = () => {
   const [shipping, setShipping] = useState({
@@ -12,6 +13,7 @@ const CheckOutForm = () => {
     state: "",
     city: "",
   });
+  const { setCart, setTotal } = useCartStore();
 
   const navigate = useNavigate();
   const { buyer } = useSelector((state) => state);
@@ -40,7 +42,7 @@ const CheckOutForm = () => {
           "Content-Type": "application/json",
         },
       });
-      window.location.href = response.data.data.checkout_url
+      window.location.href = response.data.data.checkout_url;
     } catch (error) {
       console.error(
         "Error initializing payment:",
@@ -83,6 +85,8 @@ const CheckOutForm = () => {
     })
       .then((res) => {
         toast.success("Order Placed Successfully");
+        setCart([]);
+        setTotal(0);
         initializePayment();
       })
       .catch((err) => {
