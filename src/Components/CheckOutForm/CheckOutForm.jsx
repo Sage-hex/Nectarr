@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import "./CheckOutForm.css";
 import { useSelector } from "react-redux";
+import { useCartStore } from "../../Context/cart-context";
 
 const CheckOutForm = () => {
   const [shipping, setShipping] = useState({
@@ -12,6 +13,7 @@ const CheckOutForm = () => {
     state: "",
     city: "",
   });
+  const { setCart, setTotal } = useCartStore();
 
   const navigate = useNavigate();
   const { buyer } = useSelector((state) => state);
@@ -40,7 +42,7 @@ const CheckOutForm = () => {
           "Content-Type": "application/json",
         },
       });
-      window.location.href = response.data.data.checkout_url
+      window.location.href = response.data.data.checkout_url;
     } catch (error) {
       console.error(
         "Error initializing payment:",
@@ -69,7 +71,7 @@ const CheckOutForm = () => {
 
     const currentAddress = `${shipping.address}, ${shipping.city}, ${shipping.state}`;
     const token = localStorage.getItem("token");
-
+    toast.loading("Creating Order....")
     axios({
       method: "POST",
       url: "https://nectarbuzz.onrender.com/api/v1/checkout",
@@ -82,7 +84,10 @@ const CheckOutForm = () => {
       },
     })
       .then((res) => {
-        toast.success("Order Placed Successfully");
+        toast.dismiss();
+        toast.success("Redirecting to order...");
+        setCart([]);
+        setTotal(0);
         initializePayment();
       })
       .catch((err) => {
