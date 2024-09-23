@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import useGetCartItems from "../../Hooks/get-cart-items";
 import { useCartStore } from "../../Context/cart-context";
 const Order = () => {
+  const nav = useNavigate()
   const { cart, total } = useCartStore();
 
   return (

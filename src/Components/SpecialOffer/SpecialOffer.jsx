@@ -2,15 +2,17 @@ import React, { useState, useEffect } from 'react';
 import Button from '../Button/Button';
 import { NavLink } from 'react-router-dom';
 import './SpecialOffer2.css';
+import imgOne from '../../assets/Images/christmas-one.png'
+// import imgtwo from '../../assets/Images/christmas-two.png'
+import imgtwo from '../../assets/Images/img3.webp'
+import img3 from '../../assets/Images/christmas-3.png'
+
 
 const SpecialOffer = () => {
     const [imageIndex, setImageIndex] = useState(0);
     const images = [
-        'https://via.placeholder.com/150',
-        'https://via.placeholder.com/200',
-        'https://via.placeholder.com/250',
-        'https://via.placeholder.com/300',
-        'https://via.placeholder.com/350',
+        imgOne,
+        imgtwo,img3,
     ];
 
     const changeImage = () => {

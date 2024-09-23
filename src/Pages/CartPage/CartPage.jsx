@@ -4,8 +4,11 @@ import { MdArrowForwardIos } from "react-icons/md";
 import { IoArrowBack } from "react-icons/io5";
 import CartItems from "../../Components/CartItems/CartItems";
 import Order from "../../Components/OrderSummary/Order";
+import { useNavigate } from "react-router-dom";
+import Button from "../../Components/Button/Button";
 
 const CartPage = () => {
+  const nav = useNavigate()
   return (
     <div className="CartPage">
       <div className="top">
@@ -19,10 +22,11 @@ const CartPage = () => {
 
       <div className="Cart-Wrap">
         <div className="Wrap-top">
-          <button>
-            {" "}
+          <Button onClick={()=>nav('/shop')}>
+          
             <IoArrowBack /> Continue Shopping
-          </button>
+          </Button>
+          {/* <Button onClick={()=>nav('/shop')}>shop now</Button> */}
         </div>
 
         <div className="CartItems-Wrap">
