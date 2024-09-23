@@ -8,7 +8,7 @@ const useGetCartItems = () => {
   useEffect(() => {
     const getCartItems = async () => {
       const response = await axios.get(
-        "http://localhost:8888/api/v1/viewcart",
+        "https://nectarbuzz.onrender.com/api/v1/viewcart",
         {
           headers: {
             Authorization: `Bearer ${token}`,

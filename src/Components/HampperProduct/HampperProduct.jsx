@@ -10,7 +10,7 @@ const HampperProduct = () => {
   useEffect(() => {
     axios({
       method: "get",
-      url: `https://nectarbuzz.onrender.com/api/v1/getall-product`,
+      url: `https://nectarbuzz.onrender.com/api/v1/getall-harmperproduct`,
     }).then((response) => {
       console.log(response);
       if (response.status === 200) {
@@ -33,7 +33,7 @@ const HampperProduct = () => {
     const token = localStorage.getItem("token");
     axios({
       method: "post",
-      url: `http://localhost:8888/api/v1/addtocart`,
+      url: `https://nectarbuzz.onrender.com/api/v1/addtocart`,
       data: {
         productID: product.id,
         quantity: 1,

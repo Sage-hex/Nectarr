@@ -2,7 +2,7 @@ import axios from "axios";
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 const incrementCart = async ({ id, quantity, set }) => {
-  const url = "http://localhost:8888/api/v1/increasecartitem";
+  const url = "https://nectarbuzz.onrender.com/api/v1/increasecartitem";
   const token = localStorage.getItem("token");
   axios({
     url,
@@ -29,7 +29,7 @@ const incrementCart = async ({ id, quantity, set }) => {
   });
 };
 const decrementCart = async ({ id, quantity, set }) => {
-  const url = "http://localhost:8888/api/v1/reducecartitem";
+  const url = "https://nectarbuzz.onrender.com/api/v1/reducecartitem";
   const token = localStorage.getItem("token");
   axios({
     url,
@@ -60,7 +60,7 @@ const decrementCart = async ({ id, quantity, set }) => {
   });
 };
 const removeItemCart = async ({ id, set }) => {
-  const url = "http://localhost:8888/api/v1/removecartitem";
+  const url = "https://nectarbuzz.onrender.com/api/v1/removecartitem";
   const token = localStorage.getItem("token");
   axios({
     url,
