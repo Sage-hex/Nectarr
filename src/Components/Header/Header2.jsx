@@ -34,7 +34,7 @@ const Navbar = () => {
     <header className="navbar">
       <div className="navbar__logo">
         <img src={logo} alt="NectarBuz" />
-        <p>Sweet goodness of nature</p>
+        <p style={{fontSize:'14px'}}>A spoonfull of Health</p>
       </div>
       <nav className={`navbar__links ${isOpen ? "open" : ""}`}>
         <ul>

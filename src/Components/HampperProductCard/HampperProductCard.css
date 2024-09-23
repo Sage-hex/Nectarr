@@ -2,6 +2,8 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     padding: 20px 30px;
     background-color: lightgray;
 }
@@ -9,7 +11,7 @@
 .hampper-product-card {
     width: 100%; /* Make it responsive */
     max-width: 300px; /* Maximum width for the card */
-    border: 3px solid #000;
+    border: 1px solid#0000007e;
     border-radius: 10px; /* Rounded corners */
     text-align: center;
     margin: 20px;
