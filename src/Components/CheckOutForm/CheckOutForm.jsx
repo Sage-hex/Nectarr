@@ -85,7 +85,7 @@ const CheckOutForm = () => {
     })
       .then((res) => {
         toast.dismiss();
-        toast.success("Redirecting to order...");
+        toast.loading("Redirecting to order...");
         setCart([]);
         setTotal(0);
         initializePayment();
