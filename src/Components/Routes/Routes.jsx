@@ -37,6 +37,7 @@ import Order from "../../Pages/Admin/Order";
 import Product from "../../Pages/Admin/Products";
 import Payment from "../../Pages/Admin/Payment";
 import Congrats from "../../Pages/Cograts/Congrats";
+import LoadingPage from "../../Pages/LoadingPage/LoadingPage";
 
 const router = createHashRouter([
   {
@@ -67,6 +68,7 @@ const router = createHashRouter([
   { path: "farmerResetPassword", element: <FarmerResetPassword /> },
   { path: "resetPasswordAuth", element: <ResetPasswordAuth /> },
   { path: "congrats", element: <Congrats /> },
+  { path: "loadingPage", element: <LoadingPage /> },
 
   // Dashboard section with DashboardLayout wrapping it
   {

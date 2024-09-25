@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import signuplogo from "../../assets/Images/signup-logo.png";
 import Button from "../../Components/Button/Button";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast"; 
 import { BeatLoader } from "react-spinners";
+import LoadingPage from "../LoadingPage/LoadingPage";
 
 const SignUp = () => {
-  const nav = useNavigate(); // Initialize navigation
+  const nav = useNavigate();
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -15,10 +16,17 @@ const SignUp = () => {
   const [phoneNo, setPhoneNo] = useState('');
   const [licence, setLicence] = useState('');
   const [gender, setGender] = useState('');
-  const [Loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   const signUp = async (e) => {
     e.preventDefault();
+
+    if (passWord !== confirmPassword) {
+      toast.error('Passwords do not match');
+      return;
+    }
 
     const signUpData = {
       firstName,
@@ -31,25 +39,32 @@ const SignUp = () => {
     };
 
     try {
-      setLoading(true); // Set loading to true before making the request
+      setIsSubmitting(true);
       const url = "https://nectarbuzz.onrender.com/api/v1/farmer-signup";
       const res = await axios.post(url, signUpData);
       toast.success('Sign up successful 🎉');
       console.log(res.data);
 
-      // Navigate after a short delay
       setTimeout(() => {
-        nav("/beekeepersLogin");
+        nav("/congrats");
       }, 5000);
     } catch (err) {
       console.error(err.response?.data || err);
       toast.error(err.response?.data?.message || 'An error occurred');
     } finally {
-      setLoading(false); // Ensure loading is set to false after the request
+      setIsSubmitting(false);
     }
   };
 
-  return (
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+    
+    return () => clearTimeout(timeoutId);
+  }, []);
+
+  return loading ? <LoadingPage /> : (
     <section className="signup-wrapper BeeImg">
       <div className="signup-container">
         <article className="signup-header">
@@ -85,8 +100,8 @@ const SignUp = () => {
               />
             </div>
             <div className="input-group">
-              <select name="gender" required onChange={(e) => setGender(e.target.value)}>
-                <option value="" disabled selected>
+              <select name="gender" value={gender} required onChange={(e) => setGender(e.target.value)}>
+                <option value="" disabled>
                   Select Gender
                 </option>
                 <option value="male">Male</option>
@@ -119,6 +134,7 @@ const SignUp = () => {
               <input
                 type="password"
                 placeholder="Confirm password"
+                onChange={(e) => setConfirmPassword(e.target.value)}
                 required
               />
               <input
@@ -130,7 +146,7 @@ const SignUp = () => {
             </div>
             <div className="signup-btn">
               <Button type="submit">
-                {Loading ? <BeatLoader color="white" size={10} /> : 'Sign Up'}
+                {isSubmitting ? <BeatLoader color="white" size={10} /> : 'Sign Up'}
               </Button>
             </div>
           </form>
@@ -147,3 +163,4 @@ const SignUp = () => {
 };
 
 export default SignUp;
+ 
