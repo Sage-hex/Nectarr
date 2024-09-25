@@ -135,6 +135,7 @@ import { toast, Toaster } from "react-hot-toast";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { farmerResData } from "../../Global/slice"; // Import the correct action
+import BeatLoader from 'react-spinners/BeatLoader'; // Corrected import
 
 const FarmerLogin = () => {
   const nav = useNavigate();
@@ -216,7 +217,7 @@ const FarmerLogin = () => {
 
           <div className="login-form-actions">
             <Button type="submit">
-              {loading ? "Loading..." : "Login"}
+              {loading ? <BeatLoader/> : "Login"}
             </Button>
           </div>
         </form>

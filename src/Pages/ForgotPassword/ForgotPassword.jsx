@@ -6,11 +6,13 @@ import Button from "../../Components/Button/Button";
 import { NavLink } from "react-router-dom";
 import {toast, Toaster} from "react-hot-toast";
 import axios from "axios";
+import { BeatLoader } from "react-spinners";
 
 const ForgotPasswordForm = () => {
 
 
   const [passWord, setPassWord] = useState('');
+  const [loading, setLoading] = useState(false)
  
 
   
@@ -29,6 +31,7 @@ const ForgotPasswordForm = () => {
       const url = "https://nectarbuzz.onrender.com/api/v1/forgot-password";
       const res = await axios.post(url, signUpData);
       console.log(res.data);
+      setLoading(true)
       // toast.success('vyw 🤗🎉');
       
 
@@ -38,6 +41,7 @@ const ForgotPasswordForm = () => {
       
     } catch (err) {
       console.error(err);
+      setLoading(false)
       toast.error(err.response.data.message);
     }
   }
@@ -67,7 +71,7 @@ const ForgotPasswordForm = () => {
             { /*<label htmlFor="email">Email</label>*/}
           </div>
           <div className="forgotpassword-form-actions">
-          <Button onClick={ForgetPW}>Send OTP</Button>
+          <Button onClick={ForgetPW}>{loading ? <BeatLoader/> : 'Send'}</Button>
             
           </div>
         </form>
