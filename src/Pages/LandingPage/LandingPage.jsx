@@ -15,32 +15,45 @@ import LandingHero from '../../Components/LandingHero/LandingHero';
 import Collection from '../../Components/Collection/Collection';
 import UserReview from '../../Components/UserReviews/UserReview';
 import NewsLetter from '../../Components/NewsLetter/NewsLetter'
+import LoadingPage from '../LoadingPage/LoadingPage';
 
 
 const LandingPage = () => {
-
+  const [loading, setLoading] = useState(true)
+    
+   setTimeout(() => {
+    setLoading(false)
+   }, 5000);
     return (
+      <>
+      {
+        loading ? <LoadingPage/>
+        : 
         <div className='LandingPage'>
         {/*<HeaderAd/>*/}
-        <LandingHero/>
-      
-
-      <FeaturesBox/>
-      <WhoWeAre/>
-
-      { /*<div className="space"></div>*/}
-
-      <Ourservice/>
-      <Collection/>
-      <SeeMore/>
-
-      <UserReview/>
-
-      <HoneySection/>
-      <NewsLetter/>
-
-      {/* <Footer/> */}
+          
+          <LandingHero/>
+        
+  
+        <FeaturesBox/>
+        <WhoWeAre/>
+  
+        { /*<div className="space"></div>*/}
+  
+        <Ourservice/>
+        <Collection/>
+        <SeeMore/>
+  
+        <UserReview/>
+  
+        <HoneySection/>
+        <NewsLetter/>
+  
+        {/* <Footer/> */}
     </div>
+      }
+      </>
+  
     )
 }
 
