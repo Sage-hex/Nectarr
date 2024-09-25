@@ -132,3 +132,40 @@
     transform: scale(1.02);
 }
 
+
+@media (max-width:768px) {
+    .FarmerHomePage .upload{
+        width: 30%;
+    }
+
+}
+
+@media (max-width:450px) {
+    .FarmerHomePageTop{
+        width: 100%;
+        flex-direction: column ;
+        gap: 20px;
+        height: max-content;
+    }
+
+    .productUpload,.productDescription{
+        width: 100%;
+        height: 300px;
+
+        & h2{
+            font-size: 15px;
+        }
+    }
+
+    .FarmerHomePage .upload{
+        width: 80%;
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .button-holds{
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+}

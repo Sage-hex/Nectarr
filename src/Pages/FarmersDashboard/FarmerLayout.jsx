@@ -72,11 +72,14 @@ import { Outlet, useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import mail from '../../assets/mail.png';
 import MessageModal from '../../Components/Modal/MessageModal';
+import { FaHamburger } from 'react-icons/fa';
+import { BiMenu } from 'react-icons/bi';
 
 const FarmerLayout = () => {
     const [isModalOpen, setModalOpen] = useState(false);
     const [ismessageModalOpen, setMessageModalOpen] = useState(false);
     const [products, setProducts] = useState({ single: [], hamper: [] }); // Store products by category
+    const [logout, setLogout ] = useState(false)
 
     const navigate = useNavigate();
 
@@ -123,6 +126,8 @@ const FarmerLayout = () => {
                         <img src={mail} alt="" width={'50px'} onClick={handlemail} />
                         <div className="profile-picture"><img src={UserIcon} alt="Profile" /></div>
                     </div>
+                <BiMenu  onClick={()=> setLogout(prev => !prev)} className='menu'/>
+                  {logout?<div className="Logout"  onClick={handleLogoutClick} >Log-out</div> :null}
                 </div>
 
                 <Outlet context={{ postProduct, products }} /> {/* Pass context to children */}
