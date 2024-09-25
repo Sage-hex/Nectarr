@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
-    background-color: #f5f5f5;
+/*    background-color: #f5f5f5;*/
     background-color: burlywood;
     margin-top: 3.3rem;
 }
@@ -61,7 +61,7 @@ button:hover {
 @media (max-width:768px) {
     .special-offer-container {
         flex-direction: column;
-        background-color: #f5f5f5;
+        background-color: burlywood;
         gap: 2rem;
     }
 

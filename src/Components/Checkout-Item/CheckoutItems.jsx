@@ -23,7 +23,7 @@ const CheckoutItems = () => {
         </div>
 
         <div className="CheckoutItems-bottom">
-          <button>Use Bonus Point</button>
+          {/*<button>Use Bonus Point</button>*/}
 
           <div className="checkout-total">
             <div className="total-cost">

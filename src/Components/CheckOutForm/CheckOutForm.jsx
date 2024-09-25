@@ -32,7 +32,7 @@ const CheckOutForm = () => {
         name: `${buyer.firstName} ${buyer.lastName}`,
         email: buyer.email,
       },
-      redirect_url: "https://localhost:5173/#shop", // Replace with your actual redirect URL
+      redirect_url: "https://nectarr.vercel.app/#/shop", // Replace with your actual redirect URL
     };
 
     try {

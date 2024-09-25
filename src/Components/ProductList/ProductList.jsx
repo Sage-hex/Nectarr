@@ -45,10 +45,10 @@ const ProductList = () => {
   return (
     <div
       style={{
-        maxWidth: "1200px",
-        marginInline: "auto",
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+        // maxWidth: "1200px",
+        // marginInline: "auto",
+        // display: "grid",
+        // gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
          
       }}
       

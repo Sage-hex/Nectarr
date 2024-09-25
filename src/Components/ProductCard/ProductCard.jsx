@@ -76,7 +76,7 @@ const ProductCard = ({ product, products }) => {
       {hovered && (
         <div className="hover-details">
           <p>{product.name}</p>
-          <p>#{Number(product.price).toLocaleString()}</p>
+          <p>₦ {Number(product.price).toLocaleString()}</p>
           <button
             className="add-to-cart"
             onClick={() => HandleCart(product.id, 1)}
@@ -84,6 +84,7 @@ const ProductCard = ({ product, products }) => {
             Add to cart
           </button>
         </div>
+        
       )}
       <div className="rating">{"★".repeat(5)}</div>
       <div className="card-cart">

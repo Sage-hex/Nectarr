@@ -30,6 +30,11 @@ img {
     padding: 0 10px;
 }
 
+
+/*.hero-text-overlay h1{
+    font-size: 2.5rem;
+
+}*/
 .hero-container button {
     position: absolute;
     top: 50%;
