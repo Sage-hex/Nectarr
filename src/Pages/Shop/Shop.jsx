@@ -11,8 +11,9 @@ const Shop = () => {
     <main className="shop-container">
       <ShopHero />
       <SpecialOffer />
-      <section className="shop-items">
-        <h1>Manuka Honey</h1>
+      <section className="shop-items"  data-aos="fade-up"
+     data-aos-duration="3000">
+        <h1>Explore Our Honey Varieties</h1>
         <ProductList />
       </section>
       <NewsLetter />

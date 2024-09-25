@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './LandingHero.css';
-import HeroTextImage from '../../assets/Images/Nectar-Buzz/hero-image.jpg';
+import HeroTextImage from '../../assets/Images/homepicture.png';
 import Button from '../Button/Button';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,23 +9,23 @@ const LandingHero = () => {
   const headlines = [
     <h1 key="1" className='hie'>
       HELLO <span style={{ color: 'gold' }}>HO</span>
-      <span style={{ color: 'grey' }}>NEY</span>
+      <span style={{ color: 'brown' }}>NEY</span>
     </h1>,
     <h1 key="1" className='hie'>
     WELCOME TO<span style={{ color: 'gold' }}> NECTAR</span>
-    <span style={{ color: 'grey' }}>BUZZ</span>
+    <span style={{ color: 'brown' }}>BUZZ</span>
   </h1>,
     <h1 key="2"  className='hie'>
-      Hi <span style={{ color: 'gold' }}>BEE</span>
-      <span style={{ color: 'grey' }}> INTUSIATISTIST</span>
+      YOUR ONE STOP <span style={{ color: 'gold' }}>STORE FOR</span>
+      <span style={{ color: 'brown' }}> QUALITY HONEY</span>
     </h1>,
-    <h1 key="3"  className='hie'>
-      HELLO <span style={{ color: 'gold' }}> BEE</span>
-      <span style={{ color: 'grey' }}> LOVERS</span>
-    </h1>,
+    // <h1 key="3"  className='hie'>
+    //   HELLO <span style={{ color: 'gold' }}> BEE</span>
+    //   <span style={{ color: 'grey' }}> LOVERS</span>
+    // </h1>,
     <h1 key="4" className='hie'>
-      HELLO <span style={{ color: 'gold' }}>HO</span>
-      <span style={{ color: 'grey' }}>NEY</span>
+      SHOP <span style={{ color: 'gold' }}>HONEY AND</span>
+      <span style={{ color: 'brown' }}> EARN</span>
     </h1>,
   ];
 

@@ -58,7 +58,7 @@ const WhoWeAre = () => {
                     <img src={HoneyOriginal} alt="Honey Original" className='honey-mobile'/>
                 </div>
                 <div className="who-we-are-p-wrapper">
-                    <p className='who-we-are-p-text'>Discover the pure sweetness of nature at Nectar Buzz,
+                    <p className='who-we-are-p-text' data-aos="fade-up" data-aos-duration="3000">Discover the pure sweetness of nature at Nectar Buzz,
                         Nigeria’s premier honey store. We offer a wide variety
                         of high-quality, locally sourced honey, perfect for your
                         daily needs or as a delightful gift for your health and 

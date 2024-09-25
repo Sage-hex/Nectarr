@@ -2,6 +2,7 @@
 .navbar {
     display: flex;
     height: 13vh;
+    max-height: 100px;
     align-items: center;
     justify-content: space-between;
     background: linear-gradient(90deg, rgba(92, 22, 3, 0.8) 0%, #532316 44.65%, #330E03 71.5%);
@@ -55,12 +56,13 @@
     flex-direction: column;
     align-items: flex-start;
     color: #fff;
+    margin-right: 50px;
 }
 
 .navbar__logo img {
     width: 10vw;
     /* Use viewport width for responsiveness */
-    max-width: 200px;
+    max-width: 150px;
     /* Prevent logo from becoming too large */
 }
 
@@ -93,12 +95,17 @@
 .navbar__icons {
     display: flex;
     align-items: center;
+    justify-content: center;
     /* background-color: green; */
-    gap: 15px;
+    width: 20%;
+    height: 100%;
+    gap: 30px;
+    /* font-size: large; */
+    cursor: pointer;
 }
 
 .navbar__icon {
-    font-size: 1.5rem;
+    font-size: 2.3rem;
     /* Adjusted size */
     color: #fff;
 }
@@ -167,24 +174,14 @@
         width: 1rem;
         height: 1rem;
         font-size: 1rem;
-        top: 31%;
+        top: 5%;
         /* Adjust for better vertical alignment */
         right: 10.4rem;
         /* Slightly further for large screens */
     }
 }
 
-@media (min-width: 2560px) {
-    .cart-quantity {
-        width: 2rem;
-        height: 2rem;
-        font-size: 1rem;
-        top: 30%;
-        /* Adjust for better vertical alignment */
-        right: 14rem;
-        /* Slightly further for large screens */
-    }
-}
+
 
 @media (max-width: 768px) {
     .navbar {
@@ -240,6 +237,7 @@
 /* Responsive for larger screens (4K and above) */
 @media (min-width: 2560px) {
     .navbar {
+        height: 50vh;
         padding: 1.5rem 12rem;
         /* Adjust padding for 4K */
     }
@@ -252,7 +250,7 @@
     .navbar__logo img {
         width: 15vw;
         /* Larger logo for 4K */
-        max-width: 300px;
+        max-width: 150px;
     }
 
     .navbar__icon {
@@ -264,5 +262,24 @@
         width: 2rem;
         height: 2rem;
         font-size: 1rem;
+    }
+}
+
+@media (min-width: 2560px) {
+    .cart-quantity {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+        top: 10%;
+        /* Adjust for better vertical alignment */
+        right: 14rem;
+        /* Slightly further for large screens */
+    }
+    /* .navbar__icon {
+        font-size:13rem;
+        color: #fff;
+    } */
+    .navbar{
+        height: 10vh;
     }
 }

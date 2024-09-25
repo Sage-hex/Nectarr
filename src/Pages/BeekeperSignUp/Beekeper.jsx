@@ -39,7 +39,7 @@ const SignUp = () => {
 
       // Navigate after a short delay
       setTimeout(() => {
-        nav("/beekeepersLogin");
+        nav("/farmerLogin");
       }, 5000);
     } catch (err) {
       console.error(err.response?.data || err);
