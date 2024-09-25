@@ -25,9 +25,6 @@ const Order = () => {
       </section>
       <hr />
       <section className="total">
-        <h3>
-          Subtotal: <span>₦</span>
-        </h3>
         <h2>
           Total: <span>₦ {Number(total).toLocaleString()}</span>
         </h2>

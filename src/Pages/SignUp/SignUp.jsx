@@ -6,6 +6,7 @@ import Button from "../../Components/Button/Button";
 import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
+import { BeatLoader } from "react-spinners";
 
 const SignUp = () => {
   const nav = useNavigate();
@@ -43,11 +44,12 @@ const SignUp = () => {
     };
 
     try {
+      setLoading(true)
       const url = "https://nectarbuzz.onrender.com/api/v1/user-signup";
       const res = await axios.post(url, signUpData);
       console.log(res.data);
       toast.success('Sign up successful 🎉');
-      setLoading(true)
+    
       
 
       setTimeout(() => {
@@ -55,10 +57,10 @@ const SignUp = () => {
       }, 3000);
       
     } catch (err) {
-      console.error(err);
-      setLoading(true)
-      toast.error(err.response.data.message);
-     
+      console.error(err.response?.data || err);
+      toast.error(err.response?.data?.message || 'An error occurred');
+    } finally {
+      setLoading(false); // Ensure loading is set to false after the request
     }
   
     
@@ -156,7 +158,7 @@ const SignUp = () => {
               />
             </div>
             <div className="signup-btn">
-              <Button type="submit">{loading? 'Loading...' : 'Sign Up'}</Button>
+              <Button type="submit">{loading? <BeatLoader/> : 'Sign Up'}</Button>
             </div>
           </form>
 
