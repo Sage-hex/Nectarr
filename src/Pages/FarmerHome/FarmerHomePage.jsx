@@ -426,7 +426,7 @@ const FarmerHomePage = () => {
               value={formData.honeyName}
               required
             />
-            <h4>Description</h4>
+            <h4>Quantity</h4>
             <input
               type="number"
               placeholder="quantity"

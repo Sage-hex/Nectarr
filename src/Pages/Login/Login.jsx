@@ -82,9 +82,13 @@ const LoginForm = () => {
                     </div>
                 </form>
                 <section className="signup-prompt">
+                <p style={{ color: 'white' }}>
+                        Login as a Beekeeper<NavLink to="/farmerLogin"> Login</NavLink>
+                    </p>
                     <p style={{ color: 'white' }}>
                         Don't have an account? <NavLink to="/signup">Sign up</NavLink>
                     </p>
+                     
                 </section>
             </section>
             <Toaster />

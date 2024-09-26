@@ -156,7 +156,19 @@ input:not(:placeholder-shown)+label {
 
 .signup-prompt{
     color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+/*    border: 2px solid red;*/
+    font-size: 10px;
 }
+
+/*.signup-prompt p{
+    width: 50%;
+    height: 100%;
+    border: 2px solid green ;
+}*/
 
 
 
@@ -181,6 +193,14 @@ input:not(:placeholder-shown)+label {
 
 }
 @media (max-width: 768px) {
+     .signup-prompt p{
+        font-size: 1rem;
+     }
+    .signup-prompt{
+        font-size: 1rem;
+        gap: 5px;
+    }
+
     .login-wrapper {
         flex-direction: column;
         justify-content: center;
@@ -208,6 +228,13 @@ input:not(:placeholder-shown)+label {
 }
 
 @media (max-width: 480px) {
+     .signup-prompt p{
+        font-size: 10px;
+     }
+    .signup-prompt{
+        font-size: 1rem;
+        gap: 5px;
+    }
 
     .login-form-group {
         margin: 15px 0;
