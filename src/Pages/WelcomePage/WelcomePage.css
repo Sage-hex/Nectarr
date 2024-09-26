@@ -49,6 +49,7 @@
 .welcome-message {
     font-size: 1.8rem;
     font-weight: 600;
+
     /* margin-bottom: 2rem; */
 }
 
@@ -134,11 +135,15 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 420px) {
 
     .welcome-logo {
         width: 100px;
         margin-bottom: 20px;
+    }
+     .welcome-message {
+        font-size: 1.5rem;
+        color: black;
     }
 
     .welcome-box {
@@ -148,3 +153,11 @@
         background: rgba(85, 69, 5, 0.55);
     }
 }
+
+/*@media (max-width: 375px){
+    .welcome-message {
+        font-size: 1.5rem;
+        color: black;
+    }
+
+}*/

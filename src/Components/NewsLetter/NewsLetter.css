@@ -65,7 +65,7 @@
 }
 
 .shop-newsletter .input-group .Button-custom {
-    width: 100%;
+/*    width: 100%;*/
     padding: 20px;
     text-transform: uppercase;
     font-weight: 700;
@@ -77,11 +77,41 @@
 }
 
 
-@media (max-width:768px){
+/* For Tablet (768px and below) */
+@media (max-width: 768px) {
+    .shop-newsletter .input-group {
+        width: 90%; /* Adjust input group width for a more balanced look */
+    }
+    
+    .shop-newsletter .input-group input {
+        font-size: 1rem; /* Adjust input font size for better legibility */
+        padding: 10px; /* Reduce padding for input field */
+    }
+
     .shop-newsletter .input-group .Button-custom {
-        width: 80%;
-        padding: 10px;
-        border-radius: 0;
+        width: 100%; /* Make the button full width */
+        padding: 12px 0; /* Increase top and bottom padding */
+        font-size: 1.1rem; /* Make the text slightly larger */
+        border-radius: 5px; /* Subtle rounding for a cleaner look */
+    }
+}
+
+/* For Mobile (480px and below) */
+@media (max-width: 480px) {
+    .shop-newsletter .input-group {
+        width: 100%; /* Full width for mobile */
+    }
+
+    .shop-newsletter .input-group input {
+        font-size: 0.9rem; /* Smaller font for mobile */
+        padding: 8px; /* Reduce padding further */
+    }
+
+    .shop-newsletter .input-group .Button-custom {
+        width: 80%; /* Button slightly smaller for mobile */
+        padding: 10px; /* Less padding for smaller screens */
+        font-size: 1rem; /* Smaller font for mobile */
+        border-radius: 4px;
     }
 }
 

@@ -5,7 +5,7 @@ import mamaruka from '../../assets/Images/Nectar-Buzz/mamaruka.jpg';
 const UserReviews = () => {
     const reviews = [{
             image: mrstan,
-            text: "I love the variety of flavors Nectar Buzz offers. From classic honey to flavored options like manuka and raw honey, there's something for everyone.",
+            text: "I no dey use sugar, na honey i dey use pass but this one wey una gimme so, as i use am drink my akamu e just go well for my body.",
             name: "Pa Stanley",
         },
         {

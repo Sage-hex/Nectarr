@@ -13,17 +13,18 @@ const Collection = () => {
         <p>We sell Organic Honey and 5 Kinds Of Honey</p>
       </div>
 
-      <section className='items'>
+      <section className='items' data-aos="fade-up"data-aos-anchor-placement="bottom-bottom" data-aos-duration="2000">
         {[
-          { src: HoneyJar1, title: 'Clover Honey', description: 'Mild and light-colored honey from clover plants, known for its sweet and delicate taste.' },
-          { src: HoneyJar2, title: 'Wildflower Honey', description: 'Sweet honey with diverse flavors, made from nectar of various wildflowers and plants.' },
-          { src: HoneyJar3, title: 'Manuka Honey', description: 'Unique honey from New Zealand, valued for its distinctive taste and potential health benefits.' },
-          { src: HoneyJar4, title: 'Tupelo Honey', description: 'Light-colored honey from tupelo trees, appreciated for its mild floral flavor and purity.' },
-          { src: HoneyJar5, title: 'Acacia Honey', description: 'Honey produced from acacia tree nectar, known for its clear appearance and subtle taste.' }
+          { src: HoneyJar1, title: 'Ifeola Clover Honey', description: 'Clover honey, a popular type of honey, has a rich history dating back centuries. Derived from the nectar of clover plants, this honey is prized for its mild flavor and light color.' },
+          { src: HoneyJar2, title: 'Dagogo Wildflower Honey', description: 'Wildflower honey, a delightful and diverse type of honey, is produced from the nectar of various wildflower plants.' },
+          { src: HoneyJar3, title: 'Maazi Manuka Honey', description: 'Manuka honey, a unique type of honey produced in Imo state, has gained worldwide recognition for its distinctive properties and potential health benefits.' },
+          { src: HoneyJar4, title: 'Chinelo Honey', description: 'Chinelo Honey, a prized delicacy in the Eastern part of Nigeria, Abia state. It is produced from the nectar of tupelo trees. Known for its light color and mild, floral flavor, tupelo honey has a long history of being enjoyed for its unique taste and potential health benefits.' },
+          { src: HoneyJar5, title: 'Sisi Acacia Honey', description: 'In the vast, sun-drenched plains of Ebonyi state, a colony of bees lived peacefully among the acacia trees. These trees, with their delicate yellow flowers, were a source of sustenance for the bees, providing them with nectar to produce their precious honey.' }
         ].map((item, index) => (
-          <div className="boxhold" key={index}>
+          <div className="boxhold" key={index} data-aos="zoom-in-up">
             <img src={item.src} alt={item.title} className='box' />
-            <div className="box-text">
+            <div className="box-text" data-aos="fade-up"
+     data-aos-duration="3000">
               <h3>{item.title}</h3>
               <p>{item.description}</p>
             </div>

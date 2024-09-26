@@ -7,11 +7,11 @@
     justify-content: center;
     position: absolute;
     top: 0;
-    z-index: 99999       ;
+    z-index: 99999;
 }
 
 .LoadingPage img {
-    animation: zoom 6s infinite; /* Added duration and infinite loop */
+    animation: zoom 6s infinite; /* Image zoom animation */
 }
 
 @keyframes zoom {
@@ -29,5 +29,26 @@
     }
     80% {
         transform: scale(1.1);
+    }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 568px) {
+    .LoadingPage {
+        width: 100%; /* Adjust width to fill screen */
+        height: 100vh; /* Ensure it takes up the full height */
+    }
+
+    .LoadingPage img {
+        animation: zoom-mobile 4s infinite; /* Simpler animation for mobile */
+    }
+
+    @keyframes zoom-mobile {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2);
+        }
     }
 }

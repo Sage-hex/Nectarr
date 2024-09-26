@@ -3,6 +3,7 @@ import './WelcomePage.css'; // CSS file for the styling
 import loginImg from "../../assets/Images/signup-logo.png";
 import { FaCheckCircle } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import avatar from '../../assets/Images/Nectar-Buzz/bee4.png'
 
 const WelcomePage = ({ user }) => {
     const nav = useNavigate()
@@ -13,7 +14,7 @@ const WelcomePage = ({ user }) => {
               <img src={loginImg} className='logo' alt="logo" />
             </div>
         <img
-          src="https://via.placeholder.com/150" // Replace with actual user image URL
+          src={avatar}// Replace with actual user image URL
           alt="Profile"
           className="welcome-image"
         />

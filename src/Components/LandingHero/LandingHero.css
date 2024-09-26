@@ -125,11 +125,11 @@
     }
 
     .LandingHero .Button-custom {
-        padding: 10px 15px;
+        padding: 10px 25px;
         border-radius: 5px;
         top: 60%;
-        left: 35%;
-        width: 100px;
+        left: 30%;
+/*        width: 25%;*/
         height: 40px;
         font-size: 15px;
         border-radius: 2px;
@@ -154,7 +154,16 @@
         /*        background-color: green;*/
     }
 }
+@media (max-width: 375px){
+    .LandingHero .Button-custom {
+        padding: 10px 15px;
+        border-radius: 5px;
+        top: 60%;
+        left: 35%;
+        width: 35%;
+    }
 
+}
 /* Smooth fade-in effect for the text */
 @keyframes fadeIn {
     from {
