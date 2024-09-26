@@ -16,7 +16,6 @@ const HoneySection = () => {
           <p>
             Honey use and production has a long and varied history, with its beginnings
             in prehistoric times. Several cave paintings in Cuevas de la Araña in Spain depict.
-            <a href="#">Learn more</a>
           </p>
           <img
             className="honey-icon"
@@ -30,7 +29,6 @@ const HoneySection = () => {
           <p>
             Discounts on delivery fees. Shop and earn points on the go. Get daily tips on DIY 
             once you log in and subscribe to our channel or podcast.
-            <a href="#">Read more</a>
           </p>
           <img
             className="buzz-icon"
