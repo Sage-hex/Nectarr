@@ -98,11 +98,11 @@
    display: flex;
    flex-wrap: nowrap;
   }
-  .product-card{
+  /*.product-card{
     width: 10px;
    background-color: green;
    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
-  }
+  }*/
 }
 
 @media (min-width: 2560px) {
